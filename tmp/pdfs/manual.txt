@@ -1,0 +1,703 @@
+ČESKÁ KYNOLOGICKÁ / PRVNÍ NÁVRH
+
+Uživatelský manuál
+webu a administračního systému
+Průvodce veřejnou částí, členskou zónou vystavovatele a administrací
+pořadatele výstav.
+
+OBSAH MANUÁLU
+
+1
+
+Veřejný web a registrace
+
+2
+
+Členská zóna a profily psů
+
+3
+
+Přihlášky, profil a souhlasy
+
+4
+
+Administrace výstav a exporty
+
+Verze prototypu: 24. 8. 2026
+
+01
+
+RYCHLÁ ORIENTACE
+
+Jak je systém rozdělený
+Tři části mají odlišné role. Veřejný web informuje, členská zóna slouží vystavovatelům a administrace pořadatelům.
+
+01
+
+02
+
+03
+
+Veřejný web
+
+Členská zóna
+
+Administrace
+
+Kalendář výstav, detail akce, přihlášení a vytvoření
+účtu.
+
+Profily psů, dokumenty, ocenění, přihlášky a osobní
+údaje.
+
+Výstavy, seznamy přihlášených, platby, rozpočet a
+propozice.
+
+Výstavy
+
+Moji psi
+
+Přehled
+
+Poradenství
+
+Přihlášky
+
+Výstavy
+
+Kontakt
+
+Výstavy
+
+Platby
+
+Přihlásit se
+
+Můj profil
+
+Propozice a PDF
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+02
+
+VEŘEJNÁ ČÁST
+
+Veřejná úvodní stránka
+Z úvodní stránky se návštěvník dostane k výstavám, přihlášení i registraci nového účtu.
+
+1
+
+2
+
+CO UDĚLAT
+
+1
+
+Přihlášení
+Otevře přihlašovací okno členské zóny.
+
+2
+
+Vytvořit účet
+Přepne hlavní hero sekci na registrační
+formulář.
+
+3
+
+Rychlý vstup
+E-mail a heslo umožní vstup do
+demonstračního účtu.
+
+3
+
+4
+
+Kalendář výstav
+Tlačítko posune návštěvníka k
+nadcházejícím akcím.
+
+4
+
+Poznámka: Horní navigace obsahuje také odkaz Pro
+pořadatele, který vede do oddělené administrace.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+03
+
+ČLENSKÁ ZÓNA
+
+Přihlášení uživatele
+Přihlášení je určeno vystavovatelům. Po úspěšném vstupu se otevře jejich osobní pracovní prostředí.
+
+CO UDĚLAT
+
+1
+
+E-mail
+Zadejte e-mail uložený u členského profilu.
+
+2
+
+Heslo
+Zadejte heslo a pokračujte tlačítkem
+Přihlásit se.
+
+3
+
+Vstup do účtu
+Otevře členskou zónu s profily psů a
+přihláškami.
+
+4
+
+Registrace
+Pokud účet ještě neexistuje, pokračujte
+registrací.
+
+1
+
+2
+
+3
+
+4
+
+Poznámka: V prototypu lze použít libovolný platný
+e-mail a demonstrační heslo. Přihlášení zůstává
+aktivní do obnovení stránky.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+04
+
+NOVÝ UŽIVATEL
+
+Vytvoření vystavovatelského účtu
+Údaje se vyplní jednou a následně se automaticky používají v přihláškách na výstavy.
+
+CO UDĚLAT
+
+1
+
+Osobní údaje
+Jméno, příjmení a případné akademické
+tituly.
+
+2
+
+Kontakt
+Telefon a e-mail včetně kontrolního
+zopakování.
+
+1
+3
+
+Trvalé bydliště
+Adresa, město, PSČ a stát.
+
+2
+4
+
+Přístup do účtu
+Uživatelské jméno a heslo pro další
+přihlášení.
+
+3
+5
+
+Souhlasy
+Povinné podmínky a samostatný
+dobrovolný newsletter.
+
+6
+
+4
+
+Dokončit registraci
+Po kontrole vytvoří profil vystavovatele.
+
+5
+
+6
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+Poznámka: Povinná pole jsou označená hvězdičkou.
+Marketingový souhlas není podmínkou registrace.
+
+05
+
+ČLENSKÁ ZÓNA
+
+Moji psi a detail profilu
+Po přihlášení se jako první otevře evidence psů. Každý pes má samostatný profil a vlastní dokumenty.
+
+CO UDĚLAT
+
+3
+
+1
+
+1
+
+Hlavní navigace
+Přepíná psy, přihlášky, výstavy a osobní
+profil.
+
+2
+
+Seznam psů
+Kliknutím se otevře vybraný uložený pes.
+
+4
+
+2
+
+3
+
+Přidat psa
+Založí nový profil psa podle průkazu
+původu.
+
+5
+4
+
+Upravit údaje
+Otevře editaci právě zobrazeného psa.
+
+5
+
+Dokumenty a ocenění
+Samostatné záložky pro soubory PDF,
+JPG a PNG.
+
+Poznámka: Na mobilu se stejná hlavní navigace
+zobrazuje jako pevná spodní lišta.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+06
+
+EVIDENCE PSA
+
+Přidání nového psa
+Profil psa se zakládá jednou. Později stačí při přihlášce pouze vybrat uloženého psa.
+
+CO UDĚLAT
+
+2
+
+1
+
+Moji psi
+Přehled všech psů patřících k jednomu
+účtu.
+
+2
+
+Nový profil
+Tlačítko otevře formulář Přidat psa.
+
+3
+
+1
+
+Fotografie
+Volitelně lze nahrát fotografii ve formátu
+JPG nebo PNG.
+
+4
+
+Identifikace psa
+Jméno, zápisové číslo, čip, datum
+narození, pohlaví a plemeno.
+
+3
+
+4
+
+Poznámka: Průkaz původu a další dokumenty lze
+nahrát při založení psa nebo doplnit později.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+07
+
+ČLENSKÁ ZÓNA
+
+Přihlášky uživatele
+Sekce Přihlášky ukazuje každou odeslanou přihlášku, vybraného psa, cenu a aktuální stav.
+
+CO UDĚLAT
+
+1
+
+Přihlášky
+Otevře historii a stav všech přihlášení.
+
+2
+
+Výstava a pes
+Každý řádek spojuje konkrétní akci s
+vybraným psem.
+
+1
+2
+
+3
+
+4
+
+3
+
+Stav
+Zaplaceno, čeká na platbu nebo kontrola
+dokumentů.
+
+4
+
+Detail / Zaplatit
+Otevře detail přihlášky nebo navazující
+platbu.
+
+Poznámka: Detail přihlášky obsahuje časovou osu
+kontroly dokladů, platby a vydání vstupního listu.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+08
+
+ČLENSKÁ ZÓNA
+
+Můj profil a souhlasy
+Vystavovatel zde upravuje kontaktní údaje, bydliště a dobrovolná komunikační nastavení.
+
+CO UDĚLAT
+
+1
+
+Můj profil
+Přejde k osobním údajům a nastavení
+účtu.
+
+2
+
+Kontaktní údaje
+Změny se použijí v budoucích přihláškách.
+
+3
+
+E-mailová nastavení
+Provozní zprávy jsou nutné, newsletter je
+dobrovolný.
+
+1
+
+2
+
+3
+
+4
+
+Uložit změny
+Potvrdí úpravu profilu vystavovatele.
+
+4
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+Poznámka: Uživatel může také exportovat svoji kopii
+dat nebo požádat o zrušení účtu.
+
+09
+
+POŘADATEL
+
+Vstup do administrace
+Administrace pořadatele je oddělená od běžné členské zóny vystavovatelů.
+
+CO UDĚLAT
+
+1
+
+Heslo pořadatele
+V produkční verzi půjde o zabezpečený
+pořadatelský účet.
+
+2
+
+Demo heslo
+Pro první návrh použijte heslo 123456.
+
+3
+
+Vstoupit
+Otevře přehled všech připravovaných i
+ukončených výstav.
+
+1
+
+2
+
+3
+
+Poznámka: Vstup otevřete odkazem Pro pořadatele
+v horní navigaci veřejného webu.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+10
+
+ADMINISTRACE
+
+Přehled výstav pořadatele
+Výchozí administrační obrazovka zobrazuje aktivní, připravované i archivované výstavy.
+
+CO UDĚLAT
+
+1
+
+Přehled, výstavy, platby a propozice.
+
+3
+
+2
+
+1
+
+Administrační nabídka
+
+Otevřít výstavu
+Kliknutím na řádek se zobrazí detail a
+přihlášení.
+
+3
+
+Vytvořit výstavu
+Založí novou akci v samostatném
+formuláři.
+
+2
+
+4
+4
+
+Kapacita
+U každé akce je ihned vidět počet
+přihlášených psů.
+
+Poznámka: Detail výstavy navazuje přehledem
+plateb, rozpočtu a seznamem přihlášených.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+11
+
+ADMINISTRACE
+
+Přihlášky u konkrétní výstavy
+Seznam přihlášených se otevírá přímo pod vybranou výstavou a lze jej filtrovat nebo exportovat.
+
+CO UDĚLAT
+
+2
+
+1
+
+5
+
+1
+
+Otevře správu akcí a jejich přihlášek.
+
+2
+
+3
+
+Výstavy
+
+Vybraná výstava
+Nad tabulkou je vždy uvedeno, ke které
+akci data patří.
+
+3
+
+Hledání a filtry
+Vyhledávání podle jména, psa, e-mailu
+nebo platby.
+
+4
+
+4
+
+Řádky přihlášek
+Vystavovatel, pes, třída, doklady, cena a
+stav platby.
+
+5
+
+Export CSV
+Stáhne seznam pro další organizační
+práci.
+
+Poznámka: Šipka na konci řádku otevírá detail
+konkrétní přihlášky.
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+12
+
+NOVÁ AKCE
+
+Vytvoření nové výstavy
+Formulář je rozdělený do tří logických kroků. První část obsahuje základní organizační údaje.
+
+2
+
+CO UDĚLAT
+
+1
+
+Výstavy
+Aktivní položka administrace, pod kterou
+se nová akce zakládá.
+
+2
+
+Nová výstava
+Rychlý vstup do stejného formuláře z horní
+lišty.
+
+1
+
+3
+
+Základní údaje
+Název, typ, pořadatel, termín, areál, e-mail
+a kapacita.
+
+4
+
+Uloží rozpracovanou akci, kterou lze
+později upravit.
+
+3
+
+4
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+Uložit koncept
+
+Poznámka: Povinná pole musí být vyplněná před
+uložením konceptu.
+
+13
+
+NOVÁ AKCE
+
+Plemena, třídy a poplatky
+Druhá část určuje rozsah výstavy. Třetí část nastavuje uzávěrku a registrační poplatky.
+
+CO UDĚLAT
+
+1
+
+Katalog plemen
+Abecední seznam s vyhledáváním podle
+názvu.
+
+2
+
+Přidat plemeno
+Jedním kliknutím se plemeno zařadí do
+výstavy.
+
+1
+3
+
+2
+
+Výstavní třídy
+Pro každé plemeno lze povolit vlastní sadu
+tříd.
+
+3
+4
+
+Přihlášky a poplatky
+Uzávěrka, základní cena a cena dalšího
+psa.
+
+5
+
+Uložit koncept
+Dokončí založení rozpracované výstavy.
+
+4
+
+5
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+Poznámka: Nově přidané plemeno má ve výchozím
+stavu povolené všechny třídy.
+
+14
+
+ADMINISTRACE
+
+Propozice a export PDF
+Pořadatel upraví propozice v jednom formuláři, zkontroluje náhled a následně dokument exportuje.
+
+CO UDĚLAT
+
+1
+
+Propozice a PDF
+Otevře editor dokumentu výstavy.
+
+4
+
+2
+
+Editor
+Název, datum, místo a kompletní text
+propozic.
+
+3
+
+Živý náhled
+Okamžitě ukazuje výslednou podobu
+dokumentu.
+
+1
+
+4
+
+2
+
+Exportovat do PDF
+Vytvoří PDF soubor vhodný k rozeslání
+nebo tisku.
+
+3
+
+5
+
+Uložit a publikovat
+Potvrdí aktuální znění propozic na webu.
+
+5
+
+ČESKÁ KYNOLOGICKÁ / UŽIVATELSKÝ MANUÁL
+
+Poznámka: Jde o demonstrační prototyp. Finální
+napojení na databázi, e-maily a platby bude součástí
+produkčního řešení.
+
+15
+
+

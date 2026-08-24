@@ -295,6 +295,11 @@
           <button class="reel-arrow next" id="calendar-next" type="button" aria-label="Další termíny">→</button>
         </div>
 
+        <button class="mobile-filter-toggle" id="mobile-filter-toggle" type="button" aria-expanded="false" aria-controls="event-filters">
+          <span>Filtrovat výstavy</span>
+          <b>Otevřít filtry</b>
+        </button>
+
         <form class="event-filters" id="event-filters">
           <label class="search-field">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -460,7 +465,7 @@
           <div><b>Petr Novák</b><small>Členský profil</small></div>
         </div>
         <nav aria-label="Členská navigace">
-          <button class="active" type="button" data-member-panel="dogs"><span>◇</span><em>Moji psi</em><b id="member-dog-count">2</b></button>
+          <button type="button" data-member-panel="dogs"><span>◇</span><em>Moji psi</em><b id="member-dog-count">2</b></button>
           <div class="member-dog-subnav" aria-label="Profily psů">
             <div id="dog-roster-list">
               <button class="dog-roster-item active" type="button" data-dog-select="argo"><span>AG</span><div><b>Argo Golden Forest</b><small>Zlatý retrívr · pes</small></div><i>→</i></button>
@@ -469,7 +474,7 @@
             <button class="dog-roster-add" type="button" data-open-dog><span>+</span><div><b>Přidat psa</b><small>Nový profil</small></div></button>
           </div>
           <button type="button" data-member-panel="applications"><span>▤</span><em>Přihlášky</em><b>3</b></button>
-          <button type="button" data-member-panel="member-events"><span>□</span><em>Výstavy</em></button>
+          <button class="active" type="button" data-member-panel="member-events"><span>□</span><em>Výstavy</em></button>
           <button type="button" data-member-panel="profile"><span>○</span><em>Můj profil</em></button>
         </nav>
         <div class="portal-sidebar-bottom">
@@ -481,12 +486,12 @@
       <div class="portal-main">
         <header class="portal-topbar">
           <button class="portal-menu" type="button" aria-label="Otevřít navigaci">☰</button>
-          <div><span>Členská zóna</span><b id="member-panel-title">Moji psi</b></div>
+          <div><span>Členská zóna</span><b id="member-panel-title">Výstavy</b></div>
           <button class="notification-button" type="button" aria-label="Oznámení">◌<i>2</i></button>
         </header>
 
         <main class="portal-content">
-          <section class="portal-panel active" data-member-content="dogs">
+          <section class="portal-panel" data-member-content="dogs">
             <div class="portal-welcome compact member-page-heading"><div><p class="eyebrow dark">Evidence psů</p><h1>Moji psi</h1><p>Každý pes má vlastní profil, dokumenty, ocenění a historii výstavních přihlášek</p></div><button class="gold-button" type="button" data-open-dog>+ Přidat psa</button></div>
             <div class="member-mobile-dog-switcher" aria-label="Vyberte profil psa">
               <button class="active" type="button" data-dog-select="argo"><span>AG</span><b>Argo</b></button>
@@ -566,7 +571,7 @@
             <footer class="member-application-detail-footer"><div><span>Registrační poplatek</span><b id="member-detail-price">1 100 Kč</b><small id="member-detail-payment-note">Uhrazeno QR platbou</small></div><button class="gold-button" id="member-detail-primary-action" type="button" data-toast="Potvrzení o platbě je připravené ke stažení.">Stáhnout potvrzení →</button></footer>
           </section>
 
-          <section class="portal-panel" data-member-content="member-events">
+          <section class="portal-panel active" data-member-content="member-events">
             <div class="portal-welcome compact"><div><p class="eyebrow dark">Kalendář</p><h1>Nadcházející výstavy</h1><p>Vyberte akci a přihlaste uloženého psa bez opakovaného vyplňování.</p></div></div>
             <div class="member-event-grid" id="member-event-grid"></div>
           </section>

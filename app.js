@@ -128,6 +128,7 @@ const searchInput = document.querySelector("#event-search");
 const typeFilter = document.querySelector("#type-filter");
 const regionFilter = document.querySelector("#region-filter");
 const filterForm = document.querySelector("#event-filters");
+const mobileFilterToggle = document.querySelector("#mobile-filter-toggle");
 const calendarReel = document.querySelector("#calendar-reel");
 const calendarReelWrap = document.querySelector(".calendar-reel-wrap");
 const heroShell = document.querySelector(".hero-shell");
@@ -160,6 +161,18 @@ const allDialogs = [
   breedPickerDialog,
   legalDialog,
 ];
+
+function setMobileFilters(open) {
+  if (!filterForm || !mobileFilterToggle) return;
+  filterForm.classList.toggle("mobile-open", open);
+  mobileFilterToggle.setAttribute("aria-expanded", String(open));
+  const stateLabel = mobileFilterToggle.querySelector("b");
+  if (stateLabel) stateLabel.textContent = open ? "Skrýt filtry" : "Otevřít filtry";
+}
+
+mobileFilterToggle?.addEventListener("click", () => {
+  setMobileFilters(mobileFilterToggle.getAttribute("aria-expanded") !== "true");
+});
 
 const registrations = [
   { date: "18. 8. 2026 09:42", name: "Petra Svobodová", email: "petra.svobodova@email.cz", dog: "Moonlight River", showClass: "Třída otevřená", docs: "Ověřeno", amount: 1100, payment: "paid" },
@@ -1232,7 +1245,7 @@ function showPortal(role) {
   if (isAdmin) {
     switchAdminPanel("admin-overview");
   } else {
-    switchMemberPanel("dogs");
+    switchMemberPanel("member-events");
   }
 }
 
@@ -1457,7 +1470,7 @@ document.addEventListener("click", (event) => {
       toggleMemberAccountMenu();
     } else if (accountButton.dataset.openAccount === "login" && memberSessionActive) {
       showPortal("member");
-      if (accountButton.matches("#mobile-member-access")) switchMemberPanel("dogs");
+      if (accountButton.matches("#mobile-member-access")) switchMemberPanel("member-events");
     } else if (accountButton.dataset.openAccount === "register" && !document.body.classList.contains("portal-active")) {
       setHeroRegistration(true);
     } else {
@@ -1476,7 +1489,7 @@ document.addEventListener("click", (event) => {
   if (event.target.closest("[data-open-member-zone]")) {
     closeMemberAccountMenu();
     showPortal("member");
-    switchMemberPanel("dogs");
+    switchMemberPanel("member-events");
   }
 
   const accountModeToggle = event.target.closest("#account-mode-toggle");
