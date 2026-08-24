@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#070707;color:#ffffff;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#D4AF37;text-decoration:none}
+a:hover{color:#F2C94C}
+*{box-sizing:border-box}
+input,select,textarea,button{font-family:'Manrope',sans-serif}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #F2C94C;outline-offset:2px;border-radius:4px}
+select option{background:#111111;color:#fff}
+input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.8) sepia(0.6) saturate(3)}
+@keyframes fadeA{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeB{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glowPulse{0%,100%{opacity:.35}50%{opacity:.7}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#070707">
+
+<!-- ===================== HLAVIČKA ===================== -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:90;transition:background .35s ease, box-shadow .35s ease;background:{{ headerBg }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};box-shadow:{{ headerShadow }}">
+  <div style="max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px">
+    <a href="#" onClick="{{ goTop }}" style="display:flex;align-items:center;gap:12px;color:#fff" aria-label="Česká kynologická – domů">
+      <img src="uploads/ceskakynologicka/Zadani/logo-pruhledne.png" alt="" style="width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(212,175,55,.35))">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:.04em;white-space:nowrap">Česká kynologická</span>
+    </a>
+    <nav aria-label="Hlavní navigace" style="display:flex;gap:26px;margin-left:auto;align-items:center">
+      <a href="#vystavy" onClick="{{ navVystavy }}" style="color:#c9c9c2;font-size:14px;font-weight:500" style-hover="color:#F2C94C">Výstavy</a>
+      <a href="#kalendar" onClick="{{ navKalendar }}" style="color:#c9c9c2;font-size:14px;font-weight:500" style-hover="color:#F2C94C">Kalendář</a>
+      <a href="#moji-psi" onClick="{{ navMojiPsi }}" style="color:#c9c9c2;font-size:14px;font-weight:500" style-hover="color:#F2C94C">Moji psi</a>
+      <a href="#o-projektu" onClick="{{ navOProjektu }}" style="color:#c9c9c2;font-size:14px;font-weight:500" style-hover="color:#F2C94C">O projektu</a>
+    </nav>
+    <button onClick="{{ openAuth }}" aria-label="Profil uživatele — přihlášení" style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:rgba(212,175,55,.06);color:#D4AF37;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:#F2C94C;color:#F2C94C">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+    </button>
+    <button onClick="{{ heroToEntry }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:999px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;white-space:nowrap" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 4px 24px rgba(212,175,55,.35)">Přihlásit psa</button>
+  </div>
+</header>
+
+<!-- ===================== HOME ===================== -->
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<main>
+  <!-- HERO -->
+  <section style="padding:104px 28px 40px;max-width:1320px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;border-radius:30px;overflow:hidden;border:1px solid rgba(212,175,55,.28);box-shadow:0 40px 90px rgba(0,0,0,.6), 0 0 60px rgba(212,175,55,.06);background:#111111">
+      <!-- Video -->
+      <div style="position:relative;flex:1 1 560px;min-width:min(560px,100%);min-height:460px">
+        <video ref="{{ videoRef }}" src="uploads/ceskakynologicka/Zadani/hero.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(7,7,7,.78) 0%, rgba(7,7,7,.25) 42%, rgba(7,7,7,.15) 100%)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:36px 40px;display:flex;flex-direction:column;gap:14px">
+          <span style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.55);color:#F2C94C;background:rgba(7,7,7,.5);backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"></circle></svg>
+            Oficiální svět české kynologie
+          </span>
+          <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.2vw,58px);font-weight:600;line-height:1.05;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.6)">Výstavy, které spojují šampiony</h1>
+          <p style="margin:0;max-width:46ch;color:#d8d8d0;font-size:15.5px;line-height:1.6;text-wrap:pretty">Kompletní přehled výstav ČMKU na jednom místě. Profily vašich psů, hlídání uzávěrek a online přihláška během pár minut.</p>
+        </div>
+        <button onClick="{{ toggleVideo }}" aria-label="{{ videoBtnLabel }}" style="position:absolute;right:18px;bottom:18px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(7,7,7,.55);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s" style-hover="border-color:#F2C94C;color:#F2C94C">
+          <sc-if value="{{ videoPaused }}" hint-placeholder-val="{{ false }}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+          </sc-if>
+          <sc-if value="{{ videoPlaying }}" hint-placeholder-val="{{ true }}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"></rect><rect x="14" y="4" width="5" height="16" rx="1"></rect></svg>
+          </sc-if>
+        </button>
+      </div>
+      <!-- Registrační panel -->
+      <div style="flex:1 1 380px;min-width:min(380px,100%);background:#111111;border-left:1px solid rgba(212,175,55,.45);padding:36px 36px 30px;display:flex;flex-direction:column;gap:16px">
+        <div>
+          <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#fff">Přihlásit psa na výstavu</h2>
+          <p style="margin:0;color:#9a9a92;font-size:13.5px;line-height:1.55">Vyberte výstavu a psa z profilu. Přihlášku dokončíte ve čtyřech krocích.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="hero-show" style="font-size:12.5px;font-weight:600;color:#c9c9c2;letter-spacing:.02em">Výstava</label>
+          <select id="hero-show" value="{{ heroShow }}" onChange="{{ setHeroShow }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:11px 12px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+            <sc-for list="{{ openShowOptions }}" as="o" hint-placeholder-count="3">
+              <option value="{{ o.id }}">{{ o.label }}</option>
+            </sc-for>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="hero-dog" style="font-size:12.5px;font-weight:600;color:#c9c9c2;letter-spacing:.02em">Pes z profilu</label>
+          <select id="hero-dog" value="{{ heroDog }}" onChange="{{ setHeroDog }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:11px 12px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+            <sc-for list="{{ dogOptions }}" as="o" hint-placeholder-count="2">
+              <option value="{{ o.id }}">{{ o.label }}</option>
+            </sc-for>
+          </select>
+          <a href="#moji-psi" onClick="{{ navMojiPsi }}" style="font-size:12.5px;font-weight:600">+ Přidat nového psa</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="hero-class" style="font-size:12.5px;font-weight:600;color:#c9c9c2;letter-spacing:.02em">Soutěžní třída</label>
+          <select id="hero-class" value="{{ heroClass }}" onChange="{{ setHeroClass }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:11px 12px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+            <sc-for list="{{ classOptions }}" as="o" hint-placeholder-count="3">
+              <option value="{{ o.id }}">{{ o.label }}</option>
+            </sc-for>
+          </select>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(212,175,55,.2);border-bottom:1px solid rgba(212,175,55,.2);padding:12px 2px;font-size:13px">
+          <div style="color:#9a9a92">Nejbližší uzávěrka<br><strong style="color:#fff;font-size:14px">{{ heroDeadline }}</strong></div>
+          <div style="color:#9a9a92;text-align:right">Orientační cena<br><strong style="color:#F2C94C;font-size:14px">{{ heroPrice }}</strong></div>
+        </div>
+        <button onClick="{{ heroToEntry }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 6px 30px rgba(212,175,55,.4);transform:translateY(-1px)">
+          Pokračovat k přihlášce
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </button>
+        <a href="#" onClick="{{ openAuth }}" style="text-align:center;font-size:13px;color:#9a9a92" style-hover="color:#F2C94C">Nejdříve se přihlásit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KALENDÁŘ VÝSTAV -->
+  <section id="kalendar" data-reveal="1" style="max-width:1320px;margin:0 auto;padding:64px 28px 8px">
+    <div style="text-align:center;max-width:640px;margin:0 auto 30px">
+      <h2 style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.4vw,46px);font-weight:600">Kalendář výstav</h2>
+      <p style="margin:0;color:#9a9a92;font-size:15px">Najděte nejbližší výstavu podle data, místa nebo typu.</p>
+    </div>
+    <!-- Rotující datumy -->
+    <div ref="{{ calWrapRef }}" onMouseEnter="{{ calHoverOn }}" onMouseLeave="{{ calHoverOff }}" onWheel="{{ calWheel }}" onPointerDown="{{ calDragStart }}" onPointerMove="{{ calDragMove }}" onPointerUp="{{ calDragEnd }}" onPointerCancel="{{ calDragEnd }}" role="listbox" aria-label="Výběr data" tabIndex="0" onKeyDown="{{ calKey }}" style="position:relative;height:190px;perspective:1000px;touch-action:pan-y;cursor:grab;user-select:none;overflow:hidden">
+      <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;height:160px;border-radius:24px;background:radial-gradient(ellipse at center, rgba(212,175,55,.14), transparent 70%);animation:glowPulse 4s ease-in-out infinite"></div>
+      <sc-for list="{{ calItems }}" as="d" hint-placeholder-count="5">
+        <button onClick="{{ d.pick }}" aria-label="{{ d.aria }}" style="position:absolute;left:50%;top:50%;width:118px;padding:14px 8px 12px;border-radius:20px;display:{{ d.display }};flex-direction:column;align-items:center;gap:2px;cursor:pointer;transition:transform .45s cubic-bezier(.22,.8,.3,1), opacity .45s, border-color .45s, background .45s;transform:{{ d.transform }};opacity:{{ d.opacity }};z-index:{{ d.z }};background:{{ d.bg }};border:{{ d.border }};color:{{ d.color }}">
+          <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.8">{{ d.den }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:{{ d.numSize }};font-weight:600;line-height:1">{{ d.cislo }}</span>
+          <span style="font-size:11.5px;opacity:.8">{{ d.mesic }}</span>
+          <span style="margin-top:5px;font-size:10.5px;font-weight:700;border-radius:999px;padding:2px 9px;background:{{ d.badgeBg }};color:{{ d.badgeColor }}">{{ d.pocet }}</span>
+        </button>
+      </sc-for>
+      <button onClick="{{ calPrev }}" aria-label="Předchozí datum" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);z-index:30;width:38px;height:38px;border-radius:50%;border:1px solid rgba(212,175,55,.35);background:rgba(17,17,17,.85);color:#D4AF37;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="color:#F2C94C;border-color:#F2C94C">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+      </button>
+      <button onClick="{{ calNext }}" aria-label="Další datum" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);z-index:30;width:38px;height:38px;border-radius:50%;border:1px solid rgba(212,175,55,.35);background:rgba(17,17,17,.85);color:#D4AF37;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="color:#F2C94C;border-color:#F2C94C">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+      </button>
+    </div>
+    <!-- Filtry -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:22px 0 10px">
+      <sc-for list="{{ typeFilters }}" as="f" hint-placeholder-count="6">
+        <button onClick="{{ f.pick }}" aria-pressed="{{ f.active }}" style="border-radius:999px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;background:{{ f.bg }};color:{{ f.color }};border:{{ f.border }}" style-hover="border-color:#F2C94C;color:#F2C94C">{{ f.label }}</button>
+      </sc-for>
+      <span style="width:1px;height:26px;background:rgba(212,175,55,.25)"></span>
+      <input aria-label="Město" placeholder="Město…" value="{{ filterMesto }}" onChange="{{ setFilterMesto }}" style="background:#111111;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;padding:9px 16px;font-size:13px;width:140px" style-focus="border-color:#D4AF37">
+      <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;color:#9a9a92">Od
+        <input type="date" aria-label="Období od" value="{{ filterOd }}" onChange="{{ setFilterOd }}" style="background:#111111;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;padding:8px 12px;font-size:12.5px;color-scheme:dark" style-focus="border-color:#D4AF37">
+      </label>
+      <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;color:#9a9a92">Do
+        <input type="date" aria-label="Období do" value="{{ filterDo }}" onChange="{{ setFilterDo }}" style="background:#111111;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;padding:8px 12px;font-size:12.5px;color-scheme:dark" style-focus="border-color:#D4AF37">
+      </label>
+    </div>
+  </section>
+
+  <!-- SEZNAM VÝSTAV -->
+  <section id="vystavy" style="max-width:1320px;margin:0 auto;padding:26px 28px 60px">
+    <p style="margin:0 0 18px;color:#9a9a92;font-size:13.5px">{{ listSummary }}</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px;animation:{{ listAnim }}">
+      <sc-for list="{{ visibleShows }}" as="s" hint-placeholder-count="4">
+        <article style="background:#111111;border:1px solid rgba(212,175,55,.18);border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:14px;transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px);border-color:rgba(242,201,76,.65);box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 30px rgba(212,175,55,.12)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#F2C94C;letter-spacing:.04em">{{ s.datumText }}</div>
+              <div style="font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#9a9a92;margin-top:3px">{{ s.typ }}</div>
+            </div>
+            <span style="font-size:11.5px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap;background:{{ s.stavBg }};color:{{ s.stavColor }};border:1px solid {{ s.stavBorder }}">{{ s.stavLabel }}</span>
+          </div>
+          <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;line-height:1.15;color:#fff">{{ s.nazev }}</h3>
+          <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#b9b9b1">
+            <span style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>{{ s.mistoText }}</span>
+            <span style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>{{ s.uzaverkaText }}</span>
+            <span style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M15 2v5h5"></path></svg>{{ s.propoziceText }}</span>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:10px;align-items:center;padding-top:6px">
+            <button onClick="{{ s.openDetail }}" style="flex:1;background:transparent;border:1px solid rgba(255,255,255,.2);color:#e8e8e2;border-radius:12px;padding:11px;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .2s" style-hover="border-color:#F2C94C;color:#F2C94C">Detail výstavy</button>
+            <sc-if value="{{ s.lzeApply }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ s.openEntry }}" style="flex:1;background:linear-gradient(135deg,#D4AF37,#c19d2e);border:none;color:#0a0a0a;border-radius:12px;padding:12px;font-size:13.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .25s" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 4px 20px rgba(212,175,55,.35);gap:11px">Přihlásit psa
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <sc-if value="{{ noShows }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:50px 20px;color:#9a9a92;border:1px dashed rgba(212,175,55,.3);border-radius:24px">Zvoleným filtrům neodpovídá žádná výstava. <a href="#kalendar" onClick="{{ resetFilters }}">Zrušit filtry</a></div>
+    </sc-if>
+  </section>
+
+  <!-- JAK PŘIHLÁŠENÍ FUNGUJE -->
+  <section id="o-projektu" data-reveal="1" style="background:#111111;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15)">
+    <div style="max-width:1320px;margin:0 auto;padding:72px 28px">
+      <h2 style="margin:0 0 40px;font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3vw,42px);font-weight:600;text-align:center">Jak přihlášení funguje</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px">
+        <sc-for list="{{ howSteps }}" as="h" hint-placeholder-count="4">
+          <div style="background:#070707;border:1px solid rgba(212,175,55,.18);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#D4AF37;line-height:1">{{ h.num }}</span>
+            <strong style="font-size:16px">{{ h.title }}</strong>
+            <p style="margin:0;color:#9a9a92;font-size:13.5px;line-height:1.6">{{ h.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOJI PSI + VÝHODY -->
+  <section id="moji-psi" data-reveal="1" style="max-width:1320px;margin:0 auto;padding:72px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px;align-items:start">
+    <div>
+      <h2 style="margin:0 0 14px;font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.8vw,40px);font-weight:600">Váš profil, vaše smečka</h2>
+      <p style="margin:0 0 24px;color:#9a9a92;font-size:14.5px;line-height:1.65;max-width:48ch">Údaje psa vyplníte jednou podle průkazu původu. Každá další přihláška je pak otázkou tří kliknutí.</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="3">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <span style="flex:none;width:34px;height:34px;border-radius:10px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.35);color:#F2C94C;display:flex;align-items:center;justify-content:center">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <div><strong style="font-size:14.5px">{{ b.title }}</strong><p style="margin:3px 0 0;color:#9a9a92;font-size:13px;line-height:1.55">{{ b.text }}</p></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="background:#111111;border:1px solid rgba(212,175,55,.22);border-radius:28px;padding:28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600">Moji psi</h3>
+        <a href="#" onClick="{{ noop }}" style="font-size:13px;font-weight:600">+ Přidat psa</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ myDogs }}" as="d" hint-placeholder-count="2">
+          <div style="display:flex;gap:14px;align-items:center;background:#0b0b0b;border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:14px 16px;transition:border-color .2s" style-hover="border-color:rgba(212,175,55,.5)">
+            <span style="flex:none;width:44px;height:44px;border-radius:50%;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.4);color:#D4AF37;display:flex;align-items:center;justify-content:center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"></path><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"></path></svg>
+            </span>
+            <div style="flex:1;min-width:0">
+              <strong style="font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ d.jmeno }}</strong>
+              <span style="font-size:12.5px;color:#9a9a92">{{ d.podtitul }}</span>
+            </div>
+            <span style="font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;background:rgba(107,167,90,.14);color:#9fd08c;border:1px solid rgba(107,167,90,.35);white-space:nowrap">PP ověřen</span>
+          </div>
+        </sc-for>
+        <div style="display:flex;gap:14px;align-items:center;border:1px dashed rgba(212,175,55,.35);border-radius:18px;padding:14px 16px;color:#9a9a92;font-size:13px">
+          Nahrajte oboustranný průkaz původu a my ohlídáme dokumenty pro pracovní třídu i šampionáty.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section data-reveal="1" style="max-width:1320px;margin:0 auto;padding:10px 28px 84px">
+    <div style="position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(212,175,55,.35);text-align:center;padding:74px 30px;background:radial-gradient(ellipse at 50% 120%, rgba(212,175,55,.22), rgba(17,17,17,1) 60%)">
+      <h2 style="margin:0 0 12px;font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,50px);font-weight:600">Připraveni vstoupit do kruhu?</h2>
+      <p style="margin:0 auto 28px;max-width:52ch;color:#b9b9b1;font-size:15px;line-height:1.6">Založte si profil, přidejte psy a mějte každou uzávěrku pod kontrolou.</p>
+      <button onClick="{{ heroToEntry }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:999px;padding:16px 38px;font-size:15px;font-weight:800;cursor:pointer;transition:all .25s" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 8px 40px rgba(212,175,55,.45);transform:translateY(-2px)">Přihlásit psa na výstavu</button>
+    </div>
+  </section>
+</main>
+</sc-if>
+
+<!-- ===================== DETAIL VÝSTAVY ===================== -->
+<sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+<main style="max-width:1100px;margin:0 auto;padding:104px 28px 80px">
+  <a href="#vystavy" onClick="{{ backHome }}" style="display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;margin-bottom:22px">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zpět na přehled výstav
+  </a>
+  <div style="background:#111111;border:1px solid rgba(212,175,55,.28);border-radius:30px;padding:44px;margin-bottom:24px">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start">
+      <div style="max-width:640px">
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+          <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F2C94C;border:1px solid rgba(212,175,55,.5);border-radius:999px;padding:5px 13px">{{ dTyp }}</span>
+          <span style="font-size:11.5px;font-weight:700;border-radius:999px;padding:5px 13px;background:{{ dStavBg }};color:{{ dStavColor }};border:1px solid {{ dStavBorder }}">{{ dStavLabel }}</span>
+        </div>
+        <h1 style="margin:0 0 14px;font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,50px);font-weight:600;line-height:1.08">{{ dNazev }}</h1>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;color:#b9b9b1;font-size:14px">
+          <span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>{{ dDatum }}</span>
+          <span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>{{ dMisto }}</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:220px">
+        <sc-if value="{{ dLzeApply }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ dApply }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:15px 26px;font-size:15px;font-weight:800;cursor:pointer;transition:all .25s" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 6px 30px rgba(212,175,55,.4)">Přihlásit psa</button>
+        </sc-if>
+        <sc-if value="{{ dPropozice }}" hint-placeholder-val="{{ true }}">
+          <a href="#" onClick="{{ noop }}" style="text-align:center;border:1px solid rgba(212,175,55,.4);border-radius:14px;padding:13px 26px;font-size:14px;font-weight:600" style-hover="border-color:#F2C94C">Stáhnout propozice (PDF)</a>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ dZruseno }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:22px;border:1px solid rgba(224,90,90,.5);background:rgba(224,90,90,.09);color:#f0a3a3;border-radius:16px;padding:14px 18px;font-size:14px;font-weight:600">Výstava byla zrušena. {{ dDuvod }}</div>
+    </sc-if>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+    <div style="background:#111111;border:1px solid rgba(212,175,55,.18);border-radius:24px;padding:28px">
+      <h2 style="margin:0 0 16px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F2C94C">Pořadatel</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#d8d8d0">
+        <strong style="color:#fff">{{ dOrganizator }}</strong>
+        <span style="display:flex;align-items:center;gap:9px;color:#b9b9b1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>{{ dEmail }}</span>
+        <span style="display:flex;align-items:center;gap:9px;color:#b9b9b1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>{{ dTelefon }}</span>
+      </div>
+      <h2 style="margin:24px 0 12px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F2C94C">Uzávěrky přihlášek</h2>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ dUzaverky }}" as="u" hint-placeholder-count="2">
+          <div style="display:flex;justify-content:space-between;gap-10px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:8px"><span style="color:#9a9a92">{{ u.label }}</span><strong style="color:{{ u.color }}">{{ u.datum }}</strong></div>
+        </sc-for>
+      </div>
+      <h2 style="margin:24px 0 12px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F2C94C">Rozhodčí</h2>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#b9b9b1">
+        <sc-for list="{{ dRozhodci }}" as="r" hint-placeholder-count="3">
+          <span>{{ r.jmeno }} <em style="color:#9a9a92;font-style:normal">— {{ r.role }}</em></span>
+        </sc-for>
+      </div>
+    </div>
+    <div style="background:#111111;border:1px solid rgba(212,175,55,.18);border-radius:24px;padding:28px">
+      <h2 style="margin:0 0 12px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F2C94C">Plemena a rozdělení dnů</h2>
+      <p style="margin:0 0 14px;font-size:14px;color:#d8d8d0;line-height:1.6">{{ dSkupiny }}</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ dRozpis }}" as="r" hint-placeholder-count="2">
+          <div style="background:#0b0b0b;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 16px;font-size:13.5px"><strong style="color:#F2C94C">{{ r.den }}</strong><span style="color:#b9b9b1"> — {{ r.text }}</span></div>
+        </sc-for>
+      </div>
+      <h2 style="margin:24px 0 12px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F2C94C">Třídy a výstavní poplatky</h2>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <div style="display:grid;grid-template-columns:1fr auto auto;gap:12px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;padding:0 2px 8px;border-bottom:1px solid rgba(212,175,55,.25)"><span>Třída</span><span>1. uzávěrka</span><span>2. uzávěrka</span></div>
+        <sc-for list="{{ dTridy }}" as="t" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:1fr auto auto;gap:12px;font-size:13.5px;padding:9px 2px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#d8d8d0">{{ t.label }}</span><span style="color:#b9b9b1;text-align:right">{{ t.c1 }}</span><strong style="color:#F2C94C;text-align:right">{{ t.c2 }}</strong></div>
+        </sc-for>
+      </div>
+      <p style="margin:14px 0 0;font-size:12px;color:#9a9a92;line-height:1.5">Ceny jsou orientační, za prvního psa. Rozhodná je vždy cena v propozicích a datum přijetí platby.</p>
+    </div>
+  </div>
+</main>
+</sc-if>
+
+<!-- ===================== PŘIHLÁŠKA ===================== -->
+<sc-if value="{{ isEntry }}" hint-placeholder-val="{{ false }}">
+<main style="max-width:880px;margin:0 auto;padding:104px 28px 80px">
+  <a href="#" onClick="{{ backHome }}" style="display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;margin-bottom:22px">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zpět bez odeslání
+  </a>
+  <sc-if value="{{ entrySent }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#111111;border:1px solid rgba(212,175,55,.35);border-radius:30px;padding:60px 40px;text-align:center">
+      <span style="display:inline-flex;width:74px;height:74px;border-radius:50%;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.5);color:#F2C94C;align-items:center;justify-content:center;margin-bottom:22px">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+      </span>
+      <h1 style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600">Přihláška odeslána</h1>
+      <p style="margin:0 auto 8px;max-width:52ch;color:#b9b9b1;font-size:15px;line-height:1.65">Číslo přihlášky <strong style="color:#F2C94C">CK-2026-01847</strong>. Potvrzení a platební instrukce jsme odeslali na {{ sumEmail }}. Stav přihlášky sledujte v sekci Moje přihlášky.</p>
+      <p style="margin:0 auto 30px;max-width:52ch;color:#9a9a92;font-size:13px">Toto je designový prototyp — žádná data nebyla skutečně odeslána.</p>
+      <button onClick="{{ backHome }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:999px;padding:14px 32px;font-size:14.5px;font-weight:800;cursor:pointer" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37)">Zpět na přehled výstav</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{ entryActive }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-bottom:26px">
+      <p style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9a9a92">Přihláška na výstavu</p>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.2vw,42px);font-weight:600">{{ entryShowName }}</h1>
+      <p style="margin:8px 0 0;color:#9a9a92;font-size:13.5px">{{ entryShowMeta }}</p>
+    </div>
+    <!-- Krokový ukazatel -->
+    <div style="position:relative;display:flex;justify-content:space-between;margin:0 6px 34px">
+      <div style="position:absolute;left:18px;right:18px;top:17px;height:2px;background:rgba(255,255,255,.12)"></div>
+      <div style="position:absolute;left:18px;top:17px;height:2px;background:linear-gradient(90deg,#D4AF37,#F2C94C);transition:width .5s cubic-bezier(.22,.8,.3,1);width:{{ stepperFill }}"></div>
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;width:80px">
+          <span style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;transition:all .35s;background:{{ st.bg }};color:{{ st.color }};border:{{ st.border }};box-shadow:{{ st.glow }}">{{ st.mark }}</span>
+          <span style="font-size:11.5px;font-weight:600;color:{{ st.labelColor }};text-align:center">{{ st.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:#111111;border:1px solid rgba(212,175,55,.22);border-radius:28px;padding:38px;animation:{{ stepAnim }}">
+      <!-- KROK 1 -->
+      <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600">Přihlašující</h2>
+        <p style="margin:0 0 24px;color:#9a9a92;font-size:13.5px">Údaje přebíráme z vašeho profilu. Musí odpovídat vlastníkovi v průkazu původu.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+          <sc-for list="{{ step1Fields }}" as="f" hint-placeholder-count="6">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="{{ f.id }}" style="font-size:12.5px;font-weight:600;color:#c9c9c2">{{ f.label }}</label>
+              <input id="{{ f.id }}" type="{{ f.type }}" value="{{ f.value }}" onChange="{{ f.onChange }}" style="background:#0b0b0b;border:1px solid {{ f.borderColor }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+              <sc-if value="{{ f.error }}" hint-placeholder-val="{{ false }}">
+                <span role="alert" style="font-size:12px;color:#e58a8a">{{ f.error }}</span>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <!-- KROK 2 -->
+      <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600">Přihlášený pes</h2>
+        <p style="margin:0 0 24px;color:#9a9a92;font-size:13.5px">Vyberte psa z profilu, nebo vyplňte údaje nového psa podle průkazu původu.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+          <div style="display:flex;flex-direction:column;gap:6px;grid-column:1/-1">
+            <label for="e-dog" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Pes z profilu</label>
+            <select id="e-dog" value="{{ eDog }}" onChange="{{ setEDog }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:12px 13px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+              <sc-for list="{{ dogOptionsEntry }}" as="o" hint-placeholder-count="3">
+                <option value="{{ o.id }}">{{ o.label }}</option>
+              </sc-for>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="e-breed" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Plemeno</label>
+            <select id="e-breed" value="{{ eBreed }}" onChange="{{ setEBreed }}" style="background:#0b0b0b;border:1px solid {{ eBreedBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+              <option value="">{{ breedPlaceholder }}</option>
+              <sc-for list="{{ breedOptions }}" as="o" hint-placeholder-count="5">
+                <option value="{{ o.id }}">{{ o.label }}</option>
+              </sc-for>
+            </select>
+            <sc-if value="{{ eBreedError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ eBreedError }}</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="e-reg" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Zápisové číslo</label>
+            <input id="e-reg" value="{{ eReg }}" onChange="{{ setEReg }}" placeholder="CMKU/…" style="background:#0b0b0b;border:1px solid {{ eRegBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+            <sc-if value="{{ eRegError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ eRegError }}</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="e-sex" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Pohlaví</label>
+            <select id="e-sex" value="{{ eSex }}" onChange="{{ setESex }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:12px 13px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+              <option value="pes">Pes</option>
+              <option value="fena">Fena</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="e-birth" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Datum narození</label>
+            <input id="e-birth" type="date" value="{{ eBirth }}" onChange="{{ setEBirth }}" style="background:#0b0b0b;border:1px solid {{ eBirthBorder }};border-radius:12px;color:#fff;padding:11px 13px;font-size:14px;color-scheme:dark" style-focus="border-color:#D4AF37">
+            <sc-if value="{{ eBirthError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ eBirthError }}</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="e-class" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Soutěžní třída</label>
+            <select id="e-class" value="{{ eClass }}" onChange="{{ setEClass }}" style="background:#0b0b0b;border:1px solid {{ eClassBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px;cursor:pointer" style-focus="border-color:#D4AF37">
+              <option value="">Vyberte třídu…</option>
+              <sc-for list="{{ classOptionsEntry }}" as="o" hint-placeholder-count="5">
+                <option value="{{ o.id }}">{{ o.label }}</option>
+              </sc-for>
+            </select>
+            <sc-if value="{{ eClassError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ eClassError }}</span></sc-if>
+          </div>
+          <div style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px;align-items:center;background:#0b0b0b;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 18px">
+            <div style="flex:1;min-width:220px">
+              <strong style="font-size:14px;display:block">Průkaz původu (obě strany)</strong>
+              <span style="font-size:12.5px;color:{{ ePpColor }}">{{ ePpText }}</span>
+            </div>
+            <sc-if value="{{ ePpMissing }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ mockUpload }}" style="display:flex;align-items:center;gap:9px;background:transparent;border:1px dashed rgba(212,175,55,.55);color:#F2C94C;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer" style-hover="border-color:#F2C94C;background:rgba(212,175,55,.06)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+                Nahrát dokument
+              </button>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
+      <!-- KROK 3 -->
+      <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600">Doplňkové soutěže</h2>
+        <p style="margin:0 0 24px;color:#9a9a92;font-size:13.5px">Tento krok je volitelný — můžete pokračovat bez výběru.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <sc-for list="{{ competitions }}" as="c" hint-placeholder-count="3">
+            <label style="display:flex;gap:16px;align-items:flex-start;background:#0b0b0b;border:1px solid {{ c.border }};border-radius:18px;padding:18px 20px;cursor:pointer;transition:border-color .2s" style-hover="border-color:rgba(242,201,76,.6)">
+              <input type="checkbox" checked="{{ c.checked }}" onChange="{{ c.toggle }}" style="margin-top:3px;width:17px;height:17px;accent-color:#D4AF37;cursor:pointer">
+              <span style="flex:1">
+                <strong style="font-size:14.5px;display:block">{{ c.label }}</strong>
+                <span style="font-size:13px;color:#9a9a92;line-height:1.5">{{ c.desc }}</span>
+              </span>
+              <strong style="color:#F2C94C;font-size:14px;white-space:nowrap">{{ c.cena }}</strong>
+            </label>
+          </sc-for>
+        </div>
+      </sc-if>
+      <!-- KROK 4 -->
+      <sc-if value="{{ isStep4 }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600">Shrnutí přihlášky</h2>
+        <p style="margin:0 0 24px;color:#9a9a92;font-size:13.5px">Zkontrolujte údaje. Odesláním vzniká závazná přihláška dle propozic.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:22px">
+          <sc-for list="{{ summaryRows }}" as="r" hint-placeholder-count="5">
+            <div style="display:flex;justify-content:space-between;gap:18px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:10px">
+              <span style="color:#9a9a92;flex:none">{{ r.k }}</span><span style="text-align:right;color:#e8e8e2">{{ r.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="background:#0b0b0b;border:1px solid rgba(212,175,55,.3);border-radius:18px;padding:20px 22px;margin-bottom:22px">
+          <sc-for list="{{ priceRows }}" as="p" hint-placeholder-count="2">
+            <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#b9b9b1;padding:4px 0"><span>{{ p.k }}</span><span>{{ p.v }}</span></div>
+          </sc-for>
+          <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:800;color:#F2C94C;border-top:1px solid rgba(212,175,55,.3);margin-top:10px;padding-top:12px"><span>Cena celkem</span><span>{{ priceTotal }}</span></div>
+        </div>
+        <label style="display:flex;gap:13px;align-items:flex-start;font-size:13.5px;line-height:1.55;color:#d8d8d0;cursor:pointer;margin-bottom:6px">
+          <input type="checkbox" checked="{{ agree }}" onChange="{{ toggleAgree }}" style="margin-top:2px;width:17px;height:17px;accent-color:#D4AF37;cursor:pointer;flex:none">
+          <span>Prohlašuji, že jsem se seznámil(a) s propozicemi výstavy a s <a href="#" onClick="{{ noop }}">Výstavním řádem ČMKU</a> a budu je dodržovat.</span>
+        </label>
+        <sc-if value="{{ agreeError }}" hint-placeholder-val="{{ false }}">
+          <span role="alert" style="font-size:12.5px;color:#e58a8a;display:block;margin-left:30px">{{ agreeError }}</span>
+        </sc-if>
+      </sc-if>
+
+      <!-- Navigace kroků -->
+      <div style="display:flex;justify-content:space-between;gap:14px;margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08)">
+        <button onClick="{{ stepBack }}" disabled="{{ backDisabled }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#c9c9c2;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;opacity:{{ backOpacity }}" style-hover="border-color:#F2C94C;color:#F2C94C">Zpět</button>
+        <sc-if value="{{ isNotLast }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ stepNext }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:12px;padding:13px 30px;font-size:14px;font-weight:800;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:9px" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 4px 20px rgba(212,175,55,.35)">Pokračovat
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+        </sc-if>
+        <sc-if value="{{ isLast }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ submitEntry }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:12px;padding:13px 34px;font-size:14.5px;font-weight:800;cursor:pointer;transition:all .25s" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 6px 26px rgba(212,175,55,.45)">Odeslat přihlášku</button>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+</main>
+</sc-if>
+
+<!-- ===================== PŘIHLÁŠENÍ / REGISTRACE ===================== -->
+<sc-if value="{{ isAuth }}" hint-placeholder-val="{{ false }}">
+<main style="max-width:1100px;margin:0 auto;padding:104px 28px 80px">
+  <a href="#" onClick="{{ backHome }}" style="display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;margin-bottom:22px">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zpět na hlavní stránku
+  </a>
+  <sc-if value="{{ authWide }}" hint-placeholder-val="{{ true }}">
+  <div style="position:relative;height:600px;border-radius:30px;overflow:hidden;border:1px solid rgba(212,175,55,.3);background:#111111;box-shadow:0 40px 90px rgba(0,0,0,.6), 0 0 60px rgba(212,175,55,.06)">
+    <!-- Login form (levá polovina) -->
+    <div aria-hidden="{{ isRegister }}" style="position:absolute;top:0;left:0;width:50%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:52px 58px;transition:opacity .6s ease, transform .7s cubic-bezier(.65,0,.35,1);opacity:{{ loginOpacity }};transform:translateX({{ loginShift }});pointer-events:{{ loginEvents }};z-index:2">
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600">Přihlášení</h1>
+      <p style="margin:0 0 6px;color:#9a9a92;font-size:13.5px">Vítejte zpět ve světě šampionů.</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="li-email" style="font-size:12.5px;font-weight:600;color:#c9c9c2">E-mail</label>
+        <input id="li-email" type="email" value="{{ liEmail }}" onChange="{{ setLiEmail }}" style="width:100%;background:#0b0b0b;border:1px solid {{ liEmailBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        <sc-if value="{{ liEmailError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ liEmailError }}</span></sc-if>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="li-pass" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Heslo</label>
+        <input id="li-pass" type="password" value="{{ liPass }}" onChange="{{ setLiPass }}" style="width:100%;background:#0b0b0b;border:1px solid {{ liPassBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        <sc-if value="{{ liPassError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ liPassError }}</span></sc-if>
+      </div>
+      <a href="#" onClick="{{ noop }}" style="font-size:12.5px;align-self:flex-start">Zapomenuté heslo?</a>
+      <button onClick="{{ submitLogin }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:14px;font-size:14.5px;font-weight:800;cursor:pointer;transition:all .25s;margin-top:4px" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 6px 30px rgba(212,175,55,.4)">Přihlásit se</button>
+    </div>
+    <!-- Register form (pravá polovina) -->
+    <div aria-hidden="{{ isLogin }}" style="position:absolute;top:0;right:0;width:50%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:48px 58px;transition:opacity .6s ease, transform .7s cubic-bezier(.65,0,.35,1);opacity:{{ regOpacity }};transform:translateX({{ regShift }});pointer-events:{{ regEvents }};z-index:2">
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600">Registrace</h1>
+      <p style="margin:0 0 4px;color:#9a9a92;font-size:13.5px">Založte si profil a přihlašujte psy během pár minut.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+          <label for="rg-jmeno" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Jméno</label>
+          <input id="rg-jmeno" value="{{ rgJmeno }}" onChange="{{ setRgJmeno }}" style="width:100%;background:#0b0b0b;border:1px solid {{ rgJmenoBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+          <label for="rg-prijmeni" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Příjmení</label>
+          <input id="rg-prijmeni" value="{{ rgPrijmeni }}" onChange="{{ setRgPrijmeni }}" style="width:100%;background:#0b0b0b;border:1px solid {{ rgPrijmeniBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+      </div>
+      <sc-if value="{{ rgNameError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ rgNameError }}</span></sc-if>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="rg-email" style="font-size:12.5px;font-weight:600;color:#c9c9c2">E-mail</label>
+        <input id="rg-email" type="email" value="{{ rgEmail }}" onChange="{{ setRgEmail }}" style="width:100%;background:#0b0b0b;border:1px solid {{ rgEmailBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        <sc-if value="{{ rgEmailError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ rgEmailError }}</span></sc-if>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="rg-pass" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Heslo</label>
+        <input id="rg-pass" type="password" value="{{ rgPass }}" onChange="{{ setRgPass }}" style="width:100%;background:#0b0b0b;border:1px solid {{ rgPassBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        <sc-if value="{{ rgPassError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a">{{ rgPassError }}</span></sc-if>
+      </div>
+      <label style="display:flex;gap:11px;align-items:flex-start;font-size:12.5px;line-height:1.5;color:#b9b9b1;cursor:pointer">
+        <input type="checkbox" checked="{{ rgAgree }}" onChange="{{ toggleRgAgree }}" style="margin-top:2px;width:16px;height:16px;accent-color:#D4AF37;cursor:pointer;flex:none">
+        <span>Souhlasím s <a href="#" onClick="{{ noop }}">podmínkami služby</a> a zpracováním osobních údajů.</span>
+      </label>
+      <sc-if value="{{ rgAgreeError }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:12px;color:#e58a8a;margin-left:27px">{{ rgAgreeError }}</span></sc-if>
+      <button onClick="{{ submitRegister }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:14px;font-size:14.5px;font-weight:800;cursor:pointer;transition:all .25s" style-hover="background:linear-gradient(135deg,#F2C94C,#D4AF37);box-shadow:0 6px 30px rgba(212,175,55,.4)">Vytvořit účet</button>
+    </div>
+    <!-- Zlatý přejížděcí panel -->
+    <div style="position:absolute;top:0;left:0;width:50%;height:100%;z-index:5;transition:transform .7s cubic-bezier(.65,0,.35,1);transform:translateX({{ overlayShift }});overflow:hidden">
+      <div style="position:absolute;inset:0;background:linear-gradient(150deg,#2a2108 0%,#0d0a03 55%,#111111 100%)"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%, rgba(212,175,55,.28), transparent 55%)"></div>
+      <div style="position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(to bottom, transparent, rgba(242,201,76,.8), transparent);left:{{ overlayLineLeft }};right:{{ overlayLineRight }}"></div>
+      <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:16px;padding:0 54px">
+        <img src="uploads/ceskakynologicka/Zadani/logo-pruhledne.png" alt="" style="width:74px;height:74px;object-fit:contain;filter:drop-shadow(0 0 14px rgba(212,175,55,.5))">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#F2C94C;text-wrap:balance">{{ overlayTitle }}</h2>
+        <p style="margin:0;color:#d8d8d0;font-size:14px;line-height:1.65;max-width:36ch">{{ overlayText }}</p>
+        <button onClick="{{ toggleAuthMode }}" style="margin-top:8px;background:transparent;border:1px solid rgba(242,201,76,.75);color:#F2C94C;border-radius:999px;padding:13px 34px;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s" style-hover="background:rgba(212,175,55,.12);box-shadow:0 0 26px rgba(212,175,55,.3)">{{ overlayCta }}</button>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+  <sc-if value="{{ authNarrow }}" hint-placeholder-val="{{ false }}">
+  <div style="border-radius:26px;overflow:hidden;border:1px solid rgba(212,175,55,.3);background:#111111">
+    <div style="padding:30px 26px;background:linear-gradient(150deg,#2a2108,#0d0a03);text-align:center;border-bottom:1px solid rgba(212,175,55,.4)">
+      <h1 style="margin:0 0 8px;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#F2C94C">{{ overlayTitle }}</h1>
+      <button onClick="{{ toggleAuthMode }}" style="background:transparent;border:1px solid rgba(242,201,76,.7);color:#F2C94C;border-radius:999px;padding:10px 24px;font-size:13px;font-weight:700;cursor:pointer">{{ overlayCta }}</button>
+    </div>
+    <div style="padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+      <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="mli-email" style="font-size:12.5px;font-weight:600;color:#c9c9c2">E-mail</label>
+          <input id="mli-email" type="email" value="{{ liEmail }}" onChange="{{ setLiEmail }}" style="background:#0b0b0b;border:1px solid {{ liEmailBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="mli-pass" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Heslo</label>
+          <input id="mli-pass" type="password" value="{{ liPass }}" onChange="{{ setLiPass }}" style="background:#0b0b0b;border:1px solid {{ liPassBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <button onClick="{{ submitLogin }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:14px;font-size:14.5px;font-weight:800;cursor:pointer">Přihlásit se</button>
+      </sc-if>
+      <sc-if value="{{ isRegister }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="mrg-jmeno" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Jméno a příjmení</label>
+          <input id="mrg-jmeno" value="{{ rgJmeno }}" onChange="{{ setRgJmeno }}" style="background:#0b0b0b;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="mrg-email" style="font-size:12.5px;font-weight:600;color:#c9c9c2">E-mail</label>
+          <input id="mrg-email" type="email" value="{{ rgEmail }}" onChange="{{ setRgEmail }}" style="background:#0b0b0b;border:1px solid {{ rgEmailBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="mrg-pass" style="font-size:12.5px;font-weight:600;color:#c9c9c2">Heslo</label>
+          <input id="mrg-pass" type="password" value="{{ rgPass }}" onChange="{{ setRgPass }}" style="background:#0b0b0b;border:1px solid {{ rgPassBorder }};border-radius:12px;color:#fff;padding:12px 13px;font-size:14px" style-focus="border-color:#D4AF37">
+        </div>
+        <button onClick="{{ submitRegister }}" style="background:linear-gradient(135deg,#D4AF37,#c19d2e);color:#0a0a0a;border:none;border-radius:14px;padding:14px;font-size:14.5px;font-weight:800;cursor:pointer">Vytvořit účet</button>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+  <sc-if value="{{ authDone }}" hint-placeholder-val="{{ false }}">
+    <div style="margin-top:18px;border:1px solid rgba(140,190,100,.45);background:rgba(120,170,90,.1);color:#a8d494;border-radius:16px;padding:14px 20px;font-size:14px;font-weight:600;text-align:center">{{ authDoneText }} (prototyp — žádná data nebyla odeslána)</div>
+  </sc-if>
+</main>
+</sc-if>
+
+<!-- ===================== PATIČKA ===================== -->
+<footer style="background:#050505;border-top:1px solid rgba(212,175,55,.25)">
+  <div style="max-width:1320px;margin:0 auto;padding:56px 28px 34px;display:flex;flex-wrap:wrap;gap:44px;justify-content:space-between">
+    <div style="max-width:340px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <img src="uploads/ceskakynologicka/Zadani/logo-pruhledne.png" alt="Logo Česká kynologická" style="width:46px;height:46px;object-fit:contain">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600">Česká kynologická</span>
+      </div>
+      <p style="margin:0;color:#9a9a92;font-size:13px;line-height:1.65">Přehled výstav ČMKU a online přihlášky pro vystavovatele. Designový prototyp s ukázkovými daty.</p>
+    </div>
+    <div style="display:flex;gap:64px;flex-wrap:wrap">
+      <div>
+        <strong style="display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#D4AF37;margin-bottom:14px">Navigace</strong>
+        <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px">
+          <a href="#vystavy" onClick="{{ navVystavy }}" style="color:#b9b9b1" style-hover="color:#F2C94C">Výstavy</a>
+          <a href="#kalendar" onClick="{{ navKalendar }}" style="color:#b9b9b1" style-hover="color:#F2C94C">Kalendář</a>
+          <a href="#moji-psi" onClick="{{ navMojiPsi }}" style="color:#b9b9b1" style-hover="color:#F2C94C">Moji psi</a>
+          <a href="#o-projektu" onClick="{{ navOProjektu }}" style="color:#b9b9b1" style-hover="color:#F2C94C">O projektu</a>
+        </div>
+      </div>
+      <div>
+        <strong style="display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#D4AF37;margin-bottom:14px">Kontakt</strong>
+        <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px;color:#b9b9b1">
+          <span>info@ceskakynologicka.cz</span>
+          <span>+420 777 000 111</span>
+          <span>Česká kynologická z.s.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.07)">
+    <div style="max-width:1320px;margin:0 auto;padding:18px 28px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12px;color:#6f6f68">
+      <span>© 2026 Česká kynologická z.s. — prototyp</span>
+      <span>Data výstav jsou ukázková. Plemena dle číselníku ČMKU.</span>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoRotate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Kalendář&quot;,&quot;description&quot;:&quot;Automatické posouvání datumů v kalendáři&quot;},&quot;showCancelled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seznam výstav&quot;,&quot;description&quot;:&quot;Zobrazit zrušené výstavy v seznamu&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const TODAY = new Date(2026, 7, 17);
+    this.TODAY = TODAY;
+    this.CLASSES = [
+      { id: 'stenat', label: 'Třída štěňat (4–6 měsíců)', c1: 600, c2: 700 },
+      { id: 'dorostu', label: 'Třída dorostu (6–9 měsíců)', c1: 600, c2: 700 },
+      { id: 'mladych', label: 'Třída mladých (9–18 měsíců)', c1: 1250, c2: 1450 },
+      { id: 'mezitrida', label: 'Mezitřída (15–24 měsíců)', c1: 1250, c2: 1450 },
+      { id: 'otevrena', label: 'Třída otevřená (od 15 měsíců)', c1: 1250, c2: 1450 },
+      { id: 'pracovni', label: 'Třída pracovní (od 15 měsíců, certifikát)', c1: 1250, c2: 1450 },
+      { id: 'sampionu', label: 'Třída šampionů (od 15 měsíců)', c1: 1250, c2: 1450 },
+      { id: 'vitezu', label: 'Třída vítězů (od 15 měsíců)', c1: 1250, c2: 1450 },
+      { id: 'veteranu', label: 'Třída veteránů (od 8 let)', c1: 700, c2: 800 },
+      { id: 'cestna', label: 'Třída čestná (od 15 měsíců, titul)', c1: 700, c2: 800 }
+    ];
+    this.SHOWS = [
+      { id: 'olomouc', nazev: 'Mezinárodní výstava psů – Olomouc', typ: 'Mezinárodní', od: '2026-09-26', do_: '2026-09-27', mesto: 'Olomouc', misto: 'Výstaviště Flora Olomouc', organizator: 'Kynologická jednota ČR', email: 'vystava@kjcr-olomouc.cz', telefon: '+420 585 726 130', uzaverky: [['2026-08-23', '1. uzávěrka'], ['2026-09-06', '2. uzávěrka']], zruseno: false, propozice: true, mezinarodni: true, skupiny: 'Všechna plemena FCI skupin I–X a plemena FCI zatím neuznaná uznaná ČMKU.', rozpis: [['Sobota 26. 9.', 'skupiny FCI I, II, V, IX + neuznaná'], ['Neděle 27. 9.', 'skupiny FCI III, IV, VI, VII, VIII, X']], rozhodci: [['MVDr. Petr Řehánek (CZ)', 'skupiny I a II'], ['Hans Almgren (SE)', 'skupiny V a IX'], ['Zuzana Brotánková (CZ)', 'skupiny VII a VIII'], ['Laura Cox (GB)', 'skupiny III, VI a X']] },
+      { id: 'triocacib', nazev: 'TrioCACIB Prague Expo Dog', typ: 'Mezinárodní', od: '2026-10-30', do_: '2026-11-01', mesto: 'Praha', misto: 'PVA Expo Praha Letňany', organizator: 'Českomoravská kynologická unie', email: 'triocacib@cmku.cz', telefon: '+420 234 602 274', uzaverky: [['2026-09-07', '1. uzávěrka'], ['2026-10-04', '2. uzávěrka']], zruseno: false, propozice: true, mezinarodni: true, skupiny: 'Všechna plemena FCI skupin I–X, každý den samostatné zadávání CACIB.', rozpis: [['Pátek 30. 10.', 'skupiny FCI I, II, IX'], ['Sobota 31. 10.', 'skupiny FCI III, IV, V, X'], ['Neděle 1. 11.', 'skupiny FCI VI, VII, VIII + neuznaná']], rozhodci: [['José Luis Payá (ES)', 'skupiny II a IX'], ['Ing. Leoš Jančík (CZ)', 'skupiny I a V'], ['Rui Oliveira (PT)', 'skupiny VII a VIII']] },
+      { id: 'retrieveri', nazev: 'Klubová výstava retrieverů', typ: 'Klubová', od: '2026-09-19', do_: '2026-09-19', mesto: 'Konopiště', misto: 'Zámecký park Konopiště', organizator: 'Retriever klub CZ', email: 'vystavy@retriever-klub.cz', telefon: '+420 606 118 220', uzaverky: [['2026-07-24', '1. uzávěrka'], ['2026-08-21', '2. uzávěrka']], zruseno: false, propozice: true, mezinarodni: false, skupiny: 'FCI skupina VIII — retrieveři: Zlatý retriever, Labradorský retriever, Flat Coated Retriever, Chesapeake Bay Retriever, Curly Coated Retriever a Nova Scotia Duck Tolling Retriever.', rozpis: [['Sobota 19. 9.', 'všechna plemena klubu, kruhy podle plemen']], rozhodci: [['Mgr. Božena Ovesná (CZ)', 'zlatý retriever – psi'], ['Jane Hall (GB)', 'zlatý retriever – feny'], ['Petr Studeník (CZ)', 'ostatní plemena']] },
+      { id: 'narodni-plemena', nazev: 'Speciální výstava českých národních plemen', typ: 'Speciální', od: '2026-10-10', do_: '2026-10-10', mesto: 'Praha', misto: 'Kynologický areál Praha-Braník', organizator: 'Klub chovatelů českých plemen', email: 'prihlasky@ceska-plemena.cz', telefon: '+420 731 452 887', uzaverky: [['2026-09-11', '1. uzávěrka'], ['2026-09-27', '2. uzávěrka']], zruseno: false, propozice: true, mezinarodni: false, skupiny: 'Český strakatý pes, Český teriér, Český fousek, Český horský pes, Chodský pes a Pražský krysařík.', rozpis: [['Sobota 10. 10.', 'všechna národní plemena']], rozhodci: [['Ing. Karel Hořák (CZ)', 'všechna plemena']] },
+      { id: 'brno', nazev: 'Národní výstava psů Brno', typ: 'Národní', od: '2026-10-03', do_: '2026-10-04', mesto: 'Brno', misto: 'Výstaviště Brno, pavilon P', organizator: 'Intercanis Brno', email: 'info@intercanis.cz', telefon: '+420 543 211 558', uzaverky: [['2026-08-30', '1. uzávěrka'], ['2026-09-13', '2. uzávěrka']], zruseno: false, propozice: true, mezinarodni: false, skupiny: 'Všechna plemena FCI skupin I–X a plemena FCI zatím neuznaná.', rozpis: [['Sobota 3. 10.', 'skupiny FCI I, III, IV, V, IX'], ['Neděle 4. 10.', 'skupiny FCI II, VI, VII, VIII, X']], rozhodci: [['Miroslav Václavík (CZ)', 'skupiny I a IV'], ['Anna Redlicka (PL)', 'skupiny V a IX']] },
+      { id: 'chrti', nazev: 'Speciální výstava chrtů', typ: 'Speciální', od: '2026-10-24', do_: '2026-10-24', mesto: 'Lednice', misto: 'Zámecký park Lednice', organizator: 'Klub chovatelů chrtů', email: 'vystava@kchch.cz', telefon: '+420 604 883 291', uzaverky: [['2026-09-25', '1. uzávěrka'], ['2026-10-11', '2. uzávěrka']], zruseno: false, propozice: false, mezinarodni: false, skupiny: 'FCI skupina X — chrti, včetně vipeta, greyhounda, barzoje a afgánského chrta.', rozpis: [['Sobota 24. 10.', 'všechna plemena X. skupiny']], rozhodci: [['Espen Engh (NO)', 'všechna plemena']] },
+      { id: 'plzen', nazev: 'Krajská výstava psů Plzeň', typ: 'Krajská', od: '2026-09-05', do_: '2026-09-05', mesto: 'Plzeň', misto: 'Areál TJ Lokomotiva Plzeň', organizator: 'Kynologický svaz Plzeňského kraje', email: 'vystava@ks-plzen.cz', telefon: '+420 605 337 402', uzaverky: [['2026-08-14', 'uzávěrka']], zruseno: false, propozice: true, mezinarodni: false, skupiny: 'Všechna plemena FCI mimo plemen s klubovou výstavou v tentýž den.', rozpis: [['Sobota 5. 9.', 'všechna přijatá plemena']], rozhodci: [['Jaroslav Matyáš (SK)', 'všechna plemena']] },
+      { id: 'jezevcici', nazev: 'Klubová výstava jezevčíků', typ: 'Klubová', od: '2026-09-12', do_: '2026-09-12', mesto: 'Humpolec', misto: 'Kynologický areál Humpolec', organizator: 'Klub chovatelů jezevčíků ČR', email: 'vystavy@jezevcik.org', telefon: '+420 723 990 145', uzaverky: [['2026-08-15', 'uzávěrka']], zruseno: true, duvod: 'Důvodem je havarijní stav areálu; přijaté poplatky pořadatel vrací.', propozice: true, mezinarodni: false, skupiny: 'FCI skupina IV — jezevčíci všech velikostních a srstnatých rázů.', rozpis: [['Sobota 12. 9.', 'jezevčíci všech rázů']], rozhodci: [['Ing. Pavel Krs (CZ)', 'všechny rázy']] }
+    ];
+    this.DOGS = [
+      { id: 'd1', jmeno: 'Aria Golden Aurora', plemenoFci: '111', plemeno: 'Zlatý retriever', zapis: 'CMKU/ZR/31245/23', pohlavi: 'fena', narozeni: '2023-05-12', pp: 'schvaleny' },
+      { id: 'd2', jmeno: 'Argo z Černé louky', plemenoFci: '297', plemeno: 'Border kolie', zapis: 'CMKU/BOC/8842/21', pohlavi: 'pes', narozeni: '2021-02-03', pp: 'schvaleny' }
+    ];
+    const dates = [];
+    for (let i = 0; i < 78; i++) {
+      const d = new Date(2026, 7, 17 + i);
+      dates.push(d);
+    }
+    this.DATES = dates;
+    this.state = {
+      view: 'home', scrolled: false, videoPaused: false,
+      heroShow: 'olomouc', heroDog: 'd1', heroClass: 'otevrena',
+      activeDate: 0, calHover: false, dragX: null, reduced: false,
+      filterTyp: 'Všechny výstavy', filterMesto: '', filterOd: '', filterDo: '',
+      listTick: 0, detailId: 'olomouc',
+      breeds: [],
+      entryShow: 'olomouc', step: 1, stepTick: 0, sent: false,
+      f: { jmeno: 'Jana', prijmeni: 'Nováková', email: 'jana.novakova@email.cz', telefon: '+420 723 456 789', ulice: 'Květná 12', mesto: 'Praha 5', psc: '150 00' },
+      d: { profileId: 'd1', breed: '111', reg: 'CMKU/ZR/31245/23', sex: 'fena', birth: '2023-05-12', trida: 'otevrena', pp: 'schvaleny' },
+      comp: { jh: false, par: false, skupina: false },
+      agree: false, errors: {},
+      authMode: 'login', narrow: false, authDone: '',
+      li: { email: '', pass: '' },
+      rg: { jmeno: '', prijmeni: '', email: '', pass: '', agree: false },
+      authErr: {}
+    };
+  }
+  componentDidMount() {
+    this._onScroll = () => {
+      const sc = window.scrollY > 24;
+      if (sc !== this.state.scrolled) this.setState({ scrolled: sc });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    this._onResize = () => {
+      const n = window.innerWidth < 860;
+      if (n !== this.state.narrow) this.setState({ narrow: n });
+    };
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+    try {
+      this._mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.setState({ reduced: this._mq.matches });
+      this._mqCb = (e) => this.setState({ reduced: e.matches });
+      this._mq.addEventListener('change', this._mqCb);
+    } catch (e) {}
+    fetch('uploads/ceskakynologicka/plemena-cmku.json').then(r => r.json()).then(j => {
+      this.setState({ breeds: j.plemena || [] });
+    }).catch(() => {});
+    this._timer = setInterval(() => {
+      const auto = this.props.autoRotate ?? true;
+      if (!auto || this.state.reduced || this.state.calHover || this.state.view !== 'home' || this.state.dragX !== null) return;
+      this.setState(s => ({ activeDate: (s.activeDate + 1) % this.DATES.length, listTick: s.listTick + 1 }));
+    }, 3800);
+    this._setupReveal();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+    clearInterval(this._timer);
+    if (this._mq && this._mqCb) this._mq.removeEventListener('change', this._mqCb);
+    if (this._io) this._io.disconnect();
+  }
+  _setupReveal() {
+    if (this.state.reduced || !('IntersectionObserver' in window)) return;
+    if (this._io) this._io.disconnect();
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          this._io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    setTimeout(() => {
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top > window.innerHeight) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(28px)';
+          el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.22,.8,.3,1)';
+          this._io.observe(el);
+        }
+      });
+    }, 300);
+  }
+  _fmt(iso) { const [y, m, dd] = iso.split('-').map(Number); return dd + '. ' + m + '. ' + y; }
+  _fmtShort(iso) { const [, m, dd] = iso.split('-').map(Number); return dd + '. ' + m + '.'; }
+  _daysTo(iso) { const [y, m, dd] = iso.split('-').map(Number); return Math.round((new Date(y, m - 1, dd) - this.TODAY) / 86400000); }
+  _kc(n) { return n.toLocaleString('cs-CZ') + ' Kč'; }
+  _range(s) { return s.od === s.do_ ? this._fmt(s.od) : this._fmtShort(s.od) + ' – ' + this._fmt(s.do_); }
+  _stav(s) {
+    if (s.zruseno) return { key: 'zruseno', label: 'Výstava zrušena', bg: 'rgba(224,90,90,.12)', color: '#f0a3a3', border: 'rgba(224,90,90,.45)' };
+    const next = s.uzaverky.find(u => this._daysTo(u[0]) >= 0);
+    if (!next) return { key: 'ukonceno', label: 'Přihlašování ukončeno', bg: 'rgba(255,255,255,.07)', color: '#9a9a92', border: 'rgba(255,255,255,.18)' };
+    if (this._daysTo(next[0]) <= 7) return { key: 'blizi', label: 'Uzávěrka se blíží', bg: 'rgba(224,146,58,.13)', color: '#f0b370', border: 'rgba(224,146,58,.5)', next };
+    return { key: 'otevreno', label: 'Přihlašování otevřeno', bg: 'rgba(120,170,90,.13)', color: '#a8d494', border: 'rgba(140,190,100,.45)', next };
+  }
+  _nextUz(s) { return s.uzaverky.find(u => this._daysTo(u[0]) >= 0) || null; }
+  _uzIndex(s) { const i = s.uzaverky.findIndex(u => this._daysTo(u[0]) >= 0); return i < 0 ? s.uzaverky.length - 1 : i; }
+  _classPrice(s, classId) {
+    const c = this.CLASSES.find(x => x.id === classId) || this.CLASSES[4];
+    return this._uzIndex(s) === 0 ? c.c1 : c.c2;
+  }
+  _classesFor(s) { return this.CLASSES.filter(c => s.mezinarodni ? c.id !== 'vitezu' : c.id !== 'sampionu'); }
+  _goEntry(showId) {
+    const s = this.SHOWS.find(x => x.id === showId);
+    const st = this._stav(s);
+    const id = (st.key === 'otevreno' || st.key === 'blizi') ? showId : (this.SHOWS.find(x => { const k = this._stav(x).key; return k === 'otevreno' || k === 'blizi'; }) || s).id;
+    this.setState({ view: 'entry', entryShow: id, step: 1, sent: false, errors: {}, stepTick: this.state.stepTick + 1 });
+    window.scrollTo({ top: 0 });
+  }
+  _validate(step) {
+    const e = {};
+    if (step === 1) {
+      const f = this.state.f;
+      if (!f.jmeno.trim()) e.jmeno = 'Vyplňte jméno.';
+      if (!f.prijmeni.trim()) e.prijmeni = 'Vyplňte příjmení.';
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email)) e.email = 'Zadejte platný e-mail.';
+      if ((f.telefon.replace(/\D/g, '')).length < 9) e.telefon = 'Zadejte platné telefonní číslo.';
+      if (!f.ulice.trim()) e.ulice = 'Vyplňte ulici a č. p.';
+      if (!f.mesto.trim()) e.mesto = 'Vyplňte město.';
+      if (!f.psc.trim()) e.psc = 'Vyplňte PSČ.';
+    }
+    if (step === 2) {
+      const d = this.state.d;
+      if (!d.breed) e.breed = 'Vyberte plemeno z číselníku ČMKU.';
+      if (!d.reg.trim()) e.reg = 'Vyplňte zápisové číslo dle průkazu původu.';
+      if (!d.birth) e.birth = 'Vyplňte datum narození.';
+      if (!d.trida) e.trida = 'Vyberte právě jednu soutěžní třídu.';
+    }
+    if (step === 4 && !this.state.agree) e.agree = 'Bez potvrzení propozic a Výstavního řádu ČMKU nelze přihlášku odeslat.';
+    return e;
+  }
+  _shiftDate(dir) {
+    this.setState(s => ({ activeDate: Math.min(this.DATES.length - 1, Math.max(0, s.activeDate + dir)), listTick: s.listTick + 1 }));
+  }
+  renderVals() {
+    const S = this.state;
+    const showCancelled = this.props.showCancelled ?? true;
+    const DNY = ['ne', 'po', 'út', 'st', 'čt', 'pá', 'so'];
+    const MESICE = ['ledna', 'února', 'března', 'dubna', 'května', 'června', 'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'];
+    const iso = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const shows = this.SHOWS;
+    const countFor = (d) => { const i = iso(d); return shows.filter(s => !s.zruseno && s.od <= i && i <= s.do_).length; };
+    // carousel
+    const calItems = this.DATES.map((d, i) => {
+      const off = i - S.activeDate;
+      const abs = Math.abs(off);
+      const active = off === 0;
+      const n = countFor(d);
+      const akce = n === 0 ? 'bez akcí' : n === 1 ? '1 akce' : n < 5 ? n + ' akce' : n + ' akcí';
+      return {
+        display: abs > 4 ? 'none' : 'flex',
+        transform: 'translate(-50%,-50%) translateX(' + (off * 132) + 'px) rotateY(' + (off * -14) + 'deg) scale(' + (active ? 1.06 : Math.max(.7, 1 - abs * .11)) + ')',
+        opacity: String(active ? 1 : Math.max(.18, .75 - abs * .17)),
+        z: String(20 - abs),
+        bg: active ? 'linear-gradient(160deg, rgba(212,175,55,.16), rgba(17,17,17,.9))' : '#111111',
+        border: active ? '1px solid rgba(242,201,76,.85)' : '1px solid rgba(255,255,255,.12)',
+        color: active ? '#F2C94C' : '#b9b9b1',
+        numSize: active ? '40px' : '30px',
+        den: DNY[d.getDay()], cislo: String(d.getDate()), mesic: MESICE[d.getMonth()],
+        pocet: akce,
+        badgeBg: n > 0 ? (active ? 'rgba(212,175,55,.25)' : 'rgba(212,175,55,.12)') : 'rgba(255,255,255,.06)',
+        badgeColor: n > 0 ? '#F2C94C' : '#6f6f68',
+        aria: DNY[d.getDay()] + ' ' + d.getDate() + '. ' + MESICE[d.getMonth()] + ', ' + akce,
+        pick: () => this.setState({ activeDate: i, listTick: S.listTick + 1 })
+      };
+    });
+    // filters
+    const TYPES = ['Všechny výstavy', 'Mezinárodní', 'Národní', 'Klubové', 'Speciální', 'Krajské'];
+    const typeMap = { 'Mezinárodní': 'Mezinárodní', 'Národní': 'Národní', 'Klubové': 'Klubová', 'Speciální': 'Speciální', 'Krajské': 'Krajská' };
+    const typeFilters = TYPES.map(t => {
+      const active = S.filterTyp === t;
+      return { label: t, active: String(active), bg: active ? 'rgba(212,175,55,.15)' : 'transparent', color: active ? '#F2C94C' : '#b9b9b1', border: active ? '1px solid rgba(242,201,76,.7)' : '1px solid rgba(255,255,255,.16)', pick: () => this.setState(s => ({ filterTyp: t, listTick: s.listTick + 1 })) };
+    });
+    const activeIso = iso(this.DATES[S.activeDate]);
+    let list = shows.filter(s => s.do_ >= activeIso);
+    if (S.filterTyp !== 'Všechny výstavy') list = list.filter(s => s.typ === typeMap[S.filterTyp]);
+    if (S.filterMesto.trim()) list = list.filter(s => (s.mesto + ' ' + s.misto).toLowerCase().includes(S.filterMesto.trim().toLowerCase()));
+    if (S.filterOd) list = list.filter(s => s.do_ >= S.filterOd);
+    if (S.filterDo) list = list.filter(s => s.od <= S.filterDo);
+    if (!showCancelled) list = list.filter(s => !s.zruseno);
+    list = list.slice().sort((a, b) => a.od < b.od ? -1 : 1);
+    const visibleShows = list.map(s => {
+      const st = this._stav(s);
+      const uz = this._nextUz(s);
+      const lze = st.key === 'otevreno' || st.key === 'blizi';
+      return {
+        nazev: s.nazev, typ: s.typ + ' výstava',
+        datumText: this._range(s),
+        mistoText: s.mesto + ' — ' + s.misto,
+        uzaverkaText: s.zruseno ? 'Přihlášky se vrací pořadatelem' : uz ? uz[1] + ' ' + this._fmt(uz[0]) + ' · zbývá ' + this._daysTo(uz[0]) + ' dní' : 'Uzávěrka proběhla ' + this._fmt(s.uzaverky[s.uzaverky.length - 1][0]),
+        propoziceText: s.propozice ? 'Propozice ke stažení' : 'Propozice budou doplněny',
+        stavLabel: st.label, stavBg: st.bg, stavColor: st.color, stavBorder: st.border,
+        lzeApply: lze,
+        openDetail: () => { this.setState({ view: 'detail', detailId: s.id }); window.scrollTo({ top: 0 }); },
+        openEntry: () => this._goEntry(s.id)
+      };
+    });
+    const activeD = this.DATES[S.activeDate];
+    // hero
+    const openShows = shows.filter(s => { const k = this._stav(s).key; return k === 'otevreno' || k === 'blizi'; });
+    const heroShowObj = shows.find(s => s.id === S.heroShow) || openShows[0];
+    const heroUz = this._nextUz(heroShowObj);
+    const anim = (tick, dur) => (tick % 2 ? 'fadeA' : 'fadeB') + ' ' + dur + ' ease both';
+    // detail
+    const ds = shows.find(s => s.id === S.detailId) || shows[0];
+    const dst = this._stav(ds);
+    // entry
+    const es = shows.find(s => s.id === S.entryShow) || shows[0];
+    const stepNames = ['Přihlašující', 'Přihlášení psi', 'Doplňkové soutěže', 'Shrnutí'];
+    const steps = stepNames.map((label, i) => {
+      const n = i + 1;
+      const done = n < S.step, cur = n === S.step;
+      return {
+        label, mark: done ? '✓' : String(n),
+        bg: done || cur ? 'linear-gradient(135deg,#D4AF37,#c19d2e)' : '#111111',
+        color: done || cur ? '#0a0a0a' : '#9a9a92',
+        border: done || cur ? '1px solid #F2C94C' : '1px solid rgba(255,255,255,.2)',
+        glow: cur ? '0 0 22px rgba(212,175,55,.5)' : 'none',
+        labelColor: cur ? '#F2C94C' : done ? '#c9c9c2' : '#6f6f68'
+      };
+    });
+    const err = S.errors;
+    const fField = (id, label, key, type) => ({
+      id: 'f-' + key, label, type: type || 'text', value: S.f[key], error: err[key] || '',
+      borderColor: err[key] ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      onChange: (e) => this.setState({ f: { ...this.state.f, [key]: e.target.value } })
+    });
+    const step1Fields = [
+      fField(0, 'Jméno', 'jmeno'), fField(0, 'Příjmení', 'prijmeni'),
+      fField(0, 'E-mail', 'email', 'email'), fField(0, 'Telefon', 'telefon', 'tel'),
+      fField(0, 'Ulice a č. p.', 'ulice'), fField(0, 'Město', 'mesto'), fField(0, 'PSČ', 'psc')
+    ];
+    const breedOptions = S.breeds.map(b => ({ id: b.fci_cislo + '|' + b.nazev, label: b.nazev + ' (FCI ' + (b.skupina_kod || '—') + ')' }));
+    const dBreedVal = S.breeds.length ? (S.breeds.find(b => b.fci_cislo === S.d.breed || (b.fci_cislo + '|' + b.nazev) === S.d.breed) ? (S.d.breed.includes('|') ? S.d.breed : (() => { const b = S.breeds.find(x => x.fci_cislo === S.d.breed); return b ? b.fci_cislo + '|' + b.nazev : ''; })()) : '') : '';
+    const classOptionsEntry = this._classesFor(es).map(c => ({ id: c.id, label: c.label + ' — od ' + this._kc(this._uzIndex(es) === 0 ? c.c1 : c.c2) }));
+    const dogEntryOpts = [...this.DOGS.map(d => ({ id: d.id, label: d.jmeno + ' · ' + d.plemeno })), { id: 'novy', label: '+ Nový pes (vyplnit ručně)' }];
+    const chosenClass = this.CLASSES.find(c => c.id === S.d.trida);
+    const basePrice = S.d.trida ? this._classPrice(es, S.d.trida) : 0;
+    const COMP = [
+      { key: 'jh', label: 'Junior handling', desc: 'Soutěž mladých vystavovatelů v předvádění psa. Pes musí být přihlášen na výstavu.', cena: 350 },
+      { key: 'par', label: 'Nejlepší pár psů', desc: 'Pes a fena stejného plemene v majetku jednoho vystavovatele.', cena: 450 },
+      { key: 'skupina', label: 'Nejlepší chovatelská skupina', desc: 'Nejméně tři jedinci z jedné chovatelské stanice, minimálně od dvou různých otců nebo matek.', cena: 450 }
+    ];
+    const competitions = COMP.map(c => ({
+      label: c.label, desc: c.desc, cena: this._kc(c.cena),
+      checked: S.comp[c.key],
+      border: S.comp[c.key] ? 'rgba(242,201,76,.7)' : 'rgba(255,255,255,.1)',
+      toggle: () => this.setState({ comp: { ...this.state.comp, [c.key]: !this.state.comp[c.key] } })
+    }));
+    const compTotal = COMP.reduce((a, c) => a + (S.comp[c.key] ? c.cena : 0), 0);
+    const uzE = this._nextUz(es);
+    const dogName = S.d.profileId !== 'novy' ? (this.DOGS.find(x => x.id === S.d.profileId) || {}).jmeno : 'Nový pes';
+    const breedName = (S.d.breed || '').includes('|') ? S.d.breed.split('|')[1] : ((this.DOGS.find(x => x.id === S.d.profileId) || {}).plemeno || '—');
+    const summaryRows = [
+      { k: 'Výstava', v: es.nazev + ' · ' + this._range(es) },
+      { k: 'Přihlašující', v: S.f.jmeno + ' ' + S.f.prijmeni + ' · ' + S.f.email + ' · ' + S.f.telefon },
+      { k: 'Adresa', v: S.f.ulice + ', ' + S.f.psc + ' ' + S.f.mesto },
+      { k: 'Pes', v: dogName + ' · ' + breedName + ' · ' + S.d.reg },
+      { k: 'Třída', v: chosenClass ? chosenClass.label : '—' },
+      { k: 'Doplňkové soutěže', v: COMP.filter(c => S.comp[c.key]).map(c => c.label).join(', ') || 'Žádné' },
+      { k: 'Uzávěrka', v: uzE ? uzE[1] + ' ' + this._fmt(uzE[0]) : '—' }
+    ];
+    const priceRows = [
+      { k: 'Výstavní poplatek — ' + (chosenClass ? chosenClass.label.split(' (')[0].toLowerCase() : 'třída'), v: this._kc(basePrice) },
+      ...COMP.filter(c => S.comp[c.key]).map(c => ({ k: c.label, v: this._kc(c.cena) }))
+    ];
+    const ppOk = S.d.pp === 'schvaleny';
+    return {
+      // header/nav
+      headerBg: S.scrolled ? 'rgba(7,7,7,.82)' : 'transparent',
+      headerBlur: S.scrolled ? 'blur(14px)' : 'none',
+      headerShadow: S.scrolled ? '0 1px 0 rgba(212,175,55,.22)' : 'none',
+      goTop: (e) => { e.preventDefault(); this.setState({ view: 'home' }); window.scrollTo({ top: 0 }); },
+      navVystavy: (e) => this._nav(e, 'vystavy'), navKalendar: (e) => this._nav(e, 'kalendar'),
+      navMojiPsi: (e) => this._nav(e, 'moji-psi'), navOProjektu: (e) => this._nav(e, 'o-projektu'),
+      backHome: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'home' }); window.scrollTo({ top: 0 }); },
+      noop: (e) => { if (e && e.preventDefault) e.preventDefault(); },
+      isHome: S.view === 'home', isDetail: S.view === 'detail', isEntry: S.view === 'entry',
+      // auth
+      isAuth: S.view === 'auth',
+      authWide: !S.narrow, authNarrow: S.narrow,
+      isLogin: S.authMode === 'login', isRegister: S.authMode === 'register',
+      loginOpacity: S.authMode === 'login' ? '1' : '0',
+      loginShift: S.authMode === 'login' ? '0' : '-30%',
+      loginEvents: S.authMode === 'login' ? 'auto' : 'none',
+      regOpacity: S.authMode === 'register' ? '1' : '0',
+      regShift: S.authMode === 'register' ? '0' : '30%',
+      regEvents: S.authMode === 'register' ? 'auto' : 'none',
+      overlayShift: S.authMode === 'login' ? '100%' : '0',
+      overlayLineLeft: S.authMode === 'login' ? '0' : 'auto',
+      overlayLineRight: S.authMode === 'login' ? 'auto' : '0',
+      overlayTitle: S.authMode === 'login' ? 'Ještě nemáte účet?' : 'Vítejte zpět',
+      overlayText: S.authMode === 'login' ? 'Zaregistrujte se, přidejte své psy a mějte každou uzávěrku i přihlášku pod kontrolou.' : 'Přihlaste se ke svému profilu a pokračujte tam, kde jste skončili.',
+      overlayCta: S.authMode === 'login' ? 'Zaregistrovat se' : 'Přihlásit se',
+      toggleAuthMode: () => this.setState(s => ({ authMode: s.authMode === 'login' ? 'register' : 'login', authErr: {}, authDone: '' })),
+      liEmail: S.li.email, setLiEmail: (e) => this.setState({ li: { ...this.state.li, email: e.target.value } }),
+      liPass: S.li.pass, setLiPass: (e) => this.setState({ li: { ...this.state.li, pass: e.target.value } }),
+      liEmailError: S.authErr.liEmail || '', liEmailBorder: S.authErr.liEmail ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      liPassError: S.authErr.liPass || '', liPassBorder: S.authErr.liPass ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      rgJmeno: S.rg.jmeno, setRgJmeno: (e) => this.setState({ rg: { ...this.state.rg, jmeno: e.target.value } }),
+      rgPrijmeni: S.rg.prijmeni, setRgPrijmeni: (e) => this.setState({ rg: { ...this.state.rg, prijmeni: e.target.value } }),
+      rgJmenoBorder: S.authErr.rgName ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      rgPrijmeniBorder: S.authErr.rgName ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      rgNameError: S.authErr.rgName || '',
+      rgEmail: S.rg.email, setRgEmail: (e) => this.setState({ rg: { ...this.state.rg, email: e.target.value } }),
+      rgEmailError: S.authErr.rgEmail || '', rgEmailBorder: S.authErr.rgEmail ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      rgPass: S.rg.pass, setRgPass: (e) => this.setState({ rg: { ...this.state.rg, pass: e.target.value } }),
+      rgPassError: S.authErr.rgPass || '', rgPassBorder: S.authErr.rgPass ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      rgAgree: S.rg.agree, toggleRgAgree: () => this.setState({ rg: { ...this.state.rg, agree: !this.state.rg.agree }, authErr: {} }),
+      rgAgreeError: S.authErr.rgAgree || '',
+      submitLogin: () => {
+        const e = {};
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.li.email)) e.liEmail = 'Zadejte platný e-mail.';
+        if (S.li.pass.length < 6) e.liPass = 'Heslo musí mít alespoň 6 znaků.';
+        if (Object.keys(e).length) { this.setState({ authErr: e, authDone: '' }); return; }
+        this.setState({ authErr: {}, authDone: 'Přihlášení proběhlo úspěšně.' });
+      },
+      submitRegister: () => {
+        const e = {};
+        if (!S.rg.jmeno.trim() || (!S.narrow && !S.rg.prijmeni.trim())) e.rgName = 'Vyplňte jméno a příjmení.';
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.rg.email)) e.rgEmail = 'Zadejte platný e-mail.';
+        if (S.rg.pass.length < 6) e.rgPass = 'Heslo musí mít alespoň 6 znaků.';
+        if (!S.narrow && !S.rg.agree) e.rgAgree = 'Potvrďte souhlas s podmínkami.';
+        if (Object.keys(e).length) { this.setState({ authErr: e, authDone: '' }); return; }
+        this.setState({ authErr: {}, authDone: 'Účet byl vytvořen.' });
+      },
+      authDone: !!S.authDone, authDoneText: S.authDone,
+      openAuth: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'auth', authMode: 'login', authErr: {}, authDone: '' }); window.scrollTo({ top: 0 }); },
+      openAuthRegister: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'auth', authMode: 'register', authErr: {}, authDone: '' }); window.scrollTo({ top: 0 }); },
+      // video
+      videoRef: (v) => { this._video = v; if (v) { v.muted = true; if (!S.videoPaused) { const p = v.play(); if (p) p.catch(() => {}); } } },
+      videoPaused: S.videoPaused, videoPlaying: !S.videoPaused,
+      videoBtnLabel: S.videoPaused ? 'Přehrát video' : 'Pozastavit video',
+      toggleVideo: () => { const v = this._video; if (!v) return; if (v.paused) { v.play(); this.setState({ videoPaused: false }); } else { v.pause(); this.setState({ videoPaused: true }); } },
+      // hero form
+      openShowOptions: openShows.map(s => ({ id: s.id, label: s.nazev + ' · ' + this._fmtShort(s.od) })),
+      dogOptions: [...this.DOGS.map(d => ({ id: d.id, label: d.jmeno + ' · ' + d.plemeno })), { id: 'novy', label: 'Nemám psa v profilu' }],
+      classOptions: this._classesFor(heroShowObj).map(c => ({ id: c.id, label: c.label })),
+      heroShow: heroShowObj.id, heroDog: S.heroDog, heroClass: S.heroClass,
+      setHeroShow: (e) => this.setState({ heroShow: e.target.value }),
+      setHeroDog: (e) => this.setState({ heroDog: e.target.value }),
+      setHeroClass: (e) => this.setState({ heroClass: e.target.value }),
+      heroDeadline: heroUz ? this._fmt(heroUz[0]) + ' (' + heroUz[1] + ')' : 'uzávěrka proběhla',
+      heroPrice: this._kc(this._classPrice(heroShowObj, S.heroClass)),
+      heroToEntry: (e) => { if (e && e.preventDefault) e.preventDefault(); const dog = this.DOGS.find(x => x.id === S.heroDog); this.setState({ d: dog ? { profileId: dog.id, breed: dog.plemenoFci, reg: dog.zapis, sex: dog.pohlavi, birth: dog.narozeni, trida: S.heroClass, pp: dog.pp } : { profileId: 'novy', breed: '', reg: '', sex: 'pes', birth: '', trida: S.heroClass, pp: 'chybi' } }); this._goEntry(heroShowObj.id); },
+      // calendar
+      calWrapRef: (el) => { this._calWrap = el; },
+      calItems,
+      calHoverOn: () => this.setState({ calHover: true }),
+      calHoverOff: () => this.setState({ calHover: false, dragX: null }),
+      calWheel: (e) => { e.preventDefault(); this._wheelAcc = (this._wheelAcc || 0) + e.deltaY; if (Math.abs(this._wheelAcc) > 60) { this._shiftDate(this._wheelAcc > 0 ? 1 : -1); this._wheelAcc = 0; } },
+      calDragStart: (e) => { this.setState({ dragX: e.clientX }); if (this._calWrap) this._calWrap.style.cursor = 'grabbing'; },
+      calDragMove: (e) => { if (S.dragX === null) return; const dx = e.clientX - S.dragX; if (Math.abs(dx) > 55) { this._shiftDate(dx < 0 ? 1 : -1); this.setState({ dragX: e.clientX }); } },
+      calDragEnd: () => { this.setState({ dragX: null }); if (this._calWrap) this._calWrap.style.cursor = 'grab'; },
+      calKey: (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); this._shiftDate(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); this._shiftDate(-1); } },
+      calPrev: () => this._shiftDate(-1), calNext: () => this._shiftDate(1),
+      // filters + list
+      typeFilters,
+      filterMesto: S.filterMesto, filterOd: S.filterOd, filterDo: S.filterDo,
+      setFilterMesto: (e) => this.setState(s => ({ filterMesto: e.target.value, listTick: s.listTick + 1 })),
+      setFilterOd: (e) => this.setState(s => ({ filterOd: e.target.value, listTick: s.listTick + 1 })),
+      setFilterDo: (e) => this.setState(s => ({ filterDo: e.target.value, listTick: s.listTick + 1 })),
+      resetFilters: (e) => { e.preventDefault(); this.setState(s => ({ filterTyp: 'Všechny výstavy', filterMesto: '', filterOd: '', filterDo: '', activeDate: 0, listTick: s.listTick + 1 })); },
+      listAnim: this.state.reduced ? 'none' : anim(S.listTick, '.5s'),
+      listSummary: 'Výstavy od ' + activeD.getDate() + '. ' + MESICE[activeD.getMonth()] + ' ' + activeD.getFullYear() + ' — nalezeno ' + list.length + (list.length === 1 ? ' výstava' : list.length < 5 && list.length > 0 ? ' výstavy' : ' výstav'),
+      visibleShows, noShows: list.length === 0,
+      // home sections
+      howSteps: [
+        { num: '01', title: 'Vyberte výstavu', text: 'Projděte kalendář, filtry a propozice. Sledujte uzávěrky a stav přihlašování.' },
+        { num: '02', title: 'Připravte profil psa', text: 'Údaje z průkazu původu a dokumenty nahrajete jednou, platí pro všechny přihlášky.' },
+        { num: '03', title: 'Odešlete přihlášku', text: 'Čtyři kroky: přihlašující, pes a třída, doplňkové soutěže a závazné potvrzení.' },
+        { num: '04', title: 'Zaplaťte a sledujte stav', text: 'Obdržíte platební instrukce a potvrzení pořadatele. Vstupní list najdete v profilu.' }
+      ],
+      benefits: [
+        { title: 'Hlídání uzávěrek', text: 'Upozorníme vás e-mailem před každou uzávěrkou výstavy, kterou sledujete.' },
+        { title: 'Dokumenty na jednom místě', text: 'Průkaz původu, pracovní certifikáty i šampionáty — ověřené a připravené k přihlášce.' },
+        { title: 'Historie přihlášek', text: 'Stav každé přihlášky od odeslání po vstupní list, včetně plateb.' }
+      ],
+      myDogs: this.DOGS.map(d => ({ jmeno: d.jmeno, podtitul: d.plemeno + ' · ' + d.zapis + ' · ' + (d.pohlavi === 'fena' ? 'fena' : 'pes') })),
+      // detail
+      dNazev: ds.nazev, dTyp: ds.typ + ' výstava', dDatum: this._range(ds), dMisto: ds.mesto + ' — ' + ds.misto,
+      dStavLabel: dst.label, dStavBg: dst.bg, dStavColor: dst.color, dStavBorder: dst.border,
+      dLzeApply: dst.key === 'otevreno' || dst.key === 'blizi',
+      dPropozice: ds.propozice, dZruseno: !!ds.zruseno, dDuvod: ds.duvod || '',
+      dOrganizator: ds.organizator, dEmail: ds.email, dTelefon: ds.telefon,
+      dUzaverky: ds.uzaverky.map(u => ({ label: u[1], datum: this._fmt(u[0]) + (this._daysTo(u[0]) >= 0 ? ' · zbývá ' + this._daysTo(u[0]) + ' dní' : ' · proběhla'), color: this._daysTo(u[0]) >= 0 ? '#F2C94C' : '#9a9a92' })),
+      dRozhodci: ds.rozhodci.map(r => ({ jmeno: r[0], role: r[1] })),
+      dSkupiny: ds.skupiny,
+      dRozpis: ds.rozpis.map(r => ({ den: r[0], text: r[1] })),
+      dTridy: this._classesFor(ds).map(c => ({ label: c.label, c1: this._kc(c.c1), c2: this._kc(c.c2) })),
+      dApply: () => this._goEntry(ds.id),
+      // entry
+      entrySent: S.sent, entryActive: !S.sent,
+      entryShowName: es.nazev,
+      entryShowMeta: es.typ + ' výstava · ' + this._range(es) + ' · ' + es.mesto + (uzE ? ' · ' + uzE[1] + ' ' + this._fmt(uzE[0]) : ''),
+      steps, stepperFill: ((S.step - 1) / 3 * 100) + '%',
+      stepAnim: this.state.reduced ? 'none' : anim(S.stepTick, '.45s'),
+      isStep1: S.step === 1, isStep2: S.step === 2, isStep3: S.step === 3, isStep4: S.step === 4,
+      isNotLast: S.step < 4, isLast: S.step === 4,
+      backDisabled: S.step === 1, backOpacity: S.step === 1 ? '.4' : '1',
+      stepBack: () => { if (this.state.step > 1) this.setState(s => ({ step: s.step - 1, errors: {}, stepTick: s.stepTick + 1 })); },
+      stepNext: () => { const e = this._validate(this.state.step); if (Object.keys(e).length) { this.setState({ errors: e }); return; } this.setState(s => ({ step: s.step + 1, errors: {}, stepTick: s.stepTick + 1 })); },
+      submitEntry: () => { const e = this._validate(4); if (Object.keys(e).length) { this.setState({ errors: e }); return; } this.setState({ sent: true }); window.scrollTo({ top: 0 }); },
+      step1Fields,
+      // step 2
+      dogOptionsEntry: dogEntryOpts,
+      eDog: S.d.profileId,
+      setEDog: (e) => { const id = e.target.value; const dog = this.DOGS.find(x => x.id === id); this.setState({ d: dog ? { profileId: id, breed: dog.plemenoFci, reg: dog.zapis, sex: dog.pohlavi, birth: dog.narozeni, trida: this.state.d.trida, pp: dog.pp } : { profileId: 'novy', breed: '', reg: '', sex: 'pes', birth: '', trida: this.state.d.trida, pp: 'chybi' }, errors: {} }); },
+      breedPlaceholder: S.breeds.length ? 'Vyberte plemeno (' + S.breeds.length + ')…' : 'Načítám číselník plemen…',
+      breedOptions,
+      eBreed: dBreedVal, setEBreed: (e) => this.setState({ d: { ...this.state.d, breed: e.target.value } }),
+      eBreedError: err.breed || '', eBreedBorder: err.breed ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      eReg: S.d.reg, setEReg: (e) => this.setState({ d: { ...this.state.d, reg: e.target.value } }),
+      eRegError: err.reg || '', eRegBorder: err.reg ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      eSex: S.d.sex, setESex: (e) => this.setState({ d: { ...this.state.d, sex: e.target.value } }),
+      eBirth: S.d.birth, setEBirth: (e) => this.setState({ d: { ...this.state.d, birth: e.target.value } }),
+      eBirthError: err.birth || '', eBirthBorder: err.birth ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      classOptionsEntry,
+      eClass: S.d.trida, setEClass: (e) => this.setState({ d: { ...this.state.d, trida: e.target.value } }),
+      eClassError: err.trida || '', eClassBorder: err.trida ? 'rgba(224,90,90,.65)' : 'rgba(255,255,255,.14)',
+      ePpMissing: !ppOk,
+      ePpText: ppOk ? 'Dokument je nahraný a ověřený pořadatelem.' : 'Dokument chybí — nahrajte čitelnou kopii obou stran průkazu původu.',
+      ePpColor: ppOk ? '#a8d494' : '#f0b370',
+      mockUpload: () => this.setState({ d: { ...this.state.d, pp: 'schvaleny' } }),
+      // step 3 + 4
+      competitions,
+      summaryRows, priceRows, priceTotal: this._kc(basePrice + compTotal),
+      agree: S.agree, toggleAgree: () => this.setState({ agree: !this.state.agree, errors: {} }),
+      agreeError: err.agree || '',
+      sumEmail: S.f.email
+    };
+  }
+  _nav(e, id) {
+    if (e && e.preventDefault) e.preventDefault();
+    const go = () => {
+      const el = document.getElementById(id);
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' });
+    };
+    if (this.state.view !== 'home') { this.setState({ view: 'home' }); setTimeout(() => { go(); this._setupReveal(); }, 60); }
+    else go();
+  }
+  componentDidUpdate() {
+    const v = this.state.view;
+    if (v === 'home' && this._lastView !== 'home') setTimeout(() => this._setupReveal(), 100);
+    this._lastView = v;
+  }
+}
+</script>
+</body>
+</html>

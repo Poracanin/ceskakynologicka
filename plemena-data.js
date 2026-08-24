@@ -1,0 +1,3592 @@
+window.CMKU_DATA = {
+  "zdroje": [
+    "https://www.cmku.cz/cz/seznam-plemen-159",
+    "https://fci.be/fr/nomenclature/GRAND-ANGLO-FRANCAIS-BLANC-ET-NOIR-323.html"
+  ],
+  "datum_ziskani": "2026-08-17",
+  "pocet_plemen": 390,
+  "skupiny": [
+    {
+      "kod": "I",
+      "cislo": 1,
+      "nazev": "plemena ovčácká, pastevecká a honácká",
+      "pocet_plemen": 51
+    },
+    {
+      "kod": "II",
+      "cislo": 2,
+      "nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "pocet_plemen": 56
+    },
+    {
+      "kod": "III",
+      "cislo": 3,
+      "nazev": "teriéři",
+      "pocet_plemen": 35
+    },
+    {
+      "kod": "IV",
+      "cislo": 4,
+      "nazev": "jezevčíci",
+      "pocet_plemen": 1
+    },
+    {
+      "kod": "V",
+      "cislo": 5,
+      "nazev": "špicové a tzv. primitivní plemena",
+      "pocet_plemen": 53
+    },
+    {
+      "kod": "VI",
+      "cislo": 6,
+      "nazev": "honiči a barváři",
+      "pocet_plemen": 70
+    },
+    {
+      "kod": "VII",
+      "cislo": 7,
+      "nazev": "ohaři",
+      "pocet_plemen": 36
+    },
+    {
+      "kod": "VIII",
+      "cislo": 8,
+      "nazev": "slídiči, retrieveři a vodní psi",
+      "pocet_plemen": 22
+    },
+    {
+      "kod": "IX",
+      "cislo": 9,
+      "nazev": "plemena společenská",
+      "pocet_plemen": 31
+    },
+    {
+      "kod": "X",
+      "cislo": 10,
+      "nazev": "chrti",
+      "pocet_plemen": 13
+    },
+    {
+      "kod": "N",
+      "cislo": null,
+      "nazev": "FCI neuznaná plemena",
+      "pocet_plemen": 22
+    }
+  ],
+  "poznamky": [
+    "U plemene Velký franc.-anglický bílo-černý honič (FCI 323) ČMKU skupinu neuvádí; skupina VI byla doplněna podle oficiální nomenklatury FCI."
+  ],
+  "plemena": [
+    {
+      "fci_cislo": "228",
+      "nazev": "Afgánský chrt",
+      "originalni_nazev": "Afghan Hound",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/280"
+    },
+    {
+      "fci_cislo": "247",
+      "nazev": "Aidi",
+      "originalni_nazev": "Aidi",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/299"
+    },
+    {
+      "fci_cislo": "007",
+      "nazev": "Airedale terier",
+      "originalni_nazev": "Airedale Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/7"
+    },
+    {
+      "fci_cislo": "255",
+      "nazev": "Akita",
+      "originalni_nazev": "Akita",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/307"
+    },
+    {
+      "fci_cislo": "243",
+      "nazev": "Aljašský malamut",
+      "originalni_nazev": "Alaskan Malamute",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/295"
+    },
+    {
+      "fci_cislo": "254",
+      "nazev": "Alpský jezevčíkovitý brakýř",
+      "originalni_nazev": "Alpenländische Dachsbracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/306"
+    },
+    {
+      "fci_cislo": "344",
+      "nazev": "Americká akita",
+      "originalni_nazev": "American Akita",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/392"
+    },
+    {
+      "fci_cislo": "925",
+      "nazev": "Americký bezsrstý terier",
+      "originalni_nazev": "American Hairless Terrier",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/423"
+    },
+    {
+      "fci_cislo": "910",
+      "nazev": "Americký buldok",
+      "originalni_nazev": "American Bulldog",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/410"
+    },
+    {
+      "fci_cislo": "303",
+      "nazev": "Americký foxhound",
+      "originalni_nazev": "American Fox Hound",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/351"
+    },
+    {
+      "fci_cislo": "167",
+      "nazev": "Americký kokršpaněl",
+      "originalni_nazev": "American Cocker Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/190"
+    },
+    {
+      "fci_cislo": "286",
+      "nazev": "Americký stafordširský terier",
+      "originalni_nazev": "American Staffordshire Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/334"
+    },
+    {
+      "fci_cislo": "301",
+      "nazev": "Americký vodní španěl",
+      "originalni_nazev": "American Water Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/349"
+    },
+    {
+      "fci_cislo": "325",
+      "nazev": "Angl.-franc.honič de Petite Venerie",
+      "originalni_nazev": "Anglo-Francais de Petite Venerie",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/373"
+    },
+    {
+      "fci_cislo": "149",
+      "nazev": "Anglický buldok",
+      "originalni_nazev": "Bulldog",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/172"
+    },
+    {
+      "fci_cislo": "158",
+      "nazev": "Anglický chrt (Greyhound)",
+      "originalni_nazev": "Greyhound",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/181"
+    },
+    {
+      "fci_cislo": "005",
+      "nazev": "Anglický kokršpaněl",
+      "originalni_nazev": "English Cocker Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/5"
+    },
+    {
+      "fci_cislo": "264",
+      "nazev": "Anglický mastif",
+      "originalni_nazev": "Mastiff",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/314"
+    },
+    {
+      "fci_cislo": "002",
+      "nazev": "Anglický setr",
+      "originalni_nazev": "English Setter",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/2"
+    },
+    {
+      "fci_cislo": "125",
+      "nazev": "Anglický špringr španěl",
+      "originalni_nazev": "English Springer Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/142"
+    },
+    {
+      "fci_cislo": "013",
+      "nazev": "Anglický toy terier",
+      "originalni_nazev": "Toy Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/15"
+    },
+    {
+      "fci_cislo": "046",
+      "nazev": "Appenzellský salašnický pes",
+      "originalni_nazev": "Appenzeller Sennenhund",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/47"
+    },
+    {
+      "fci_cislo": "171",
+      "nazev": "Ardenský bouvier",
+      "originalni_nazev": "Bouvier des Ardennes",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/194"
+    },
+    {
+      "fci_cislo": "292",
+      "nazev": "Argentinská doga",
+      "originalni_nazev": "Dogo Argentino",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/340"
+    },
+    {
+      "fci_cislo": "020",
+      "nazev": "Ariégois",
+      "originalni_nazev": "Ariégois",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/25"
+    },
+    {
+      "fci_cislo": "177",
+      "nazev": "Ariegský ohař krátkosrstý",
+      "originalni_nazev": "Braque d Ariége",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/219"
+    },
+    {
+      "fci_cislo": "034",
+      "nazev": "Artésko-normandský basset",
+      "originalni_nazev": "Basset Artésien Normand",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/35"
+    },
+    {
+      "fci_cislo": "028",
+      "nazev": "Artoisský honič",
+      "originalni_nazev": "Chien d Artois",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/30"
+    },
+    {
+      "fci_cislo": "293",
+      "nazev": "Australská kelpie",
+      "originalni_nazev": "Australian Kelpie",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/341"
+    },
+    {
+      "fci_cislo": "287",
+      "nazev": "Australský honácký pes",
+      "originalni_nazev": "Australian Cattledog",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/335"
+    },
+    {
+      "fci_cislo": "351",
+      "nazev": "Australský honácký pes s krátkým ocasem",
+      "originalni_nazev": "Australian Stumpy Tail Cattle Dog",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/399"
+    },
+    {
+      "fci_cislo": "342",
+      "nazev": "Australský ovčák",
+      "originalni_nazev": "Australian Shepherd",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/428"
+    },
+    {
+      "fci_cislo": "236",
+      "nazev": "Australský Silky terier",
+      "originalni_nazev": "Australian Silky Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/288"
+    },
+    {
+      "fci_cislo": "008",
+      "nazev": "Australský terier",
+      "originalni_nazev": "Australian Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/8"
+    },
+    {
+      "fci_cislo": "180",
+      "nazev": "Auvergneský ohař krátkosrstý",
+      "originalni_nazev": "Braque d Auvergne",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/221"
+    },
+    {
+      "fci_cislo": "307",
+      "nazev": "Azavak",
+      "originalni_nazev": "Azawakh",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/355"
+    },
+    {
+      "fci_cislo": "105",
+      "nazev": "Barbet",
+      "originalni_nazev": "Barbet",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/123"
+    },
+    {
+      "fci_cislo": "193",
+      "nazev": "Barzoj - ruský chrt",
+      "originalni_nazev": "Borzoi",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/242"
+    },
+    {
+      "fci_cislo": "043",
+      "nazev": "Basenji",
+      "originalni_nazev": "Basenji",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/44"
+    },
+    {
+      "fci_cislo": "163",
+      "nazev": "Basset Hound",
+      "originalni_nazev": "Basset Hound",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/186"
+    },
+    {
+      "fci_cislo": "217",
+      "nazev": "Bavorský barvář",
+      "originalni_nazev": "Bayerischer Gebirgsschweisshund",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/264"
+    },
+    {
+      "fci_cislo": "161",
+      "nazev": "Beagle",
+      "originalni_nazev": "Beagle",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/184"
+    },
+    {
+      "fci_cislo": "290",
+      "nazev": "Beagle Harrier",
+      "originalni_nazev": "Beagle Harrier",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/338"
+    },
+    {
+      "fci_cislo": "271",
+      "nazev": "Bearded kolie",
+      "originalni_nazev": "Bearded Collie",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/321"
+    },
+    {
+      "fci_cislo": "044",
+      "nazev": "Beauceron",
+      "originalni_nazev": "Berger de Beauce",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/45"
+    },
+    {
+      "fci_cislo": "009",
+      "nazev": "Bedlington terier",
+      "originalni_nazev": "Bedlington Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/9"
+    },
+    {
+      "fci_cislo": "081",
+      "nazev": "Belgický grifonek",
+      "originalni_nazev": "Griffon Belge",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/92"
+    },
+    {
+      "fci_cislo": "015",
+      "nazev": "Belgický ovčák",
+      "originalni_nazev": "Chien de Berger Belge",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/17"
+    },
+    {
+      "fci_cislo": "015",
+      "nazev": "Belgický ovčák - Groenendael",
+      "originalni_nazev": "Chien de Berger Belge - Groenendael",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/18"
+    },
+    {
+      "fci_cislo": "015",
+      "nazev": "Belgický ovčák - Laekenois",
+      "originalni_nazev": "Chien de Berger Belge - Laekenois",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/19"
+    },
+    {
+      "fci_cislo": "015",
+      "nazev": "Belgický ovčák - Malinois",
+      "originalni_nazev": "Chien de Berger Belge - Malinois",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/20"
+    },
+    {
+      "fci_cislo": "015",
+      "nazev": "Belgický ovčák - Tervueren",
+      "originalni_nazev": "Chien de Berger Belge - Tervueren",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/21"
+    },
+    {
+      "fci_cislo": "194",
+      "nazev": "Bergamský ovčák",
+      "originalni_nazev": "Cane da Pastore Bergamasco",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/243"
+    },
+    {
+      "fci_cislo": "045",
+      "nazev": "Bernský salašnický pes",
+      "originalni_nazev": "Berner Sennenhund",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/46"
+    },
+    {
+      "fci_cislo": "942",
+      "nazev": "Biewer teriér",
+      "originalni_nazev": "Biewer Terrier",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/454"
+    },
+    {
+      "fci_cislo": "025",
+      "nazev": "Billy",
+      "originalni_nazev": "Billy",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/29"
+    },
+    {
+      "fci_cislo": "347",
+      "nazev": "Bílý švýcarský ovčák",
+      "originalni_nazev": "Berger Blanc Suisse",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/395"
+    },
+    {
+      "fci_cislo": "215",
+      "nazev": "Bišonek",
+      "originalni_nazev": "Bichon á poil Frisé",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/262"
+    },
+    {
+      "fci_cislo": "300",
+      "nazev": "Black and Tan Coonhound",
+      "originalni_nazev": "Black and Tan Coonhound",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/348"
+    },
+    {
+      "fci_cislo": "084",
+      "nazev": "Bloodhound",
+      "originalni_nazev": "Chien de Saint Hubert",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/95"
+    },
+    {
+      "fci_cislo": "016",
+      "nazev": "Bobtail",
+      "originalni_nazev": "Old English Sheepdog",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/22"
+    },
+    {
+      "fci_cislo": "196",
+      "nazev": "Boloňský psík",
+      "originalni_nazev": "Bolognese",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/245"
+    },
+    {
+      "fci_cislo": "116",
+      "nazev": "Bordeauxská doga",
+      "originalni_nazev": "Dogue de Bordeaux",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/133"
+    },
+    {
+      "fci_cislo": "297",
+      "nazev": "Border kolie",
+      "originalni_nazev": "Border Collie",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/345"
+    },
+    {
+      "fci_cislo": "010",
+      "nazev": "Border terier",
+      "originalni_nazev": "Border Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/10"
+    },
+    {
+      "fci_cislo": "355",
+      "nazev": "Bosensko - hercegovinský - chorvatský ovčák",
+      "originalni_nazev": "Tornjak",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/403"
+    },
+    {
+      "fci_cislo": "155",
+      "nazev": "Bosenský hrubosrstý honič",
+      "originalni_nazev": "Bosanski Oštrodlaki Gonič - Barak",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/178"
+    },
+    {
+      "fci_cislo": "140",
+      "nazev": "Bostonský terier",
+      "originalni_nazev": "Boston Terrier",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/157"
+    },
+    {
+      "fci_cislo": "179",
+      "nazev": "Bourbonský ohař krátkosrstý",
+      "originalni_nazev": "Braque du Bourbonnais",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/220"
+    },
+    {
+      "fci_cislo": "082",
+      "nazev": "Brabantík",
+      "originalni_nazev": "Petit Brabancon",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/93"
+    },
+    {
+      "fci_cislo": "225",
+      "nazev": "Brazilská fila",
+      "originalni_nazev": "Fila Brasileiro",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/277"
+    },
+    {
+      "fci_cislo": "374",
+      "nazev": "Brazilský buldok",
+      "originalni_nazev": "Buldogue Campeiro",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/442"
+    },
+    {
+      "fci_cislo": "341",
+      "nazev": "Brazilský terier",
+      "originalni_nazev": "Brasilian Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/389"
+    },
+    {
+      "fci_cislo": "095",
+      "nazev": "Bretaňský ohař dlouhosrstý",
+      "originalni_nazev": "Epagneul Breton",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/106"
+    },
+    {
+      "fci_cislo": "113",
+      "nazev": "Briard",
+      "originalni_nazev": "Berger de Brie",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/130"
+    },
+    {
+      "fci_cislo": "019",
+      "nazev": "Briquet Griffon Vendéen",
+      "originalni_nazev": "Briquet Griffon Vendéen",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/24"
+    },
+    {
+      "fci_cislo": "080",
+      "nazev": "Bruselský grifonek",
+      "originalni_nazev": "Griffon Bruxellois",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/91"
+    },
+    {
+      "fci_cislo": "157",
+      "nazev": "Bullmastif",
+      "originalni_nazev": "Bullmastiff",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/180"
+    },
+    {
+      "fci_cislo": "011",
+      "nazev": "Bulteriér",
+      "originalni_nazev": "Bull Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/11"
+    },
+    {
+      "fci_cislo": "090",
+      "nazev": "Burgoský perdiquero",
+      "originalni_nazev": "Perdiquero de Burgos",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/429"
+    },
+    {
+      "fci_cislo": "923",
+      "nazev": "Búrský buldok",
+      "originalni_nazev": "Boerboel",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/419"
+    },
+    {
+      "fci_cislo": "004",
+      "nazev": "Cairn Terier",
+      "originalni_nazev": "Cairn Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/4"
+    },
+    {
+      "fci_cislo": "170",
+      "nazev": "Cao de Castro Laboreiro",
+      "originalni_nazev": "Cao de Castro Laboreiro",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/193"
+    },
+    {
+      "fci_cislo": "093",
+      "nazev": "Cao de Serra de Aires",
+      "originalni_nazev": "Cao de Serra de Aires",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/104"
+    },
+    {
+      "fci_cislo": "263",
+      "nazev": "Chesapeake Bay Retriever",
+      "originalni_nazev": "Chesapeake Bay Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/313"
+    },
+    {
+      "fci_cislo": "340",
+      "nazev": "Chien Fila de Saint Miguel",
+      "originalni_nazev": "Chien Fila de Saint Miguel",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/388"
+    },
+    {
+      "fci_cislo": "939",
+      "nazev": "Chinese Chongquing dog",
+      "originalni_nazev": "Chinese Chongquing dog",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/449"
+    },
+    {
+      "fci_cislo": "364",
+      "nazev": "Chodský pes",
+      "originalni_nazev": "Chodský pes",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/406"
+    },
+    {
+      "fci_cislo": "922",
+      "nazev": "Chortaja Borzaja",
+      "originalni_nazev": "Chortaja Borzaja",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/421"
+    },
+    {
+      "fci_cislo": "277",
+      "nazev": "Chorvatský ovčák",
+      "originalni_nazev": "Hrvatski Ovčar",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/326"
+    },
+    {
+      "fci_cislo": "205",
+      "nazev": "Chow chow",
+      "originalni_nazev": "Chow chow",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/254"
+    },
+    {
+      "fci_cislo": "109",
+      "nazev": "Clumber španěl",
+      "originalni_nazev": "Clumber Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/127"
+    },
+    {
+      "fci_cislo": "283",
+      "nazev": "Coton de Tuléar",
+      "originalni_nazev": "Coton de Tuléar",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/331"
+    },
+    {
+      "fci_cislo": "110",
+      "nazev": "Curly Coated Retriever",
+      "originalni_nazev": "Curly Coated Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/128"
+    },
+    {
+      "fci_cislo": "279",
+      "nazev": "Černohorský planinský honič",
+      "originalni_nazev": "Crnogorski Planinski Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/328"
+    },
+    {
+      "fci_cislo": "332",
+      "nazev": "Československý vlčák",
+      "originalni_nazev": "Československý vlčák",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/380"
+    },
+    {
+      "fci_cislo": "245",
+      "nazev": "Český fousek",
+      "originalni_nazev": "Český fousek",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/297"
+    },
+    {
+      "fci_cislo": "904",
+      "nazev": "Český horský pes",
+      "originalni_nazev": "Český horský pes",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/404"
+    },
+    {
+      "fci_cislo": "905",
+      "nazev": "Český strakatý pes",
+      "originalni_nazev": "Český strakatý pes",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/405"
+    },
+    {
+      "fci_cislo": "246",
+      "nazev": "Český teriér",
+      "originalni_nazev": "Czech Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/298"
+    },
+    {
+      "fci_cislo": "288",
+      "nazev": "Čínský chocholatý pes",
+      "originalni_nazev": "Chinese Crested Dog",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/336"
+    },
+    {
+      "fci_cislo": "218",
+      "nazev": "Čivava",
+      "originalni_nazev": "Chihuahua",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/265"
+    },
+    {
+      "fci_cislo": "218",
+      "nazev": "Čivava dlouhosrstá",
+      "originalni_nazev": "Chihuahua - Pelo Largo",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/267"
+    },
+    {
+      "fci_cislo": "218",
+      "nazev": "Čivava krátkosrstá",
+      "originalni_nazev": "Chihuahua - Pelo Corto",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/266"
+    },
+    {
+      "fci_cislo": "153",
+      "nazev": "Dalmatin",
+      "originalni_nazev": "Dalmatinski pas",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/176"
+    },
+    {
+      "fci_cislo": "168",
+      "nazev": "Dandie Dinmont terier",
+      "originalni_nazev": "Dandie Dinmont Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/191"
+    },
+    {
+      "fci_cislo": "315",
+      "nazev": "Dánská doga",
+      "originalni_nazev": "Broholmer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/363"
+    },
+    {
+      "fci_cislo": "356",
+      "nazev": "Dánsko-švédský farmářský pes",
+      "originalni_nazev": "Danish-Swedish Farmdog",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/425"
+    },
+    {
+      "fci_cislo": "281",
+      "nazev": "Dánský ohař krátkosrstý",
+      "originalni_nazev": "Gammel Dansk Honsehund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/329"
+    },
+    {
+      "fci_cislo": "164",
+      "nazev": "Deerhound",
+      "originalni_nazev": "Deerhound",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/187"
+    },
+    {
+      "fci_cislo": "937",
+      "nazev": "Deltari Ilir",
+      "originalni_nazev": "Deltari Ilir",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/445"
+    },
+    {
+      "fci_cislo": "114",
+      "nazev": "Dlouhosrstý ohař z Pont-Audemer",
+      "originalni_nazev": "Epagneul de Pont-Audemer",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/131"
+    },
+    {
+      "fci_cislo": "924",
+      "nazev": "Dlouhosrstý vipet",
+      "originalni_nazev": "Silken Windsprite - LHW",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/420"
+    },
+    {
+      "fci_cislo": "143",
+      "nazev": "Dobrman",
+      "originalni_nazev": "Dobermann",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/160"
+    },
+    {
+      "fci_cislo": "224",
+      "nazev": "Drentsche Patrisijshond",
+      "originalni_nazev": "Drentsche Patrisijshond",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/276"
+    },
+    {
+      "fci_cislo": "130",
+      "nazev": "Drever",
+      "originalni_nazev": "Drever",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/147"
+    },
+    {
+      "fci_cislo": "203",
+      "nazev": "Dunker",
+      "originalni_nazev": "Dunker",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/252"
+    },
+    {
+      "fci_cislo": "047",
+      "nazev": "Entlebuchský salašnický pes",
+      "originalni_nazev": "Entlebucher Sennenhund",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/435"
+    },
+    {
+      "fci_cislo": "173",
+      "nazev": "Estrelský pastevecký pes",
+      "originalni_nazev": "Cao da Serra da Estrela",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/216"
+    },
+    {
+      "fci_cislo": "291",
+      "nazev": "Eurasier",
+      "originalni_nazev": "Eurasier",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/339"
+    },
+    {
+      "fci_cislo": "248",
+      "nazev": "Faraónský pes",
+      "originalni_nazev": "Pharaoh Hound",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/300"
+    },
+    {
+      "fci_cislo": "123",
+      "nazev": "Field španěl",
+      "originalni_nazev": "Field Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/140"
+    },
+    {
+      "fci_cislo": "051",
+      "nazev": "Finský honič",
+      "originalni_nazev": "Suomenajaokoira",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/52"
+    },
+    {
+      "fci_cislo": "049",
+      "nazev": "Finský špic",
+      "originalni_nazev": "Suomenpystkorva",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/50"
+    },
+    {
+      "fci_cislo": "191",
+      "nazev": "Flanderský bouvier",
+      "originalni_nazev": "Bouvier des Flandres",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/240"
+    },
+    {
+      "fci_cislo": "121",
+      "nazev": "Flat Coated Retriever",
+      "originalni_nazev": "Flat Coated Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/138"
+    },
+    {
+      "fci_cislo": "159",
+      "nazev": "Foxhound",
+      "originalni_nazev": "English Foxhound",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/182"
+    },
+    {
+      "fci_cislo": "169",
+      "nazev": "Foxterier drsnosrstý",
+      "originalni_nazev": "Fox Terrier Wire",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/192"
+    },
+    {
+      "fci_cislo": "012",
+      "nazev": "Foxterier hladkosrstý",
+      "originalni_nazev": "Fox Terrier Smooth",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/14"
+    },
+    {
+      "fci_cislo": "220",
+      "nazev": "Francouzský bílo-černý honič",
+      "originalni_nazev": "Francais Blanc et Noir",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/269"
+    },
+    {
+      "fci_cislo": "316",
+      "nazev": "Francouzský bílo-oranžový honič",
+      "originalni_nazev": "Francais Blanc et Orange",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/364"
+    },
+    {
+      "fci_cislo": "101",
+      "nazev": "Francouzský buldoček",
+      "originalni_nazev": "Bouledogue Francais",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/119"
+    },
+    {
+      "fci_cislo": "175",
+      "nazev": "Francouzský ohař dlouhosrstý",
+      "originalni_nazev": "Epagneul Francais",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/217"
+    },
+    {
+      "fci_cislo": "133",
+      "nazev": "Francouzský ohař krátkosrstý gaskoň.typu",
+      "originalni_nazev": "Braque Francais Type Gascogne",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/150"
+    },
+    {
+      "fci_cislo": "134",
+      "nazev": "Francouzský ohař krátkosrstý pyren.typu",
+      "originalni_nazev": "Braque Francais Type Pyrénées",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/151"
+    },
+    {
+      "fci_cislo": "219",
+      "nazev": "Francouzský trikolorní honič",
+      "originalni_nazev": "Francais Tricolore",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/268"
+    },
+    {
+      "fci_cislo": "222",
+      "nazev": "Frízský ohař (Stabijhoun)",
+      "originalni_nazev": "Friesischer Vorstehhund (Stabijhoun)",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/271"
+    },
+    {
+      "fci_cislo": "021",
+      "nazev": "Gaskoňsko-saintgeoiský honič",
+      "originalni_nazev": "Gascon Saintgeois",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/26"
+    },
+    {
+      "fci_cislo": "006",
+      "nazev": "Gordonsetr",
+      "originalni_nazev": "Gordon Setter",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/6"
+    },
+    {
+      "fci_cislo": "274",
+      "nazev": "Grónský pes",
+      "originalni_nazev": "Grönlandshund",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/324"
+    },
+    {
+      "fci_cislo": "267",
+      "nazev": "Haldenův honič",
+      "originalni_nazev": "Haldenstöver",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/317"
+    },
+    {
+      "fci_cislo": "132",
+      "nazev": "Hamiltonův honič",
+      "originalni_nazev": "Hamiltonstövare",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/149"
+    },
+    {
+      "fci_cislo": "213",
+      "nazev": "Hannoverský barvář",
+      "originalni_nazev": "Hannoverscher Schweisshund",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/260"
+    },
+    {
+      "fci_cislo": "295",
+      "nazev": "Harrier",
+      "originalni_nazev": "Harrier",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/343"
+    },
+    {
+      "fci_cislo": "250",
+      "nazev": "Havanský psík",
+      "originalni_nazev": "Bichon Havanais",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/302"
+    },
+    {
+      "fci_cislo": "261",
+      "nazev": "Hokkaido",
+      "originalni_nazev": "Hokkaido",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/311"
+    },
+    {
+      "fci_cislo": "313",
+      "nazev": "Holandský ovčácký pudl",
+      "originalni_nazev": "Schapendoes",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/361"
+    },
+    {
+      "fci_cislo": "223",
+      "nazev": "Holandský ovčák",
+      "originalni_nazev": "Hollandse Herdershond",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/272"
+    },
+    {
+      "fci_cislo": "308",
+      "nazev": "Holandský pinč",
+      "originalni_nazev": "Hollandse Smoushond",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/356"
+    },
+    {
+      "fci_cislo": "190",
+      "nazev": "Hovawart",
+      "originalni_nazev": "Hovawart",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/239"
+    },
+    {
+      "fci_cislo": "032",
+      "nazev": "Hrubosrstý modrý gaskoňský honič",
+      "originalni_nazev": "Griffon Bleu de Gascogne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/33"
+    },
+    {
+      "fci_cislo": "266",
+      "nazev": "Hygenův honič",
+      "originalni_nazev": "Hygenhund",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/316"
+    },
+    {
+      "fci_cislo": "089",
+      "nazev": "Ibizský podenco",
+      "originalni_nazev": "Podenco Ibicenco",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/100"
+    },
+    {
+      "fci_cislo": "302",
+      "nazev": "Irish Glen of Imaal terier",
+      "originalni_nazev": "Irish Glen of Imaal Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/350"
+    },
+    {
+      "fci_cislo": "040",
+      "nazev": "Irish Soft Coated Wheaten Terrier",
+      "originalni_nazev": "Irish Soft Coated Wheaten Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/41"
+    },
+    {
+      "fci_cislo": "330",
+      "nazev": "Irský červenobílý setr",
+      "originalni_nazev": "Irish Red & White Setter",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/378"
+    },
+    {
+      "fci_cislo": "120",
+      "nazev": "Irský setr",
+      "originalni_nazev": "Irish Red Setter",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/137"
+    },
+    {
+      "fci_cislo": "139",
+      "nazev": "Irský terier",
+      "originalni_nazev": "Irish Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/156"
+    },
+    {
+      "fci_cislo": "160",
+      "nazev": "Irský vlkodav",
+      "originalni_nazev": "Irish Wolfhound",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/183"
+    },
+    {
+      "fci_cislo": "124",
+      "nazev": "Irský vodní španěl",
+      "originalni_nazev": "Irish Water Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/141"
+    },
+    {
+      "fci_cislo": "289",
+      "nazev": "Islandský ovčácký pes",
+      "originalni_nazev": "Íslenskur Fjárhundur",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/337"
+    },
+    {
+      "fci_cislo": "152",
+      "nazev": "Istrijský hrubosrstý honič",
+      "originalni_nazev": "Istarski Ostrodlaki Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/175"
+    },
+    {
+      "fci_cislo": "151",
+      "nazev": "Istrijský krátkosrstý honič",
+      "originalni_nazev": "Istarski Kratkodlaki Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/174"
+    },
+    {
+      "fci_cislo": "200",
+      "nazev": "Italský chrtík",
+      "originalni_nazev": "Piccolo Levriero Italiano",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/249"
+    },
+    {
+      "fci_cislo": "343",
+      "nazev": "Italský corso pes",
+      "originalni_nazev": "Cane Corso Italiano",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/391"
+    },
+    {
+      "fci_cislo": "198",
+      "nazev": "Italský drsnosrstý honič",
+      "originalni_nazev": "Segugio Italiano a Pelo Forte",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/247"
+    },
+    {
+      "fci_cislo": "337",
+      "nazev": "Italský krátkosrstý honič",
+      "originalni_nazev": "Segugio Italiano a Pelo Raso",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/385"
+    },
+    {
+      "fci_cislo": "202",
+      "nazev": "Italský ohař",
+      "originalni_nazev": "Bracco Italiano",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/251"
+    },
+    {
+      "fci_cislo": "165",
+      "nazev": "Italský spinone",
+      "originalni_nazev": "Spinone Italiano",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/188"
+    },
+    {
+      "fci_cislo": "195",
+      "nazev": "Italský volpino",
+      "originalni_nazev": "Volpino Italiano",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/244"
+    },
+    {
+      "fci_cislo": "345",
+      "nazev": "Jack Russell Teriér",
+      "originalni_nazev": "Jack Russell Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/393"
+    },
+    {
+      "fci_cislo": "042",
+      "nazev": "Jaemthund",
+      "originalni_nazev": "Jämthund",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/43"
+    },
+    {
+      "fci_cislo": "365",
+      "nazev": "Jakutská lajka",
+      "originalni_nazev": "Yakutskaia laika",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/441"
+    },
+    {
+      "fci_cislo": "206",
+      "nazev": "Japan-chin",
+      "originalni_nazev": "Chin",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/255"
+    },
+    {
+      "fci_cislo": "262",
+      "nazev": "Japonský špic",
+      "originalni_nazev": "Nihon Supittsu",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/312"
+    },
+    {
+      "fci_cislo": "259",
+      "nazev": "Japonský terier",
+      "originalni_nazev": "Nihon Teria",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/309"
+    },
+    {
+      "fci_cislo": "148",
+      "nazev": "Jezevčík",
+      "originalni_nazev": "Dachshund",
+      "skupina_kod": "IV",
+      "skupina_cislo": 4,
+      "skupina_nazev": "jezevčíci",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/165"
+    },
+    {
+      "fci_cislo": "326",
+      "nazev": "Jihoruský ovčák",
+      "originalni_nazev": "Ioujnorousskaia Ovtcharka",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/374"
+    },
+    {
+      "fci_cislo": "317",
+      "nazev": "Kai",
+      "originalni_nazev": "Kai",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/365"
+    },
+    {
+      "fci_cislo": "273",
+      "nazev": "Kanaánský pes",
+      "originalni_nazev": "Canaan dog",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/323"
+    },
+    {
+      "fci_cislo": "211",
+      "nazev": "Kanadský eskymácký pes",
+      "originalni_nazev": "Canadian Eskimo Dog",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/444"
+    },
+    {
+      "fci_cislo": "329",
+      "nazev": "Kanárský podenco",
+      "originalni_nazev": "Podenco Canario",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/377"
+    },
+    {
+      "fci_cislo": "331",
+      "nazev": "Kangalský pastevecký pes",
+      "originalni_nazev": "Kangal Coban Köpegi",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/379"
+    },
+    {
+      "fci_cislo": "048",
+      "nazev": "Karelský medvědí pes",
+      "originalni_nazev": "Karjalankarhukoira",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/49"
+    },
+    {
+      "fci_cislo": "087",
+      "nazev": "Katalánský ovčák",
+      "originalni_nazev": "Gos d Atura Catala",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/98"
+    },
+    {
+      "fci_cislo": "136",
+      "nazev": "Kavalír King Charles španěl",
+      "originalni_nazev": "Cavalier King Charles Spaniel",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/153"
+    },
+    {
+      "fci_cislo": "328",
+      "nazev": "Kavkazský pastevecký pes",
+      "originalni_nazev": "Kavkazskaia Ovtcharka",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/376"
+    },
+    {
+      "fci_cislo": "003",
+      "nazev": "Kerry blue terier",
+      "originalni_nazev": "Kerry Blue Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/3"
+    },
+    {
+      "fci_cislo": "128",
+      "nazev": "King Charles španěl",
+      "originalni_nazev": "King Charles Spaniel",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/145"
+    },
+    {
+      "fci_cislo": "362",
+      "nazev": "Kintamani-Bali Dog",
+      "originalni_nazev": "Anjing Kintamani-Bali",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/455"
+    },
+    {
+      "fci_cislo": "318",
+      "nazev": "Kishu",
+      "originalni_nazev": "Kishu",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/366"
+    },
+    {
+      "fci_cislo": "183",
+      "nazev": "Knírač malý",
+      "originalni_nazev": "Zwergschnauzer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/228"
+    },
+    {
+      "fci_cislo": "182",
+      "nazev": "Knírač střední",
+      "originalni_nazev": "Schnauzer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/225"
+    },
+    {
+      "fci_cislo": "181",
+      "nazev": "Knírač velký",
+      "originalni_nazev": "Riesenschnauzer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/222"
+    },
+    {
+      "fci_cislo": "156",
+      "nazev": "Kolie dlouhosrstá",
+      "originalni_nazev": "Collie Rough",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/179"
+    },
+    {
+      "fci_cislo": "296",
+      "nazev": "Kolie krátkosrstá",
+      "originalni_nazev": "Collie Smooth",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/344"
+    },
+    {
+      "fci_cislo": "053",
+      "nazev": "Komondor",
+      "originalni_nazev": "Komondor",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/54"
+    },
+    {
+      "fci_cislo": "369",
+      "nazev": "Kontinentální buldok",
+      "originalni_nazev": "Continental Bulldog",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/430"
+    },
+    {
+      "fci_cislo": "314",
+      "nazev": "Kooikerhondje",
+      "originalni_nazev": "Kooikerhondje",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/362"
+    },
+    {
+      "fci_cislo": "334",
+      "nazev": "Korejský Jindo Dog",
+      "originalni_nazev": "Korea Jindo Dog",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/382"
+    },
+    {
+      "fci_cislo": "107",
+      "nazev": "Korthalsův Griffon",
+      "originalni_nazev": "Griffon d´ arret á poil dur Korthals",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/125"
+    },
+    {
+      "fci_cislo": "278",
+      "nazev": "Krašský ovčák",
+      "originalni_nazev": "Kraski ovčar",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/327"
+    },
+    {
+      "fci_cislo": "192",
+      "nazev": "Kromforländer",
+      "originalni_nazev": "Kromforländer",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/241"
+    },
+    {
+      "fci_cislo": "054",
+      "nazev": "Kuvasz",
+      "originalni_nazev": "Kuvasz",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/55"
+    },
+    {
+      "fci_cislo": "122",
+      "nazev": "Labradorský retriever",
+      "originalni_nazev": "Labrador Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/139"
+    },
+    {
+      "fci_cislo": "298",
+      "nazev": "Lagotto romagnolo",
+      "originalni_nazev": "Lagotto romagnolo",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/346"
+    },
+    {
+      "fci_cislo": "070",
+      "nazev": "Lakeland terier",
+      "originalni_nazev": "Lakeland Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/80"
+    },
+    {
+      "fci_cislo": "360",
+      "nazev": "Lancashirský patař",
+      "originalni_nazev": "Lancashire heeler",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/443"
+    },
+    {
+      "fci_cislo": "226",
+      "nazev": "Landseer",
+      "originalni_nazev": "Landseer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/278"
+    },
+    {
+      "fci_cislo": "189",
+      "nazev": "Lapinkoira",
+      "originalni_nazev": "Suomenlapinkoira",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/238"
+    },
+    {
+      "fci_cislo": "284",
+      "nazev": "Lapinporokoira",
+      "originalni_nazev": "Lapinporokoira (Lapponian Herder)",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/332"
+    },
+    {
+      "fci_cislo": "145",
+      "nazev": "Leonberger",
+      "originalni_nazev": "Leonberger",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/162"
+    },
+    {
+      "fci_cislo": "227",
+      "nazev": "Lhasa Apso",
+      "originalni_nazev": "Lhasa Apso",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/279"
+    },
+    {
+      "fci_cislo": "919",
+      "nazev": "Louisianský leopardí pes",
+      "originalni_nazev": "Louisiana Catahoula",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/417"
+    },
+    {
+      "fci_cislo": "233",
+      "nazev": "Lvíček",
+      "originalni_nazev": "Petit Chien Lion",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/285"
+    },
+    {
+      "fci_cislo": "240",
+      "nazev": "Maďarský chrt",
+      "originalni_nazev": "Magyar Agar",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/292"
+    },
+    {
+      "fci_cislo": "239",
+      "nazev": "Maďarský ohař drátosrstý",
+      "originalni_nazev": "Drotzörü Magyar Vizsla",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/291"
+    },
+    {
+      "fci_cislo": "057",
+      "nazev": "Maďarský ohař krátkosrstý",
+      "originalni_nazev": "Rövidszörü Magyar Viszla",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/58"
+    },
+    {
+      "fci_cislo": "941",
+      "nazev": "Mali Medimurski pas - Medi",
+      "originalni_nazev": "Mali Medimurski pas - Medi",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/450"
+    },
+    {
+      "fci_cislo": "321",
+      "nazev": "Malorský ovčák",
+      "originalni_nazev": "P.de Past.Mallorquín (P.d.C.de Bestiar)",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/369"
+    },
+    {
+      "fci_cislo": "065",
+      "nazev": "Maltézský psík",
+      "originalni_nazev": "Maltese",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/76"
+    },
+    {
+      "fci_cislo": "067",
+      "nazev": "Malý hrubosrstý vendéeský basset",
+      "originalni_nazev": "Petit Basset Griffon Vendéen",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/78"
+    },
+    {
+      "fci_cislo": "077",
+      "nazev": "Malý kontinentální španěl",
+      "originalni_nazev": "Epagneul Nain Continental",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/87"
+    },
+    {
+      "fci_cislo": "031",
+      "nazev": "Malý modrý gaskoňský honič",
+      "originalni_nazev": "Petit Bleu de Gascogne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/32"
+    },
+    {
+      "fci_cislo": "102",
+      "nazev": "Malý münsterlandský ohař",
+      "originalni_nazev": "Kleiner Münsterländer Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/120"
+    },
+    {
+      "fci_cislo": "071",
+      "nazev": "Manchester terier",
+      "originalni_nazev": "Manchester Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/81"
+    },
+    {
+      "fci_cislo": "201",
+      "nazev": "Maremmansko-abruzský pastevecký pes",
+      "originalni_nazev": "Cane da Pastore Maremmano-Abruzzese",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/250"
+    },
+    {
+      "fci_cislo": "938",
+      "nazev": "Markiesje",
+      "originalni_nazev": "Markiesje",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/447"
+    },
+    {
+      "fci_cislo": "234",
+      "nazev": "Mexický naháč",
+      "originalni_nazev": "Xoloitzcuintle",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/286"
+    },
+    {
+      "fci_cislo": "367",
+      "nazev": "Miniaturní americký ovčák",
+      "originalni_nazev": "Miniature American Shepherd",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/437"
+    },
+    {
+      "fci_cislo": "359",
+      "nazev": "Miniaturní bulteriér",
+      "originalni_nazev": "Miniature Bull Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/13"
+    },
+    {
+      "fci_cislo": "035",
+      "nazev": "Modrý gaskoňský basset",
+      "originalni_nazev": "Basset Bleu de Gascogne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/36"
+    },
+    {
+      "fci_cislo": "106",
+      "nazev": "Modrý pikardský ohař dlouhosrstý",
+      "originalni_nazev": "Epagneul Bleu de Picardie",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/124"
+    },
+    {
+      "fci_cislo": "253",
+      "nazev": "Mops",
+      "originalni_nazev": "Pug",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/305"
+    },
+    {
+      "fci_cislo": "918",
+      "nazev": "Moskevský strážní pes",
+      "originalni_nazev": "Moskovskaja Storoževaja Sobaka",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/416"
+    },
+    {
+      "fci_cislo": "238",
+      "nazev": "Mudi",
+      "originalni_nazev": "Mudi",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/290"
+    },
+    {
+      "fci_cislo": "197",
+      "nazev": "Neapolský mastin",
+      "originalni_nazev": "Mastino Napoletano",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/246"
+    },
+    {
+      "fci_cislo": "235",
+      "nazev": "Německá doga",
+      "originalni_nazev": "Deutsche Dogge",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/287"
+    },
+    {
+      "fci_cislo": "144",
+      "nazev": "Německý boxer",
+      "originalni_nazev": "Deutscher Boxer",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/161"
+    },
+    {
+      "fci_cislo": "299",
+      "nazev": "Německý brakýř",
+      "originalni_nazev": "Deutsche Bracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/347"
+    },
+    {
+      "fci_cislo": "104",
+      "nazev": "Německý křepelák",
+      "originalni_nazev": "Deutscher Wachtelhund",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/122"
+    },
+    {
+      "fci_cislo": "103",
+      "nazev": "Německý lovecký terier",
+      "originalni_nazev": "Deutscher Jagdterrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/121"
+    },
+    {
+      "fci_cislo": "117",
+      "nazev": "Německý ohař dlouhosrstý",
+      "originalni_nazev": "Deutscher Langhaariger Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/134"
+    },
+    {
+      "fci_cislo": "098",
+      "nazev": "Německý ohař drátosrstý",
+      "originalni_nazev": "Deutscher Drahthaariger Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/114"
+    },
+    {
+      "fci_cislo": "119",
+      "nazev": "Německý ohař krátkosrstý",
+      "originalni_nazev": "Deutscher Kurzhaariger Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/136"
+    },
+    {
+      "fci_cislo": "232",
+      "nazev": "Německý ohař ostnosrstý",
+      "originalni_nazev": "Deutscher Stichelhaariger Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/284"
+    },
+    {
+      "fci_cislo": "166",
+      "nazev": "Německý ovčák",
+      "originalni_nazev": "Deutscher Schäferhund",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/189"
+    },
+    {
+      "fci_cislo": "184",
+      "nazev": "Německý pinč",
+      "originalni_nazev": "Pinscher",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/233"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic",
+      "originalni_nazev": "Deutscher Spitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/108"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic malý",
+      "originalni_nazev": "Deutscher Spitz - Kleinspitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/109"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic střední",
+      "originalni_nazev": "Deutscher Spitz - Mittelspitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/110"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic trpasličí",
+      "originalni_nazev": "Deutscher Spitz - Zwergspitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/111"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic velký",
+      "originalni_nazev": "Deutscher Spitz - Grosspitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/112"
+    },
+    {
+      "fci_cislo": "097",
+      "nazev": "Německý špic vlčí",
+      "originalni_nazev": "Deutscher Spitz - Wolfspitz",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/113"
+    },
+    {
+      "fci_cislo": "017",
+      "nazev": "Nivernaisský hrubosrstý honič",
+      "originalni_nazev": "Griffon Nivernais",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/23"
+    },
+    {
+      "fci_cislo": "276",
+      "nazev": "Norbotenský špic",
+      "originalni_nazev": "Norrbottenspets",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/325"
+    },
+    {
+      "fci_cislo": "272",
+      "nazev": "Norfolk terier",
+      "originalni_nazev": "Norfolk Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/322"
+    },
+    {
+      "fci_cislo": "237",
+      "nazev": "Norský buhund",
+      "originalni_nazev": "Norsk Buhund",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/289"
+    },
+    {
+      "fci_cislo": "268",
+      "nazev": "Norský losí pes černý",
+      "originalni_nazev": "Norsk Elghund Sort",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/318"
+    },
+    {
+      "fci_cislo": "242",
+      "nazev": "Norský losí pes šedý",
+      "originalni_nazev": "Elghund Grä",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/294"
+    },
+    {
+      "fci_cislo": "265",
+      "nazev": "Norský lundehund",
+      "originalni_nazev": "Norsk Lundehund",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/315"
+    },
+    {
+      "fci_cislo": "072",
+      "nazev": "Norwich terier",
+      "originalni_nazev": "Norwich Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/82"
+    },
+    {
+      "fci_cislo": "312",
+      "nazev": "Nova Scotia Duck Tolling Retriever",
+      "originalni_nazev": "Nova Scotia Duck Tolling Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/360"
+    },
+    {
+      "fci_cislo": "050",
+      "nazev": "Novofundlandský pes",
+      "originalni_nazev": "Newfoundland",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/51"
+    },
+    {
+      "fci_cislo": "929",
+      "nazev": "Odis",
+      "originalni_nazev": "Odis",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/433"
+    },
+    {
+      "fci_cislo": "186",
+      "nazev": "Opičí pinč",
+      "originalni_nazev": "Affenpinscher",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/235"
+    },
+    {
+      "fci_cislo": "294",
+      "nazev": "Otterhound (Vydrař)",
+      "originalni_nazev": "Otterhound",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/342"
+    },
+    {
+      "fci_cislo": "077",
+      "nazev": "Papillon",
+      "originalni_nazev": "Papillon - Epagneul Nain Continental",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/88"
+    },
+    {
+      "fci_cislo": "339",
+      "nazev": "Parson Russell Teriér",
+      "originalni_nazev": "Parson Russell Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/387"
+    },
+    {
+      "fci_cislo": "916",
+      "nazev": "Patterdale terier",
+      "originalni_nazev": "Patterdale Terrier",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/413"
+    },
+    {
+      "fci_cislo": "207",
+      "nazev": "Pekingský palácový psík",
+      "originalni_nazev": "Pekingese",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/256"
+    },
+    {
+      "fci_cislo": "249",
+      "nazev": "Perro de Presa Mallorquin",
+      "originalni_nazev": "Perro de Presa Mallorquin",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/301"
+    },
+    {
+      "fci_cislo": "310",
+      "nazev": "Peruánský naháč",
+      "originalni_nazev": "Perro Sin Pelo del Perú",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/358"
+    },
+    {
+      "fci_cislo": "077",
+      "nazev": "Phaléne",
+      "originalni_nazev": "Phaléne - Epagneul Nain Continental",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/89"
+    },
+    {
+      "fci_cislo": "108",
+      "nazev": "Pikardský ohař dlouhosrstý",
+      "originalni_nazev": "Epagneul Picard",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/126"
+    },
+    {
+      "fci_cislo": "176",
+      "nazev": "Pikardský ovčák",
+      "originalni_nazev": "Berger de Picardie",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/218"
+    },
+    {
+      "fci_cislo": "036",
+      "nazev": "Plavý bretaňský basset",
+      "originalni_nazev": "Basset Fauve de Bretagne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/37"
+    },
+    {
+      "fci_cislo": "066",
+      "nazev": "Plavý bretaňský honič",
+      "originalni_nazev": "Griffon Fauve de Bretagne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/77"
+    },
+    {
+      "fci_cislo": "940",
+      "nazev": "Plott Hound",
+      "originalni_nazev": "Plott Hound",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/451"
+    },
+    {
+      "fci_cislo": "252",
+      "nazev": "Podhalaňský ovčák",
+      "originalni_nazev": "Polski Owczarek Podhalanski",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/304"
+    },
+    {
+      "fci_cislo": "001",
+      "nazev": "Pointer",
+      "originalni_nazev": "English Pointer",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/1"
+    },
+    {
+      "fci_cislo": "024",
+      "nazev": "Poitevin",
+      "originalni_nazev": "Poitevin",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/28"
+    },
+    {
+      "fci_cislo": "333",
+      "nazev": "Polský chrt",
+      "originalni_nazev": "Chart Polski",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/381"
+    },
+    {
+      "fci_cislo": "354",
+      "nazev": "Polský honič",
+      "originalni_nazev": "Gończy Polski",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/402"
+    },
+    {
+      "fci_cislo": "936",
+      "nazev": "Polský lovecký španěl",
+      "originalni_nazev": "Polish Hunting Spaniel",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/452"
+    },
+    {
+      "fci_cislo": "052",
+      "nazev": "Polský ogar",
+      "originalni_nazev": "Polski ogar",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/53"
+    },
+    {
+      "fci_cislo": "251",
+      "nazev": "Polský ovčák nížinný",
+      "originalni_nazev": "Polski Owczarek Nizinny",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/303"
+    },
+    {
+      "fci_cislo": "030",
+      "nazev": "Porcelán",
+      "originalni_nazev": "Porcelaine",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/31"
+    },
+    {
+      "fci_cislo": "187",
+      "nazev": "Portugalský ohař",
+      "originalni_nazev": "Perdiguero Portugués",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/236"
+    },
+    {
+      "fci_cislo": "094",
+      "nazev": "Portugalský podengo",
+      "originalni_nazev": "Podengo Portugues",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/105"
+    },
+    {
+      "fci_cislo": "037",
+      "nazev": "Portugalský vodní pes",
+      "originalni_nazev": "Cao de Aqua",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/38"
+    },
+    {
+      "fci_cislo": "154",
+      "nazev": "Posávský honič",
+      "originalni_nazev": "Posavski Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/177"
+    },
+    {
+      "fci_cislo": "363",
+      "nazev": "Pražský krysařík",
+      "originalni_nazev": "Pražský krysařík",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/407"
+    },
+    {
+      "fci_cislo": "346",
+      "nazev": "Presa Canario",
+      "originalni_nazev": "Presa Canario",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/394"
+    },
+    {
+      "fci_cislo": "172",
+      "nazev": "Pudl",
+      "originalni_nazev": "Caniche",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/195"
+    },
+    {
+      "fci_cislo": "216",
+      "nazev": "Pudlpointr",
+      "originalni_nazev": "Pudelpointer",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/263"
+    },
+    {
+      "fci_cislo": "055",
+      "nazev": "Puli",
+      "originalni_nazev": "Puli",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/56"
+    },
+    {
+      "fci_cislo": "056",
+      "nazev": "Pumi",
+      "originalni_nazev": "Pumi",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/57"
+    },
+    {
+      "fci_cislo": "137",
+      "nazev": "Pyrenejský horský pes",
+      "originalni_nazev": "Chien de Montagne des Pyrénées",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/154"
+    },
+    {
+      "fci_cislo": "092",
+      "nazev": "Pyrenejský mastin",
+      "originalni_nazev": "Mastin de los Pirineos",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/103"
+    },
+    {
+      "fci_cislo": "141",
+      "nazev": "Pyrenejský ovčák s dl. srstí v obličeji",
+      "originalni_nazev": "Berger des Pyrénées á poil long",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/158"
+    },
+    {
+      "fci_cislo": "138",
+      "nazev": "Pyrenejský ovčák s kr.srstí v obličeji",
+      "originalni_nazev": "Chien de Berger des Pyrénées á face rase",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/155"
+    },
+    {
+      "fci_cislo": "096",
+      "nazev": "Rafeiro do Alentejo",
+      "originalni_nazev": "Rafeiro do Alentejo",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/107"
+    },
+    {
+      "fci_cislo": "063",
+      "nazev": "Rakouský krátkosrstý honič",
+      "originalni_nazev": "Brandlbracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/74"
+    },
+    {
+      "fci_cislo": "064",
+      "nazev": "Rakouský krátkosrstý pinč",
+      "originalni_nazev": "Oesterreichischer Kurzhaariger Pinscher",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/75"
+    },
+    {
+      "fci_cislo": "214",
+      "nazev": "Řecký honič",
+      "originalni_nazev": "Hellinikos Ichnilatis",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/261"
+    },
+    {
+      "fci_cislo": "926",
+      "nazev": "Redbone Coonhound",
+      "originalni_nazev": "Redbone Coonhound",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/424"
+    },
+    {
+      "fci_cislo": "146",
+      "nazev": "Rhodéský ridgeback",
+      "originalni_nazev": "Rhodesian ridgeback",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/163"
+    },
+    {
+      "fci_cislo": "147",
+      "nazev": "Rotvajler",
+      "originalni_nazev": "Rottweiler",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/164"
+    },
+    {
+      "fci_cislo": "350",
+      "nazev": "Rumunský karpatský ovčák",
+      "originalni_nazev": "Ciobanesc Romanesc Carpatin",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/398"
+    },
+    {
+      "fci_cislo": "349",
+      "nazev": "Rumunský mioritský ovčák",
+      "originalni_nazev": "Ciobanesc Romanesc Mioritic",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/397"
+    },
+    {
+      "fci_cislo": "357",
+      "nazev": "Rumunský ovčák - Bucovina",
+      "originalni_nazev": "Ciobanesc Romanesc de Bucovina",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/426"
+    },
+    {
+      "fci_cislo": "917",
+      "nazev": "Ruská barevná bolonka",
+      "originalni_nazev": "Russkaya cvetnaja bolonka",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/415"
+    },
+    {
+      "fci_cislo": "304",
+      "nazev": "Ruskoevropská lajka",
+      "originalni_nazev": "Laika Russko-Evropeiskaia",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/352"
+    },
+    {
+      "fci_cislo": "327",
+      "nazev": "Ruský černý terier",
+      "originalni_nazev": "Russkiy Tchiorny Terrier",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/375"
+    },
+    {
+      "fci_cislo": "352",
+      "nazev": "Ruský toy",
+      "originalni_nazev": "Russkiy toy",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/400"
+    },
+    {
+      "fci_cislo": "311",
+      "nazev": "Saarloosův vlčák",
+      "originalni_nazev": "Saarloos Wolfhond",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/359"
+    },
+    {
+      "fci_cislo": "115",
+      "nazev": "Saint-Germainský ohař krátkosrstý",
+      "originalni_nazev": "Braque Saint-Germain",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/132"
+    },
+    {
+      "fci_cislo": "269",
+      "nazev": "Saluki - Perský chrt",
+      "originalni_nazev": "Saluki",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/319"
+    },
+    {
+      "fci_cislo": "212",
+      "nazev": "Samojed",
+      "originalni_nazev": "Samoyede",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/259"
+    },
+    {
+      "fci_cislo": "131",
+      "nazev": "Schillerův honič",
+      "originalni_nazev": "Schillerstövare",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/148"
+    },
+    {
+      "fci_cislo": "074",
+      "nazev": "Sealyham terier",
+      "originalni_nazev": "Sealyham Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/84"
+    },
+    {
+      "fci_cislo": "241",
+      "nazev": "Sedmihradský honič",
+      "originalni_nazev": "Erdélyi kopó",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/293"
+    },
+    {
+      "fci_cislo": "309",
+      "nazev": "Shar-Pei",
+      "originalni_nazev": "Shar Pei",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/357"
+    },
+    {
+      "fci_cislo": "088",
+      "nazev": "Sheltie",
+      "originalni_nazev": "Shetland Sheepdog",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/99"
+    },
+    {
+      "fci_cislo": "257",
+      "nazev": "Shiba",
+      "originalni_nazev": "Shiba",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/308"
+    },
+    {
+      "fci_cislo": "208",
+      "nazev": "Shih-tzu",
+      "originalni_nazev": "Shih Tzu",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/257"
+    },
+    {
+      "fci_cislo": "319",
+      "nazev": "Shikoku",
+      "originalni_nazev": "Shikoku",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/367"
+    },
+    {
+      "fci_cislo": "270",
+      "nazev": "Sibiřský husky",
+      "originalni_nazev": "Siberian Husky",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/320"
+    },
+    {
+      "fci_cislo": "199",
+      "nazev": "Sicilský chrt",
+      "originalni_nazev": "Cirneco dell Etna",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/248"
+    },
+    {
+      "fci_cislo": "073",
+      "nazev": "Skotský teriér",
+      "originalni_nazev": "Scottish terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/431"
+    },
+    {
+      "fci_cislo": "075",
+      "nazev": "Skye terier",
+      "originalni_nazev": "Skye Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/85"
+    },
+    {
+      "fci_cislo": "188",
+      "nazev": "Sloughi",
+      "originalni_nazev": "Sloughi",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/237"
+    },
+    {
+      "fci_cislo": "142",
+      "nazev": "Slovenský čuvač",
+      "originalni_nazev": "Slovenský čuvač",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/159"
+    },
+    {
+      "fci_cislo": "244",
+      "nazev": "Slovenský kopov",
+      "originalni_nazev": "Slovenský kopov",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/296"
+    },
+    {
+      "fci_cislo": "320",
+      "nazev": "Slovenský ohař hrubosrstý",
+      "originalni_nazev": "Slovenský hrubosrstý stavač",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/368"
+    },
+    {
+      "fci_cislo": "129",
+      "nazev": "Smalandský honič",
+      "originalni_nazev": "Smalandsstövare",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/146"
+    },
+    {
+      "fci_cislo": "150",
+      "nazev": "Srbský honič",
+      "originalni_nazev": "Srpski Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/173"
+    },
+    {
+      "fci_cislo": "229",
+      "nazev": "Srbský trikolorní honič",
+      "originalni_nazev": "Srpski Trojbojni Gonič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/281"
+    },
+    {
+      "fci_cislo": "076",
+      "nazev": "Stafordšírský bullterier",
+      "originalni_nazev": "Staffordshire Bullterrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/86"
+    },
+    {
+      "fci_cislo": "335",
+      "nazev": "Středoasijský pastevecký pes",
+      "originalni_nazev": "Sredneasiatskaia Ovtcharka",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/383"
+    },
+    {
+      "fci_cislo": "127",
+      "nazev": "Sussex španěl",
+      "originalni_nazev": "Sussex Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/144"
+    },
+    {
+      "fci_cislo": "061",
+      "nazev": "Svatobernardský pes",
+      "originalni_nazev": "St. Bernardshund",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/70"
+    },
+    {
+      "fci_cislo": "061",
+      "nazev": "Svatobernardský pes krátkosrstý",
+      "originalni_nazev": "St. Bernardshund Kurzhaaring",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/72"
+    },
+    {
+      "fci_cislo": "041",
+      "nazev": "Šarplaninský pastevecký pes",
+      "originalni_nazev": "Jugoslavenski Ovcarski Pas - Sarplaninac",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/448"
+    },
+    {
+      "fci_cislo": "083",
+      "nazev": "Šiperka",
+      "originalni_nazev": "Schipperke",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/94"
+    },
+    {
+      "fci_cislo": "285",
+      "nazev": "Španělský galgo",
+      "originalni_nazev": "Galgo Espaňol",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/333"
+    },
+    {
+      "fci_cislo": "091",
+      "nazev": "Španělský mastin",
+      "originalni_nazev": "Mastín Espaňol",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/102"
+    },
+    {
+      "fci_cislo": "204",
+      "nazev": "Španělský sabueso",
+      "originalni_nazev": "Sabueso Espaňol",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/253"
+    },
+    {
+      "fci_cislo": "336",
+      "nazev": "Španělský vodní pes",
+      "originalni_nazev": "Perro de Aqua",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/384"
+    },
+    {
+      "fci_cislo": "062",
+      "nazev": "Štýrský brakýř",
+      "originalni_nazev": "Steirische Rauhhaarbracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/73"
+    },
+    {
+      "fci_cislo": "135",
+      "nazev": "Švédský laponský pes",
+      "originalni_nazev": "Svensk Lapphund",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/152"
+    },
+    {
+      "fci_cislo": "014",
+      "nazev": "Švédský vallhund",
+      "originalni_nazev": "Västgötaspets",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/16"
+    },
+    {
+      "fci_cislo": "059",
+      "nazev": "Švýcarský honič",
+      "originalni_nazev": "Schweizer Laufhund",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/60"
+    },
+    {
+      "fci_cislo": "060",
+      "nazev": "Švýcarský nízkonohý honič",
+      "originalni_nazev": "Schweizer Niederlaufhund",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/65"
+    },
+    {
+      "fci_cislo": "348",
+      "nazev": "Taiwanský pes",
+      "originalni_nazev": "Taiwan Dog",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/396"
+    },
+    {
+      "fci_cislo": "933",
+      "nazev": "Tatranský honič",
+      "originalni_nazev": "Tatranský durič",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/440"
+    },
+    {
+      "fci_cislo": "358",
+      "nazev": "Thai Bangkaew dog",
+      "originalni_nazev": "Thai Bangkaew dog",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/432"
+    },
+    {
+      "fci_cislo": "338",
+      "nazev": "Thajský ridgeback",
+      "originalni_nazev": "Thailand-Ridgeback",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/386"
+    },
+    {
+      "fci_cislo": "230",
+      "nazev": "Tibetská doga",
+      "originalni_nazev": "Tibetan Mastiff",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/282"
+    },
+    {
+      "fci_cislo": "231",
+      "nazev": "Tibetský španěl",
+      "originalni_nazev": "Tibetan Spaniel",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/283"
+    },
+    {
+      "fci_cislo": "209",
+      "nazev": "Tibetský terier",
+      "originalni_nazev": "Tibetan Terrier",
+      "skupina_kod": "IX",
+      "skupina_cislo": 9,
+      "skupina_nazev": "plemena společenská",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/258"
+    },
+    {
+      "fci_cislo": "260",
+      "nazev": "Tosa-Inu",
+      "originalni_nazev": "Tosa",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/310"
+    },
+    {
+      "fci_cislo": "927",
+      "nazev": "Toy foxteriér",
+      "originalni_nazev": "Toy Fox Terrier",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/427"
+    },
+    {
+      "fci_cislo": "185",
+      "nazev": "Trpasličí pinč",
+      "originalni_nazev": "Zwergpinscher",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/234"
+    },
+    {
+      "fci_cislo": "068",
+      "nazev": "Tyrolský honič",
+      "originalni_nazev": "Tyroler Bracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/79"
+    },
+    {
+      "fci_cislo": "353",
+      "nazev": "Uruguajský cimarron",
+      "originalni_nazev": "Cimarrón Uruguayo",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/401"
+    },
+    {
+      "fci_cislo": "370",
+      "nazev": "Valencian teriér",
+      "originalni_nazev": "Gos Rater Valencia",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/457"
+    },
+    {
+      "fci_cislo": "324",
+      "nazev": "Vel.franc.-anglický bílo-oranžový honič",
+      "originalni_nazev": "Grand Anglo-Francais Blanc et Orange",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/372"
+    },
+    {
+      "fci_cislo": "322",
+      "nazev": "Vel.francouzsko-anglický trikolor.honič",
+      "originalni_nazev": "Grand Anglo-Francais Tricolore",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/370"
+    },
+    {
+      "fci_cislo": "323",
+      "nazev": "Velký franc.-anglický bílo-černý honič",
+      "originalni_nazev": "Grand Anglo-Francais Blanc et Noir",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/371"
+    },
+    {
+      "fci_cislo": "033",
+      "nazev": "Velký hrubosrstý vendéeský basset",
+      "originalni_nazev": "Grand Basset Griffon Vendéen",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/34"
+    },
+    {
+      "fci_cislo": "022",
+      "nazev": "Velký modrý gaskoňský honič",
+      "originalni_nazev": "Grand Bleu de Gascogne",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/27"
+    },
+    {
+      "fci_cislo": "118",
+      "nazev": "Velký münsterlandský ohař",
+      "originalni_nazev": "Grosser Münsterländer Vorstehhund",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/135"
+    },
+    {
+      "fci_cislo": "058",
+      "nazev": "Velký švýcarský salašnický pes",
+      "originalni_nazev": "Grosser Schweizer Sennenhund",
+      "skupina_kod": "II",
+      "skupina_cislo": 2,
+      "skupina_nazev": "pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/59"
+    },
+    {
+      "fci_cislo": "282",
+      "nazev": "Velký vendéeský hrubosrstý honič",
+      "originalni_nazev": "Grand Griffon Vendéen",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/330"
+    },
+    {
+      "fci_cislo": "930",
+      "nazev": "Východoevropský ovčák",
+      "originalni_nazev": "Vostochoeuropeyskaya ovtcharka",
+      "skupina_kod": "N",
+      "skupina_cislo": null,
+      "skupina_nazev": "FCI neuznaná plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/434"
+    },
+    {
+      "fci_cislo": "305",
+      "nazev": "Východosibiřská lajka",
+      "originalni_nazev": "Laika Vostotchno-Sibirskaia",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/353"
+    },
+    {
+      "fci_cislo": "099",
+      "nazev": "Výmarský ohař",
+      "originalni_nazev": "Weimaraner",
+      "skupina_kod": "VII",
+      "skupina_cislo": 7,
+      "skupina_nazev": "ohaři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/115"
+    },
+    {
+      "fci_cislo": "038",
+      "nazev": "Welsh Corgi Cardigan",
+      "originalni_nazev": "Welsh Corgi Cardigan",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/39"
+    },
+    {
+      "fci_cislo": "039",
+      "nazev": "Welsh Corgi Pembroke",
+      "originalni_nazev": "Welsh Corgi Pembroke",
+      "skupina_kod": "I",
+      "skupina_cislo": 1,
+      "skupina_nazev": "plemena ovčácká, pastevecká a honácká",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/40"
+    },
+    {
+      "fci_cislo": "078",
+      "nazev": "Welsh terier",
+      "originalni_nazev": "Welsh Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/90"
+    },
+    {
+      "fci_cislo": "126",
+      "nazev": "Welššpringršpaněl",
+      "originalni_nazev": "Welsh Springer Spaniel",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/143"
+    },
+    {
+      "fci_cislo": "085",
+      "nazev": "West Highland White Terrier",
+      "originalni_nazev": "West Highland White Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/96"
+    },
+    {
+      "fci_cislo": "100",
+      "nazev": "Westfálský jezevčíkovitý honič",
+      "originalni_nazev": "Westfälische Dachsbracke",
+      "skupina_kod": "VI",
+      "skupina_cislo": 6,
+      "skupina_nazev": "honiči a barváři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/118"
+    },
+    {
+      "fci_cislo": "221",
+      "nazev": "Wetterhound",
+      "originalni_nazev": "Wetterhound",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/270"
+    },
+    {
+      "fci_cislo": "162",
+      "nazev": "Whippet",
+      "originalni_nazev": "Whippet",
+      "skupina_kod": "X",
+      "skupina_cislo": 10,
+      "skupina_nazev": "chrti",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/185"
+    },
+    {
+      "fci_cislo": "086",
+      "nazev": "Yorkšírský terier",
+      "originalni_nazev": "Yorkshire Terrier",
+      "skupina_kod": "III",
+      "skupina_cislo": 3,
+      "skupina_nazev": "teriéři",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/97"
+    },
+    {
+      "fci_cislo": "306",
+      "nazev": "Západosibiřská lajka",
+      "originalni_nazev": "Laika Zapadno-Sibirskaia",
+      "skupina_kod": "V",
+      "skupina_cislo": 5,
+      "skupina_nazev": "špicové a tzv. primitivní plemena",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/354"
+    },
+    {
+      "fci_cislo": "111",
+      "nazev": "Zlatý retriever",
+      "originalni_nazev": "Golden Retriever",
+      "skupina_kod": "VIII",
+      "skupina_cislo": 8,
+      "skupina_nazev": "slídiči, retrieveři a vodní psi",
+      "detail_url": "https://www.cmku.cz/cz/seznam-plemen-159/129"
+    }
+  ]
+}
+;
