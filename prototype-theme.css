@@ -2910,3 +2910,229 @@ body.portal-active { background: #070707; }
 @keyframes mobileSheetIn {
   from { opacity: 0; transform: translateY(28px); }
 }
+
+/* Mobilní pracovní zóny: stabilní spodní navigace místo výsuvného bočního panelu. */
+.portal-sidebar nav button > em {
+  min-width: 0;
+  overflow: hidden;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.member-mobile-dog-switcher { display: none; }
+
+@media (max-width: 820px) {
+  body.portal-active { overflow: hidden; }
+  .portal-shell {
+    display: block;
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+  .portal-shell .portal-sidebar {
+    position: fixed;
+    z-index: 80;
+    inset: auto 0 0;
+    width: auto !important;
+    min-height: 0;
+    height: auto;
+    padding: 7px 9px calc(7px + env(safe-area-inset-bottom));
+    overflow: visible;
+    border-top: 1px solid rgba(212, 175, 55, .28);
+    border-right: 0;
+    background: linear-gradient(180deg, rgba(17, 17, 16, .97), #070707 64%);
+    box-shadow: 0 -16px 45px rgba(0, 0, 0, .48);
+    transform: none !important;
+    backdrop-filter: blur(18px);
+  }
+  .portal-shell .portal-brand,
+  .portal-shell .portal-account,
+  .portal-shell .admin-mode-label,
+  .portal-shell .portal-sidebar-bottom,
+  .portal-shell .member-dog-subnav { display: none !important; }
+  .portal-shell .portal-sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .portal-shell .portal-sidebar nav > button {
+    position: relative;
+    min-width: 0;
+    min-height: 55px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23px auto;
+    place-items: center;
+    gap: 2px;
+    padding: 5px 3px 4px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    color: #7f7f78;
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .portal-shell .portal-sidebar nav > button > span {
+    font-size: 19px;
+    line-height: 1;
+  }
+  .portal-shell .portal-sidebar nav > button > em {
+    width: 100%;
+    color: inherit;
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .portal-shell .portal-sidebar nav > button > b {
+    position: absolute;
+    top: 4px;
+    right: max(5px, calc(50% - 27px));
+    min-width: 16px;
+    padding: 2px 5px;
+    font-size: 8px;
+  }
+  .portal-shell .portal-sidebar nav > button:hover,
+  .portal-shell .portal-sidebar nav > button.active {
+    border-color: rgba(212, 175, 55, .22);
+    background: rgba(212, 175, 55, .09);
+    color: #fff;
+  }
+  .portal-shell .portal-sidebar nav > button.active {
+    box-shadow: inset 0 2px #d4af37;
+  }
+  .portal-shell .portal-main {
+    height: calc(100dvh - 72px - env(safe-area-inset-bottom));
+    padding-bottom: 0;
+  }
+  .portal-shell .portal-content {
+    padding-bottom: 52px;
+  }
+  .portal-shell .portal-menu { display: none !important; }
+  .portal-shell .portal-topbar {
+    min-height: 64px;
+    padding-inline: 16px;
+  }
+  .portal-shell .portal-topbar > div { gap: 1px; }
+}
+
+/* Členská zóna: na mobilu se související údaje skládají po dvojicích. */
+@media (max-width: 680px) {
+  .member-mobile-dog-switcher {
+    display: flex;
+    gap: 7px;
+    margin: -10px 0 14px;
+    padding-bottom: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .member-mobile-dog-switcher::-webkit-scrollbar { display: none; }
+  .member-mobile-dog-switcher button {
+    min-width: 104px;
+    min-height: 52px;
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 12px;
+    background: #0b0b0b;
+    color: #aaa9a2;
+    text-align: left;
+  }
+  .member-mobile-dog-switcher button > span {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(212, 175, 55, .32);
+    border-radius: 50%;
+    color: #f2c94c;
+    font-size: 9px;
+    font-weight: 800;
+  }
+  .member-mobile-dog-switcher button > b {
+    overflow: hidden;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .member-mobile-dog-switcher button.active {
+    border-color: rgba(242, 201, 76, .58);
+    background: rgba(212, 175, 55, .09);
+    color: #fff;
+  }
+  .member-mobile-dog-switcher .member-mobile-add-dog { min-width: 92px; }
+
+  .member-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px 8px;
+  }
+  .member-form-grid .span-2,
+  .member-form-grid .span-3,
+  .member-form-grid .span-4,
+  .member-form-grid .span-5,
+  .member-form-grid .span-6,
+  .member-form-grid .span-8 { grid-column: span 1; }
+  .floating-form-grid > label:has(input[readonly]) { grid-column: 1 / -1 !important; }
+  .member-profile-card .member-profile-divider + .member-form-grid > label:first-child { grid-column: 1 / -1; }
+  .member-form-grid input,
+  .member-form-grid select,
+  .floating-picker { min-width: 0; padding-inline: 10px; }
+  .member-form-grid label > span,
+  .floating-picker > span { letter-spacing: .055em; }
+
+  .dog-facts-grid,
+  .member-application-detail-body dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dog-facts-grid > div.wide { grid-column: 1 / -1; }
+  .dog-facts-grid > div,
+  .member-application-detail-body dl > div { min-width: 0; padding-right: 9px; }
+  .dog-facts-grid dd,
+  .member-application-detail-body dd { overflow-wrap: anywhere; }
+}
+
+/* Tvorba výstavy: krátká pole zůstávají na mobilu ve dvou sloupcích. */
+@media (max-width: 590px) {
+  .admin-create-form { gap: 12px; }
+  .create-form-section { padding: 18px 14px; }
+  .create-form-section .card-heading { margin-bottom: 16px; padding-bottom: 13px; }
+  .create-form-section .card-heading h2 { font-size: 21px; }
+  .create-form-section .form-grid.two,
+  .create-form-section .form-grid.three,
+  .class-check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 8px;
+  }
+  .create-form-section .form-grid.three > label:first-child { grid-column: 1 / -1; }
+  .create-form-section label > span,
+  .breed-multi-label > span,
+  .create-textarea > span { font-size: 9px; letter-spacing: .055em; }
+  .create-form-section input,
+  .create-form-section select {
+    min-width: 0;
+    height: 46px;
+    padding-inline: 9px;
+    font-size: 12px;
+  }
+  .create-breed-layout { gap: 20px; }
+  .event-breed-option-list { height: 230px; }
+  .class-check-grid label {
+    min-width: 0;
+    min-height: 45px;
+    gap: 7px;
+    padding: 8px;
+    font-size: 10px;
+    line-height: 1.25;
+  }
+  .class-check-grid input { flex: 0 0 auto; }
+  .create-form-actions {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px;
+    bottom: -1px;
+    padding-bottom: 5px;
+  }
+  .create-form-actions button { min-width: 0; }
+  .create-form-actions .outline-button { width: auto; padding-inline: 14px; }
+  .create-form-actions .gold-button { width: 100%; padding-inline: 13px; }
+  .portal-shell .portal-sidebar nav > button > em { font-size: 9px; }
+  .portal-shell .portal-sidebar nav > button .nav-detail { display: none; }
+}
