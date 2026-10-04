@@ -1,0 +1,67 @@
+.contact-action { border: 0; cursor: pointer; }
+.contact-action:hover { background: var(--gold-light); }
+.contact-modal-open { overflow: hidden; }
+.contact-dialog { width: min(660px, calc(100% - 40px)); max-height: calc(100dvh - 40px); margin: auto; padding: 0; overflow: auto; border: 1px solid #665536; border-radius: 0; background: #10100e; color: var(--text); box-shadow: 0 24px 90px #0008; }
+.contact-dialog::backdrop { background: rgb(0 0 0 / 78%); backdrop-filter: blur(5px); }
+.contact-dialog [hidden] { display: none !important; }
+.contact-dialog-body { padding: 30px; }
+.contact-dialog-head { padding-right: 35px; margin-bottom: 24px; }
+.contact-dialog-head .eyebrow { margin-bottom: 10px; }
+.contact-dialog h2 { margin: 0 0 10px; font-size: 28px; letter-spacing: -.025em; line-height: 1.2; }
+.contact-dialog-head > p:last-child { margin: 0; font-size: 14px; color: #bdb9ad; line-height: 1.5; overflow-wrap: anywhere; }
+.contact-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; display: grid; place-items: center; padding: 0; border: 1px solid #49412d; background: #10100e; color: var(--gold); font-size: 25px; cursor: pointer; }
+.contact-dialog :is(button, a, input, textarea, select):focus-visible, .contact-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.contact-dialog label { display: grid; gap: 8px; min-width: 0; margin-bottom: 17px; color: #d7d4ca; font-size: 14px; }
+.contact-dialog :is(input, textarea, select) { width: 100%; min-width: 0; min-height: 44px; padding: 11px 12px; border: 1px solid #4b473d; border-radius: 0; background: #0b0b0a; color: var(--text); font: inherit; font-size: 16px; }
+.contact-dialog textarea { min-height: 114px; resize: vertical; line-height: 1.5; }
+.contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-dialog .contact-hint { color: #aaa69b; font-size: 12px; line-height: 1.6; margin: 12px 0; }
+.contact-form-actions { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+.contact-form-actions > p { max-width: 275px; margin: 0; font-size: 12px; color: #aaa69b; line-height: 1.6; }
+.contact-primary, .contact-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 18px; flex: none; min-height: 44px; padding: 11px 16px; border: 1px solid var(--gold); border-radius: 0; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.contact-primary { background: var(--gold); color: #0c0c0a; }
+.contact-primary:hover { background: var(--gold-light); }
+.contact-secondary { background: transparent; color: var(--gold); border-color: #665536; }
+.contact-secondary:hover { background: #221e15; }
+.contact-preview-meta { display: grid; gap: 15px; font-size: 14px; }
+.contact-preview-meta dt { color: #aaa69b; margin-bottom: 5px; }
+.contact-preview-meta dd { margin: 0; overflow-wrap: anywhere; }
+#contact-preview-message { padding-block: 20px; border-block: 1px solid var(--line); white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: 14px; line-height: 1.6; }
+.event-finder-dialog { width: min(1000px, calc(100% - 40px)); }
+.event-finder-dialog .contact-dialog-body { padding: 24px 30px; }
+.event-finder-dialog .contact-dialog-head { margin-bottom: 16px; }
+.event-finder-dialog .contact-dialog-head .eyebrow { margin-bottom: 7px; }
+.event-finder-dialog .event-finder-search { margin-bottom: 12px; }
+.event-finder-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 28px; }
+.contact-finder-count { margin: -5px 0 18px; color: #aaa69b; font-size: 12px; }
+.contact-event-list { display: grid; align-content: start; max-height: 370px; overflow-y: auto; }
+.contact-event-list > button { display: grid; gap: 7px; width: 100%; min-height: 68px; margin: 0; padding: 15px 14px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: #eeece4; text-align: left; cursor: pointer; }
+.contact-event-list > button:hover { background: #1b1913; }
+.contact-event-list > button[aria-pressed="true"] { box-shadow: inset 2px 0 var(--gold); background: #242017; }
+.contact-event-list b { font-size: 15px; font-weight: 600; line-height: 1.4; }
+.contact-event-list span { color: #b9b4a7; font-size: 13px; }
+.contact-event-detail { min-width: 0; padding-left: 28px; border-left: 1px solid var(--line); }
+.contact-event-detail .eyebrow { margin-bottom: 10px; }
+.contact-event-detail h3 { margin: 0 0 9px; font-size: 23px; line-height: 1.25; }
+#contact-event-venue { margin: 0 0 18px; color: #b9b4a7; font-size: 14px; line-height: 1.5; }
+#contact-event-map { display: block; width: 100%; height: 200px; border: 1px solid #49412d; background: #e0ded4; color-scheme: light; }
+.contact-map-caption { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-top: 10px; font-size: 12px; color: #aaa69b; }
+.contact-map-caption a { color: var(--gold); text-underline-offset: 3px; }
+.contact-organizer { display: grid; grid-template-columns: minmax(0, 1fr) auto; justify-items: start; gap: 6px 16px; margin-top: 20px; }
+.contact-organizer > span { color: #aaa69b; font-size: 12px; }
+.contact-organizer > b { grid-column: 1; font-size: 14px; font-weight: 500; }
+.contact-organizer > button { grid-column: 2; grid-row: 1 / 3; align-self: center; padding-inline: 12px; }
+@media (max-width: 680px) {
+  .contact-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); }
+  .contact-dialog-body, .event-finder-dialog .contact-dialog-body { padding: 24px 20px; }
+  .contact-dialog h2 { font-size: 24px; }
+  .contact-fields { grid-template-columns: 1fr; gap: 0; }
+  .contact-form-actions { flex-wrap: wrap; gap: 16px; }
+  .contact-form-actions > p { max-width: none; }
+  .event-finder-layout { grid-template-columns: 1fr; gap: 24px; }
+  .contact-event-list { max-height: 220px; overflow-y: auto; }
+  .contact-event-detail { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  .contact-organizer { grid-template-columns: 1fr; }
+  .contact-organizer > button { grid-column: 1; grid-row: auto; margin-top: 8px; }
+  #contact-event-map { height: 220px; }
+}

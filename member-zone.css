@@ -1,0 +1,307 @@
+/* Member workspace: the same restrained gold as the public website. */
+#member-portal {
+  --gold: var(--site-gold);
+  --gold-light: #ecd395;
+  --gold-dark: #b99a56;
+  --line: var(--site-line);
+  --member-gold-wash: #d9ba7212;
+  --member-gold-line: #d9ba724d;
+}
+#member-portal .eyebrow,
+#member-portal .eyebrow.dark { color: var(--site-gold); }
+#member-portal :is(button, a, label):focus-visible,
+#member-portal .member-upload-card:focus-within { outline: 2px solid var(--site-gold); outline-offset: 3px; }
+#member-portal .gold-button {
+  width: auto; min-height: 44px; gap: 10px; padding: 0 18px; border-radius: 0;
+  background: var(--site-gold); color: #151413; font-size: 14px; font-weight: 600;
+  white-space: nowrap; box-shadow: none;
+}
+#member-portal .gold-button:hover { background: var(--gold-light); box-shadow: none; }
+#member-portal .portal-topbar { border-color: var(--site-line); }
+#member-portal .notification-button { border-color: var(--site-line); }
+#member-portal .notification-button i { background: var(--site-gold); color: #151413; }
+
+/* Compact navigation, with dogs as plain rows under Moji psi. */
+@media (min-width: 821px) {
+  #member-portal { grid-template-columns: 254px minmax(0, 1fr); }
+  #member-portal .portal-sidebar { padding: 22px 16px 16px; }
+  #member-portal .portal-brand { padding: 0 8px 18px; border-color: var(--site-line); }
+  #member-portal .portal-account { margin: 14px 0 16px; padding: 6px 8px; background: none; border: 0; }
+  #member-portal .portal-account > span { width: 32px; height: 32px; background: var(--site-gold); }
+  #member-portal .portal-sidebar nav { gap: 3px; }
+  #member-portal .portal-sidebar nav > button {
+    min-height: 44px; grid-template-columns: 22px minmax(0, 1fr) auto;
+    gap: 10px; padding: 10px; border-radius: 0; font-size: 14px; font-weight: 500;
+  }
+  #member-portal .portal-sidebar nav > button > span { font-size: 18px; }
+  #member-portal .portal-sidebar-bottom { padding-top: 14px; border-color: var(--site-line); }
+  #member-portal .portal-sidebar-bottom button { min-height: 40px; padding: 8px 10px; color: #aaa79f; }
+}
+#member-portal .portal-brand small,
+#member-portal .portal-home-link small,
+#member-portal .portal-sidebar nav > button > span { color: var(--site-gold); }
+#member-portal .portal-sidebar nav > button { color: #c8c5bd; }
+#member-portal .portal-sidebar nav > button:hover { background: #ffffff05; }
+#member-portal .portal-sidebar nav > button.active { background: var(--member-gold-wash); color: var(--site-gold); box-shadow: inset 2px 0 var(--site-gold); }
+#member-portal .portal-sidebar nav > button > b { background: var(--member-gold-wash); color: var(--site-gold); }
+#member-portal .member-dog-subnav { margin: 0 0 6px; }
+#member-portal .member-dog-subnav #dog-roster-list { gap: 0; }
+#member-portal .portal-sidebar nav .member-dog-subnav :is(.dog-roster-item, .dog-roster-add) {
+  min-height: 44px; grid-template-columns: 24px minmax(0, 1fr); gap: 9px;
+  padding: 6px 4px; border: 0; border-radius: 0; background: none; color: #c8c5bd;
+}
+#member-portal .portal-sidebar nav .member-dog-subnav :is(.dog-roster-item, .dog-roster-add) > span {
+  width: 24px; height: 24px; border: 0; background-color: transparent;
+  color: var(--site-gold); font-size: 10px; font-weight: 600;
+}
+#member-portal .portal-sidebar nav .member-dog-subnav .dog-roster-add > span { font-size: 20px; }
+#member-portal .portal-sidebar nav .member-dog-subnav :is(.dog-roster-item, .dog-roster-add) b { font-size: 12px; font-weight: 550; letter-spacing: 0; }
+#member-portal .portal-sidebar nav .member-dog-subnav :is(.dog-roster-item, .dog-roster-add) small { color: #a09c93; font-size: 11px; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+#member-portal .portal-sidebar nav .member-dog-subnav .dog-roster-item.active { background: transparent; box-shadow: inset 2px 0 var(--site-gold); color: var(--site-gold); }
+#member-portal .portal-sidebar nav .member-dog-subnav .dog-roster-item:hover { box-shadow: none; color: var(--gold-light); }
+
+/* Headings make room for the work instead of taking up the first screen. */
+#member-portal .portal-welcome.compact,
+#member-portal [data-member-content="member-events"] .portal-welcome {
+  align-items: center; gap: 18px; margin-bottom: 18px; padding-bottom: 18px; border-color: var(--site-line);
+}
+#member-portal [data-member-content="member-events"] .portal-welcome { padding-bottom: 0; border-bottom: 0; }
+#member-portal .portal-welcome h1,
+#member-portal .member-page-heading h1,
+#member-portal [data-member-content="member-events"] .portal-welcome h1 {
+  margin: 0 0 7px; font-size: 30px; font-weight: 550; line-height: 1.2; letter-spacing: -.025em;
+}
+#member-portal .portal-welcome p:not(.eyebrow),
+#member-portal .member-page-heading p:not(.eyebrow) { color: #b3b0a8; font-size: 14px; line-height: 1.6; }
+#member-portal .portal-welcome .eyebrow { margin: 0 0 8px; }
+#member-portal .member-add-dog { flex: 0 0 auto; }
+#member-portal .member-add-dog > span { font-size: 21px; font-weight: 400; }
+#member-portal .dog-detail-card { border-color: var(--site-line); border-radius: 0; background: #111110; }
+#member-portal .dog-detail-head { min-height: 76px; padding: 16px 24px; gap: 16px; background: none; }
+#member-portal .dog-detail-head > div { min-width: 0; gap: 12px; }
+#member-portal .dog-detail-head h2 { margin: 0 0 4px; font-size: 22px; font-weight: 550; line-height: 1.25; overflow-wrap: anywhere; }
+#member-portal .dog-detail-head small { color: #b3b0a8; font-size: 13px; }
+#member-portal .dog-detail-avatar { width: 36px; height: 36px; border: 0; background-color: var(--member-gold-wash); color: var(--site-gold); font-size: 12px; }
+#member-portal .dog-edit-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; flex: 0 0 auto; min-height: 40px; padding: 0 14px; border-color: var(--member-gold-line); border-radius: 0; color: var(--site-gold); font-size: 13px; font-weight: 550; white-space: nowrap; }
+#member-portal .dog-edit-button:hover { background: var(--member-gold-wash); border-color: var(--site-gold); }
+#member-portal .dog-detail-tabs { padding: 0 24px; gap: 8px; border-color: var(--site-line); }
+#member-portal .dog-detail-tabs button { min-height: 46px; padding: 0 12px; font-size: 13px; font-weight: 550; }
+#member-portal .dog-detail-tabs button.active,
+#member-portal .dog-detail-tabs button:hover { border-bottom-color: var(--site-gold); color: var(--site-gold); }
+#member-portal .dog-detail-tabs button b { color: var(--site-gold); background: var(--member-gold-wash); font-size: 11px; font-weight: 500; }
+/* Preserve the user's preferred basic-data layout; only adjust its palette. */
+#member-portal .dog-summary-section,
+#member-portal .dog-facts-grid,
+#member-portal .dog-facts-grid > div { border-color: var(--site-line); }
+#member-portal .dog-form-heading > span { color: var(--site-gold); border-color: var(--member-gold-line); }
+
+/* Three-column show rows keep actions together and dates under the description. */
+#member-portal .member-event-card {
+  grid-template-columns: 54px minmax(0, 1fr) 158px;
+  grid-template-areas: "date description actions" "date deadline actions";
+  gap: 7px 22px; min-height: 116px; padding: 18px 0; border-color: var(--site-line);
+}
+#member-portal .member-event-card:hover { background: #ffffff02; }
+#member-portal .member-event-date { grid-area: date; align-self: center; gap: 5px; padding: 10px 4px; border-color: var(--site-line); background: #191917; }
+#member-portal .member-event-date b { color: var(--site-gold); font-size: 24px; font-weight: 550; }
+#member-portal .member-event-description { grid-area: description; }
+#member-portal .member-event-description > span { color: var(--site-gold); }
+#member-portal .member-event-card h2 { margin: 4px 0; font-size: 19px; line-height: 1.35; }
+#member-portal .member-event-card p { color: #b3b0a8; }
+#member-portal .member-event-deadline { grid-area: deadline; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
+#member-portal .member-event-deadline > span { font-size: 12px; }
+#member-portal .member-event-deadline b { font-size: 13px; }
+#member-portal .member-event-deadline small { display: inline; margin-left: 6px; padding-left: 14px; border-left: 1px solid var(--site-line); font-size: 12px; }
+#member-portal .member-event-actions { grid-area: actions; display: grid; gap: 6px; }
+#member-portal .member-event-card .gold-button { width: 100%; min-height: 42px; padding: 0 14px; gap: 10px; font-size: 13px; white-space: nowrap; }
+#member-portal .member-event-detail { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 12px; border: 1px solid var(--site-line); border-radius: 0; color: #d4d0c6; font-size: 13px; white-space: nowrap; }
+#member-portal .member-event-detail:hover { border-color: var(--member-gold-line); color: var(--site-gold); background: var(--member-gold-wash); }
+
+/* Documents read as a file register, with a compact upload toolbar. */
+#member-portal .dog-section-intro { margin-bottom: 18px; }
+#member-portal .dog-section-intro h3 { margin: 0 0 6px; font-size: 19px; font-weight: 550; }
+#member-portal .dog-section-intro span { color: #b3b0a8; font-size: 13px; line-height: 1.6; }
+#member-portal .member-upload-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+#member-portal .member-upload-card { position: relative; display: inline-flex; align-items: center; min-height: 44px; gap: 10px; padding: 8px 14px; border: 1px solid var(--member-gold-line); border-radius: 0; background: none; }
+#member-portal .member-upload-card:hover { background: var(--member-gold-wash); border-color: var(--site-gold); }
+#member-portal .member-upload-card > span { width: 20px; height: 24px; background: none; color: var(--site-gold); font-size: 21px; font-weight: 400; }
+#member-portal .member-upload-card b { color: var(--site-gold); font-size: 13px; font-weight: 550; }
+#member-portal .member-file-list { gap: 0; border-top: 1px solid var(--site-line); }
+#member-portal .member-file-list article { grid-template-columns: 36px minmax(0, 1fr) auto auto; gap: 16px; padding: 14px 0; border: 0; border-bottom: 1px solid var(--site-line); border-radius: 0; background: none; }
+#member-portal .member-file-list article > div { min-width: 0; gap: 5px; }
+#member-portal .member-file-list article b { font-size: 14px; font-weight: 550; overflow-wrap: anywhere; }
+#member-portal .member-file-list article small { font-size: 12px; color: #aba69c; overflow-wrap: anywhere; }
+#member-portal .file-type { position: relative; width: 32px; height: 40px; padding-top: 7px; border: 1px solid var(--member-gold-line); border-radius: 0; background: var(--member-gold-wash); color: var(--site-gold); font-size: 9px; letter-spacing: .02em; }
+#member-portal .file-type::after { content: ""; position: absolute; top: -1px; right: -1px; width: 9px; height: 9px; border-left: 1px solid var(--member-gold-line); border-bottom: 1px solid var(--member-gold-line); background: #111110; }
+#member-portal .status-badge { font-style: normal; letter-spacing: .02em; text-transform: none; font-weight: 550; }
+#member-portal .status-badge.paid { background: #b3cfb81c; color: #bdd2bb; }
+#member-portal .status-badge.review { background: var(--member-gold-wash); color: #ddc995; }
+#member-portal .member-file-list article > button,
+#member-portal .award-list article > button { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 6px; border: 0; color: var(--site-gold); font-size: 13px; font-weight: 550; white-space: nowrap; }
+#member-portal .member-file-list article > button:hover,
+#member-portal .award-list article > button:hover { color: var(--gold-light); text-decoration: underline; text-underline-offset: 4px; }
+#member-portal .member-empty-assets { min-height: 108px; padding: 22px 16px; border-color: var(--site-line); border-radius: 0; }
+#member-portal .member-empty-assets span { color: #b3b0a8; font-size: 13px; line-height: 1.5; }
+
+/* Awards are a read-only list maintained by the administrator. */
+#member-portal .award-list { gap: 0; border-top: 1px solid var(--site-line); }
+#member-portal .award-list article { grid-template-columns: 58px minmax(0, 1fr) auto auto; gap: 18px; padding: 15px 0; border: 0; border-bottom: 1px solid var(--site-line); border-radius: 0; background: none; }
+#member-portal .award-list time { display: grid; justify-items: start; gap: 4px; padding: 0; border: 0; }
+#member-portal .award-list time b { color: var(--site-gold); font-size: 22px; font-weight: 550; line-height: 1; }
+#member-portal .award-list time span { color: #aba69c; font-size: 10px; font-weight: 500; white-space: nowrap; }
+#member-portal .award-list article > div { min-width: 0; gap: 4px; }
+#member-portal .award-list h4 { margin: 0; font-size: 15px; font-weight: 550; line-height: 1.4; }
+#member-portal .award-list p { color: #b3b0a8; font-size: 12px; line-height: 1.5; }
+#member-portal .award-list small { color: #9d988d; font-size: 12px; overflow-wrap: anywhere; }
+
+@media (max-width: 1100px) {
+  #member-portal .member-file-list article { grid-template-columns: 36px minmax(0, 1fr) auto; gap: 6px 14px; }
+  #member-portal .member-file-list .file-type { grid-column: 1; grid-row: 1 / 3; }
+  #member-portal .member-file-list article > div { grid-column: 2; grid-row: 1; }
+  #member-portal .member-file-list article > i { grid-column: 2; grid-row: 2; justify-self: start; }
+  #member-portal .member-file-list article > button { grid-column: 3; grid-row: 1 / 3; }
+  #member-portal .award-list article { grid-template-columns: 54px minmax(0, 1fr) auto; gap: 8px 14px; }
+  #member-portal .award-list time { grid-column: 1; grid-row: 1 / 3; }
+  #member-portal .award-list article > div { grid-column: 2; grid-row: 1; }
+  #member-portal .award-list article > .status-badge { grid-column: 2; grid-row: 2; justify-self: start; }
+  #member-portal .award-list article > button { grid-column: 3; grid-row: 1 / 3; }
+}
+@media (max-width: 820px) {
+  #member-portal .portal-sidebar { border-color: var(--site-line); background: #10100e; }
+  #member-portal .portal-sidebar nav > button.active { border-color: transparent; box-shadow: inset 0 -2px var(--site-gold); }
+  #member-portal .member-mobile-dog-switcher { display: flex; gap: 4px; margin: 0 0 14px; padding: 0; overflow-x: auto; border-bottom: 1px solid var(--site-line); }
+  #member-portal .member-mobile-dog-switcher button { display: inline-flex; align-items: center; gap: 7px; min-width: 80px; min-height: 44px; padding: 8px 10px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: #c8c5bd; }
+  #member-portal .member-mobile-dog-switcher button.active { background: none; border-bottom-color: var(--site-gold); color: var(--site-gold); }
+  #member-portal .member-mobile-dog-switcher button > span { display: grid; place-items: center; width: 20px; height: 20px; border: 0; background: none; color: var(--site-gold); font-size: 10px; }
+  #member-portal .member-mobile-dog-switcher button > b { font-size: 12px; font-weight: 550; white-space: nowrap; }
+}
+@media (max-width: 700px) {
+  #member-portal .portal-welcome.compact { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+  #member-portal .portal-welcome h1,
+  #member-portal .member-page-heading h1,
+  #member-portal [data-member-content="member-events"] .portal-welcome h1 { font-size: 27px; }
+  #member-portal .portal-welcome .gold-button { width: auto; }
+  #member-portal .dog-detail-head { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 16px; gap: 12px; }
+  #member-portal .dog-detail-head h2 { font-size: 21px; }
+  #member-portal .dog-detail-tabs { gap: 0; padding: 0 6px; }
+  #member-portal .dog-detail-tabs button { padding: 0 9px; font-size: 12px; }
+  #member-portal .dog-detail-tabs button b { margin-left: 3px; padding: 2px 4px; }
+  #member-portal .member-event-card { grid-template-columns: 44px minmax(0, 1fr); grid-template-areas: "date description" "date deadline" "actions actions"; gap: 10px 14px; padding: 18px 0; }
+  #member-portal .member-event-date { align-self: start; width: 44px; padding: 10px 2px; }
+  #member-portal .member-event-date b { font-size: 22px; }
+  #member-portal .member-event-card h2 { font-size: 18px; }
+  #member-portal .member-event-deadline small { width: 100%; margin: 2px 0 0; padding: 0; border: 0; }
+  #member-portal .member-event-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  #member-portal .member-event-actions > button { flex: 1 1 auto; }
+  #member-portal .member-event-card .gold-button { width: auto; min-width: 0; min-height: 44px; padding: 0 12px; }
+  #member-portal .member-event-detail { min-height: 44px; }
+  #member-portal .member-upload-grid { gap: 8px; }
+  #member-portal .member-upload-card { padding: 8px 12px; }
+  #member-portal .member-file-list article { grid-template-columns: 32px minmax(0, 1fr); gap: 8px 12px; }
+  #member-portal .member-file-list .file-type { grid-row: 1 / 3; }
+  #member-portal .member-file-list article > button { grid-column: 2; grid-row: 3; justify-self: start; padding: 0; }
+  #member-portal .award-list article { grid-template-columns: 46px minmax(0, 1fr); gap: 7px 12px; }
+  #member-portal .award-list time { grid-row: 1 / 3; }
+  #member-portal .award-list article > button { grid-column: 2; grid-row: 3; justify-self: start; padding: 0; }
+}
+
+/* Applications share the quiet, compact file-and-dog workspace. */
+#member-portal .member-application-list { gap: 0; border-top: 0; }
+#member-portal .member-application-list > article {
+  grid-template-columns: 56px minmax(0, 1.25fr) minmax(0, 1fr) 136px 96px;
+  gap: 22px; padding: 22px 0; border: 0; border-bottom: 1px solid var(--site-line);
+  background: none; transform: none;
+}
+#member-portal .member-application-list > article:hover { background: #ffffff02; }
+#member-portal .member-application-date { padding: 0; border: 0; }
+#member-portal .member-application-date b { color: var(--site-gold); font-size: 26px; font-weight: 550; }
+#member-portal .member-application-date span { color: #aaa79f; font-size: 10px; font-weight: 500; }
+#member-portal .member-application-main > span,
+#member-portal .member-application-dog > span { color: var(--site-gold); font-size: 11px; font-weight: 500; letter-spacing: 0; text-transform: none; }
+#member-portal .member-application-main h2 { margin: 5px 0; font-size: 18px; font-weight: 550; line-height: 1.35; }
+#member-portal .member-application-main p,
+#member-portal .member-application-dog small,
+#member-portal .member-application-state small { color: #aaa79f; font-size: 12px; line-height: 1.5; }
+#member-portal .member-application-dog { min-width: 0; padding: 0; border: 0; }
+#member-portal .member-application-dog b { font-size: 13px; font-weight: 550; line-height: 1.5; }
+#member-portal .member-application-list > article > button {
+  min-height: 40px; padding: 0 10px; border: 1px solid var(--member-gold-line);
+  color: var(--site-gold); font-size: 13px; font-weight: 500; white-space: nowrap;
+}
+#member-portal .member-application-list > article > button:hover { background: var(--member-gold-wash); }
+#member-portal .status-badge { padding: 5px 8px; font-size: 11px; font-style: normal; font-weight: 500; letter-spacing: 0; text-transform: none; }
+#member-portal .status-badge.paid { background: #a9c3a51a; color: #c3d4bd; }
+#member-portal .status-badge.pending,
+#member-portal .status-badge.review { background: var(--member-gold-wash); color: var(--site-gold); }
+#member-portal .inline-back { min-height: 40px; color: var(--site-gold); border-color: var(--member-gold-line); font-size: 13px; font-weight: 500; }
+#member-portal .member-application-detail-head { margin-top: 10px; padding: 14px 0 24px; border-color: var(--site-line); }
+#member-portal .member-application-detail-head .eyebrow { margin: 0 0 8px; }
+#member-portal .member-application-detail-head h1 { margin: 0 0 10px; font-size: 30px; font-weight: 550; line-height: 1.25; }
+#member-portal .member-application-detail-head > div > span { color: #b3b0a8; font-size: 13px; }
+#member-portal .member-application-detail-body,
+#member-portal .member-application-detail-body > section,
+#member-portal .member-application-detail-body dl > div { border-color: var(--site-line); }
+#member-portal .member-application-detail-body h2 { font-size: 19px; font-weight: 550; }
+#member-portal .application-status-line li.done > span { background: var(--site-gold); border-color: var(--site-gold); }
+#member-portal .application-status-line li.done::before { background: var(--member-gold-line); }
+#member-portal .member-application-detail-footer b { color: var(--site-gold); }
+#member-portal .member-application-detail-footer :is(span, small) { font-size: 12px; }
+
+/* One heading row for creating or editing a dog, including its optional photo. */
+#member-portal [data-member-content="dogs"]:has(#dog-create-view:not([hidden])) > .portal-welcome { display: none; }
+#member-portal .dog-create-head {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center;
+  gap: 18px; min-height: 108px; padding: 0 0 24px; border-color: var(--site-line);
+}
+#member-portal .dog-create-head > button {
+  display: grid; place-items: center; width: 40px; min-height: 40px; padding: 0;
+  border: 1px solid var(--member-gold-line); color: var(--site-gold); font-size: 20px;
+}
+#member-portal .dog-create-head > div { min-width: 0; }
+#member-portal #dog-form-eyebrow { display: none; }
+#member-portal #dog-form-title { margin: 0 0 6px; font-size: 27px; line-height: 1.25; font-weight: 550; overflow-wrap: anywhere; }
+#member-portal #dog-form-copy { color: #b3b0a8; font-size: 13px; line-height: 1.5; }
+#member-portal .dog-photo-upload { width: auto; height: auto; display: flex; align-items: center; gap: 12px; }
+#member-portal .dog-photo-upload:focus-within { outline: 2px solid var(--site-gold); outline-offset: 3px; }
+#member-portal #dog-photo-preview { flex: 0 0 64px; width: 64px; height: 64px; border-color: var(--member-gold-line); color: var(--site-gold); background: var(--member-gold-wash); }
+#member-portal #dog-photo-preview > small { display: none; }
+#member-portal .dog-photo-copy { display: grid; gap: 5px; }
+#member-portal .dog-photo-copy b { color: var(--site-gold); font-size: 13px; font-weight: 550; }
+#member-portal .dog-photo-copy small { max-width: 140px; color: #aaa79f; font-size: 11px; line-height: 1.5; }
+#member-portal .dog-create-form > .dog-form-group,
+#member-portal .dog-create-documents,
+#member-portal .dog-create-actions { border-color: var(--site-line); }
+#member-portal .floating-picker > span,
+#member-portal .floating-picker > i { color: var(--site-gold); }
+#member-portal .settings-card { border-color: var(--site-line); background: #111110; }
+#member-portal .profile-submit-row { border-color: var(--member-gold-line); background: var(--member-gold-wash); }
+
+@media (max-width: 1100px) and (min-width: 681px) {
+  #member-portal .member-application-list > article { grid-template-columns: 50px minmax(0, 1fr) 136px; gap: 12px 18px; }
+  #member-portal .member-application-date { grid-column: 1; grid-row: 1 / 3; }
+  #member-portal .member-application-main { grid-column: 2; }
+  #member-portal .member-application-dog { grid-column: 2; grid-row: 2; }
+  #member-portal .member-application-dog > span { display: none; }
+  #member-portal .member-application-state { grid-column: 3; grid-row: 1; }
+  #member-portal .member-application-list > article > button { grid-column: 3; grid-row: 2; }
+  #member-portal .dog-photo-copy small { max-width: 95px; }
+}
+@media (max-width: 680px) {
+  #member-portal .member-application-list > article { grid-template-columns: 44px minmax(0, 1fr); gap: 12px 16px; padding: 20px 0; }
+  #member-portal .member-application-date { grid-column: 1; grid-row: 1; align-self: start; }
+  #member-portal .member-application-main { grid-column: 2; }
+  #member-portal .member-application-main h2 { font-size: 17px; }
+  #member-portal .member-application-dog { grid-column: 2; grid-row: auto; }
+  #member-portal .member-application-dog > span { display: none; }
+  #member-portal .member-application-state { grid-column: 2; grid-row: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  #member-portal .member-application-list > article > button { grid-column: 2; grid-row: auto; justify-self: start; min-height: 44px; min-width: 110px; }
+  #member-portal .member-application-detail-head h1 { font-size: 27px; }
+  #member-portal .dog-create-head { grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding-bottom: 20px; }
+  #member-portal #dog-form-title { font-size: 25px; }
+  #member-portal .dog-photo-upload { grid-column: 2; }
+  #member-portal #dog-photo-preview { flex-basis: 48px; width: 48px; height: 48px; }
+  #member-portal .dog-photo-copy small { max-width: none; }
+}
+@media (max-width: 480px) {
+  #member-portal .floating-form-grid > label:has(input[name="newDogName"]) { grid-column: 1 / -1; }
+}

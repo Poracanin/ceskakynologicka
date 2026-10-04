@@ -5,14 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Informace o newsletteru a provozních oznámeních České kynologické" />
   <title>Newsletter a oznámení | Česká kynologická</title>
-  <link rel="stylesheet" href="info-pages.css" />
+  <link rel="stylesheet" href="info-pages.css?v=20261004-square" />
+  <link rel="stylesheet" href="site-header.css?v=20261004-arrow" />
+  <link rel="icon" href="Zadani/logo-pruhledne.png" type="image/png" />
+  <script src="info-navigation.js" defer></script>
+  <link rel="stylesheet" href="brand.css?v=20261004-angular" />
 </head>
 <body>
-  <header class="info-header">
-    <a class="info-brand" href="index.html"><img src="Zadani/logo-pruhledne.png" alt="" /><span><b>Česká</b><small>kynologická</small></span></a>
-    <nav class="info-nav" aria-label="Informační stránky"><a href="ochrana-osobnich-udaju.html">Osobní údaje</a><a href="podminky.html">Podmínky</a><a class="active" href="newsletter.html">Newsletter</a><a href="kontakt.html">Kontakt</a><a class="back-home" href="index.html">Zpět na web →</a></nav>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <header class="site-header" id="top">
+    <a class="brand brand-lockup" href="index.html#uvod" aria-label="Česká kynologická — úvod"><img src="Zadani/logo-pruhledne.png" alt="" width="48" height="48" /><span class="brand-wordmark"><b>Česká</b><small>kynologická</small></span></a>
+    <nav class="desktop-nav" aria-label="Hlavní navigace">
+      <a href="index.html#uvod">Úvod</a>
+      <a href="index.html#klub">Klub</a>
+      <a href="index.html#vystavy">Výstavy <svg class="nav-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></a>
+      <a  href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-member-access" id="header-member-access" href="index.html#prihlaseni"><span class="header-member-copy"><strong id="header-member-label">Přihlásit se</strong></span></a>
+      <a id="header-register-button" href="index.html#registrace">Vytvořit účet <svg class="header-register-arrow" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 15 15 5M5 5h10v10" /></svg></a>
+      <button class="menu-button" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobilní navigace" hidden>
+      <div class="mobile-nav-panel">
+        <div class="mobile-nav-head"><div class="mobile-nav-title"><span>Hlavní nabídka</span><b>Kam chcete pokračovat?</b></div><button class="mobile-nav-close" type="button" aria-label="Zavřít menu">×</button></div>
+        <div class="mobile-nav-links">
+          <a href="index.html#uvod"><b>Úvod</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#klub"><b>Klub</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#vystavy"><b>Výstavy</b><i aria-hidden="true">→</i></a>
+          <a  href="kontakt.html"><b>Kontakt</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#prihlaseni"><b>Přihlásit se</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#poradatel"><b>Pro pořadatele</b><i aria-hidden="true">↗</i></a>
+        </div>
+        <p class="mobile-nav-foot">Česká kynologická · klub a výstavy</p>
+      </div>
+    </nav>
   </header>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="info-hero"><p class="eyebrow">Nastavení komunikace</p><h1>Newsletter a oznámení</h1><p class="lead">Provozní komunikaci oddělujeme od marketingu. Účet a přihlášky můžete používat bez souhlasu s newsletterem</p><div class="info-meta"><span>Správce <b>Česká kynologická, z. s.</b></span><span>IČO <b>22254862</b></span><span>Nastavení <b>kdykoli změnitelné</b></span></div></section>
     <div class="info-layout">
       <aside class="info-toc" aria-label="Obsah stránky"><span>Na této stránce</span><a href="#provozni">Provozní zprávy</a><a href="#marketing">Dobrovolný newsletter</a><a href="#personalizace">Personalizace</a><a href="#odvolani">Odvolání souhlasu</a><a href="#kontakt">Kontakt</a></aside>

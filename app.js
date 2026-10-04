@@ -1,143 +1,19 @@
-const events = [
-  {
-    id: 1,
-    date: "2026-08-29",
-    day: "29",
-    month: "srpna",
-    weekday: "sobota",
-    type: "Národní",
-    title: "Národní výstava psů Brno",
-    city: "Brno",
-    venue: "BVV — Výstaviště Brno",
-    region: "Jihomoravský",
-    dogs: 842,
-    capacity: 1200,
-    deadline: "20. 8. 2026",
-    organizer: "Moravskoslezský kynologický svaz",
-    contact: "vystavy@kynologie-brno.cz",
-    judges: "18 rozhodčích z 8 zemí",
-    description:
-      "Celostátní výstava všech plemen se zadáváním titulů CAJC, CAC ČR a Národní vítěz. Součástí programu budou také soutěže mladých vystavovatelů a chovatelských skupin.",
-  },
-  {
-    id: 2,
-    date: "2026-09-05",
-    day: "05",
-    month: "září",
-    weekday: "sobota",
-    type: "Mezinárodní",
-    title: "Prague Expo Dog",
-    city: "Praha",
-    venue: "PVA EXPO Letňany",
-    region: "Praha",
-    dogs: 1368,
-    capacity: 1800,
-    deadline: "25. 8. 2026",
-    organizer: "Kynologická jednota České republiky",
-    contact: "info@pragueexpodog.cz",
-    judges: "26 rozhodčích z 12 zemí",
-    description:
-      "Mezinárodní výstava všech plemen FCI v moderním areálu PVA EXPO. Zadávají se tituly CACIB, CAJC, CAC ČR a BOB. Parkování a veterinární přejímka přímo v areálu.",
-  },
-  {
-    id: 3,
-    date: "2026-09-12",
-    day: "12",
-    month: "září",
-    weekday: "sobota",
-    type: "Klubová",
-    title: "Klubová výstava retrívrů",
-    city: "Konopiště",
-    venue: "Zámecký park Konopiště",
-    region: "Středočeský",
-    dogs: 214,
-    capacity: 320,
-    deadline: "2. 9. 2026",
-    organizer: "Retriever klub CZ",
-    contact: "vystava@retrieverklub.cz",
-    judges: "4 specialisté na plemena retrívrů",
-    description:
-      "Klubová výstava retrívrů v přírodním prostředí zámeckého parku. Otevřeny jsou všechny standardní třídy, soutěž Nejlepší chovatelská skupina a Junior handling.",
-  },
-  {
-    id: 4,
-    date: "2026-09-19",
-    day: "19",
-    month: "září",
-    weekday: "sobota",
-    type: "Mezinárodní",
-    title: "International Dog Show České Budějovice",
-    city: "České Budějovice",
-    venue: "Výstaviště České Budějovice",
-    region: "Jihočeský",
-    dogs: 1106,
-    capacity: 1600,
-    deadline: "8. 9. 2026",
-    organizer: "Jihočeský kynologický klub",
-    contact: "office@ids-cb.cz",
-    judges: "22 rozhodčích z 10 zemí",
-    description:
-      "Tradiční mezinárodní výstava v Českých Budějovicích pro všechna plemena FCI. Přihlášení probíhá online a vstupní list bude k dispozici v členské zóně.",
-  },
-  {
-    id: 5,
-    date: "2026-09-26",
-    day: "26",
-    month: "září",
-    weekday: "sobota",
-    type: "Národní",
-    title: "Slezská národní výstava",
-    city: "Ostrava",
-    venue: "Černá louka — pavilon A",
-    region: "Moravskoslezský",
-    dogs: 673,
-    capacity: 1050,
-    deadline: "15. 9. 2026",
-    organizer: "Kynologický klub Ostrava",
-    contact: "vystava@kkostrava.cz",
-    judges: "16 rozhodčích z 6 zemí",
-    description:
-      "Jednodenní národní výstava všech plemen s doprovodným programem pro rodiny a prezentací českých národních plemen. K dispozici bude veterinární poradna.",
-  },
-  {
-    id: 6,
-    date: "2026-10-10",
-    day: "10",
-    month: "října",
-    weekday: "sobota",
-    type: "Speciální",
-    title: "Speciální výstava ovčáckých plemen",
-    city: "Mladá Boleslav",
-    venue: "Krásná louka",
-    region: "Středočeský",
-    dogs: 186,
-    capacity: 280,
-    deadline: "28. 9. 2026",
-    organizer: "Klub ovčáckých a pasteveckých plemen",
-    contact: "specialka@kopp.cz",
-    judges: "5 specialistů FCI skupiny I",
-    description:
-      "Speciální výstava plemen FCI skupiny I s možností získat titul Vítěz speciální výstavy. Součástí dne je komentovaná přehlídka pracovních vloh pasteveckých psů.",
-  },
-];
+const events = window.CK_EVENT_CATALOG.map(event => ({ ...event }));
 
 const eventList = document.querySelector("#event-list");
 const eventCount = document.querySelector("#event-count");
 const emptyState = document.querySelector("#empty-state");
 const searchInput = document.querySelector("#event-search");
 const typeFilter = document.querySelector("#type-filter");
-const regionFilter = document.querySelector("#region-filter");
 const filterForm = document.querySelector("#event-filters");
 const mobileFilterToggle = document.querySelector("#mobile-filter-toggle");
-const calendarReel = document.querySelector("#calendar-reel");
-const calendarReelWrap = document.querySelector(".calendar-reel-wrap");
+const dateFilter = document.querySelector("#date-filter");
 const heroShell = document.querySelector(".hero-shell");
 const heroAuthCard = document.querySelector("#hero-auth-card");
 const heroLoginFace = document.querySelector(".auth-login-face");
 const heroRegisterFace = document.querySelector(".auth-register-face");
 const eventDialog = document.querySelector("#event-dialog");
 const eventModalContent = document.querySelector("#event-modal-content");
-const applicationDialog = document.querySelector("#application-dialog");
 const applicationForm = document.querySelector("#application-form");
 const qrPaymentDialog = document.querySelector("#qr-payment-dialog");
 const accountDialog = document.querySelector("#account-dialog");
@@ -152,7 +28,6 @@ const legalDialog = document.querySelector("#legal-dialog");
 
 const allDialogs = [
   eventDialog,
-  applicationDialog,
   qrPaymentDialog,
   accountDialog,
   adminAccessDialog,
@@ -312,158 +187,21 @@ const legalDocuments = {
   `,
 };
 
-let selectedDate = "all";
-const calendarDates = [
-  { value: "all", weekday: "Přehled", day: "Vše", month: "termíny", hasEvent: true, count: `${events.length} akcí` },
-  ...events.map((event) => ({
-    value: event.date,
-    weekday: event.weekday,
-    day: event.day,
-    month: event.month,
-    hasEvent: true,
-    count: "1 akce",
-  })),
-  { value: "2026-10-17", weekday: "sobota", day: "17", month: "října", hasEvent: false, count: "bez akcí" },
-  { value: "2026-10-24", weekday: "sobota", day: "24", month: "října", hasEvent: false, count: "bez akcí" },
-];
-let calendarIndex = 0;
-let calendarDragX = null;
-let calendarWheelDelta = 0;
 let currentApplicationEvent = events[0];
 let toastTimer;
-let calendarAutoTimer;
-let calendarTouched = false;
 let pendingApplicationEventId = null;
 
-const enhancedFilterSelects = [];
-
-function enhanceFilterSelect(select) {
-  const field = select.closest(".select-field");
-  const label = field.dataset.filterLabel;
-  const floatingLabel = field.querySelector(":scope > span");
-  const trigger = document.createElement("button");
-  const value = document.createElement("span");
-  const chevron = document.createElement("span");
-  const menu = document.createElement("div");
-
-  field.classList.add("custom-filter-select");
-  floatingLabel.classList.add("select-floating-label");
-  select.classList.add("native-filter-select");
-  select.tabIndex = -1;
-
-  trigger.type = "button";
-  trigger.className = "custom-select-trigger";
-  trigger.setAttribute("aria-haspopup", "listbox");
-  trigger.setAttribute("aria-expanded", "false");
-  trigger.setAttribute("aria-controls", `${select.id}-menu`);
-  trigger.setAttribute("aria-label", label);
-  value.className = "custom-select-value";
-  chevron.className = "custom-select-chevron";
-  chevron.textContent = "⌄";
-  chevron.setAttribute("aria-hidden", "true");
-  trigger.append(value, chevron);
-
-  menu.className = "custom-select-menu";
-  menu.id = `${select.id}-menu`;
-  menu.setAttribute("role", "listbox");
-  menu.setAttribute("aria-label", label);
-  menu.hidden = true;
-
-  [...select.options].forEach((option) => {
-    const item = document.createElement("button");
-    item.type = "button";
-    item.className = "custom-select-option";
-    item.dataset.value = option.value;
-    item.textContent = option.textContent;
-    item.setAttribute("role", "option");
-    menu.append(item);
-  });
-
-  function sync() {
-    const isDefault = select.value === "all";
-    const selectedOption = select.options[select.selectedIndex];
-    field.classList.toggle("has-selection", !isDefault);
-    value.textContent = isDefault ? label : selectedOption.textContent;
-    menu.querySelectorAll(".custom-select-option").forEach((item) => {
-      const selected = item.dataset.value === select.value;
-      item.classList.toggle("selected", selected);
-      item.setAttribute("aria-selected", String(selected));
-    });
-  }
-
-  function close() {
-    field.classList.remove("open");
-    menu.hidden = true;
-    trigger.setAttribute("aria-expanded", "false");
-  }
-
-  function open() {
-    enhancedFilterSelects.forEach((control) => control.close());
-    field.classList.add("open");
-    menu.hidden = false;
-    trigger.setAttribute("aria-expanded", "true");
-    menu.querySelector(".selected")?.focus();
-  }
-
-  trigger.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (field.classList.contains("open")) close();
-    else open();
-  });
-
-  trigger.addEventListener("keydown", (event) => {
-    if (event.key !== "ArrowDown" && event.key !== "Enter" && event.key !== " ") return;
-    if (field.classList.contains("open")) return;
-    event.preventDefault();
-    open();
-  });
-
-  menu.addEventListener("click", (event) => {
-    const item = event.target.closest(".custom-select-option");
-    if (!item) return;
-    select.value = item.dataset.value;
-    sync();
-    close();
-    trigger.focus();
-    select.dispatchEvent(new Event("input", { bubbles: true }));
-  });
-
-  field.append(trigger, menu);
-  const control = { field, trigger, menu, sync, close };
-  enhancedFilterSelects.push(control);
-  sync();
-}
-
-[typeFilter, regionFilter].forEach(enhanceFilterSelect);
-
-document.addEventListener("click", (event) => {
-  enhancedFilterSelects.forEach((control) => {
-    if (!control.field.contains(event.target)) control.close();
-  });
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
-  enhancedFilterSelects.forEach((control) => {
-    if (!control.field.classList.contains("open")) return;
-    control.close();
-    control.trigger.focus();
-  });
-});
-
-const formatCapacity = (event) => Math.round((event.dogs / event.capacity) * 100);
 
 function renderEvents() {
   const query = searchInput.value.trim().toLocaleLowerCase("cs");
   const selectedType = typeFilter.value;
-  const selectedRegion = regionFilter.value;
+  const selectedDate = dateFilter.value;
 
   const filtered = events.filter((event) => {
     const matchesDate = selectedDate === "all" || event.date === selectedDate;
     const matchesQuery = `${event.title} ${event.city} ${event.venue}`.toLocaleLowerCase("cs").includes(query);
     const matchesType = selectedType === "all" || event.type === selectedType;
-    const matchesRegion = selectedRegion === "all" || event.region === selectedRegion;
-    return matchesDate && matchesQuery && matchesType && matchesRegion;
+    return event.status === "published" && matchesDate && matchesQuery && matchesType;
   });
 
   eventCount.textContent = filtered.length;
@@ -476,25 +214,21 @@ function renderEvents() {
             <span>${event.month}</span>
           </div>
           <div class="event-main">
-            <span class="badge">${event.type}</span>
-            <h3>${event.title}</h3>
-            <p>${event.weekday} · uzávěrka <span class="deadline">${event.deadline}</span></p>
-            <p class="event-excerpt">${event.description}</p>
+            <span class="badge">${escapeHTML(event.type)}</span>
+            <h3>${escapeHTML(event.title)}</h3>
+            <p>${event.weekday} · uzávěrka <span class="deadline">${escapeHTML(event.deadline)}</span></p>
+            <p class="event-excerpt">${escapeHTML(event.description)}</p>
           </div>
           <div class="event-place">
             <span>Místo konání</span>
-            <b>${event.city}</b>
-            <p>${event.venue}</p>
-          </div>
-          <div class="event-capacity">
-            <span>Přihlášeno</span>
-            <b>${event.dogs.toLocaleString("cs-CZ")} psů</b>
-            <p>${event.capacity - event.dogs} volných míst</p>
-            <div class="capacity-bar"><i style="width:${formatCapacity(event)}%"></i></div>
+            <b>${escapeHTML(event.city)}</b>
+            <p>${escapeHTML(event.venue)}</p>
           </div>
           <div class="event-actions">
-            <button class="details-event" type="button" data-event-detail="${event.id}">Detail akce →</button>
-            <button class="register-event" type="button" data-event-register="${event.id}">Přihlásit psa</button>
+            ${memberSessionActive ? `
+              <button class="details-event" type="button" data-event-detail="${event.id}">Detail výstavy →</button>
+              <button class="register-event" type="button" data-event-register="${event.id}">Přihlásit psa</button>
+            ` : `<span class="event-locked"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Po přihlášení</span>`}
           </div>
         </article>
       `,
@@ -505,60 +239,17 @@ function renderEvents() {
   emptyState.hidden = filtered.length !== 0;
 }
 
-function renderCalendar() {
-  calendarReel.innerHTML = calendarDates
-    .map(
-      (item, index) => {
-        const active = item.value === selectedDate;
-        return `
-        <button class="calendar-day ${item.value === selectedDate ? "active" : ""} ${item.hasEvent ? "has-event" : ""}"
-          type="button" role="option" data-calendar-date="${item.value}" data-calendar-index="${index}"
-          aria-selected="${active}" aria-label="${item.weekday} ${item.day} ${item.month}, ${item.count}"
-          tabindex="${active ? "0" : "-1"}">
-          <small>${item.weekday}</small>
-          <b>${item.day}</b>
-          <em>${item.month}</em>
-          <span class="calendar-count">${item.count}</span>
-        </button>
-      `;
-      },
-    )
-    .join("");
-  window.requestAnimationFrame(() => {
-    const selected = calendarReel.querySelector(".calendar-day.active");
-    if (selected) calendarReel.scrollLeft = selected.offsetLeft - (calendarReel.clientWidth - selected.offsetWidth) / 2;
-  });
-}
-
-function shiftCalendar(direction, updateEvents = true) {
-  const nextIndex = Math.min(calendarDates.length - 1, Math.max(0, calendarIndex + direction));
-  if (nextIndex === calendarIndex) return;
-  calendarIndex = nextIndex;
-  selectedDate = calendarDates[calendarIndex].value;
-  renderCalendar();
-  if (updateEvents) renderEvents();
-}
-
-function markCalendarTouched() {
-  calendarTouched = true;
-  window.clearInterval(calendarAutoTimer);
-}
-
-function startCalendarMotion() {
-  calendarReelWrap.dataset.motionReady = "true";
-}
-
 function setHeroRegistration(open, shouldScroll = true) {
+  if (shouldScroll) {
+    navigatePublic(open ? "registrace" : "prihlaseni");
+    return;
+  }
   heroAuthCard.classList.toggle("registering", open);
   heroShell.classList.toggle("registration-open", open);
   heroLoginFace.setAttribute("aria-hidden", String(open));
   heroRegisterFace.setAttribute("aria-hidden", String(!open));
   heroLoginFace.inert = open;
   heroRegisterFace.inert = !open;
-  if (open && shouldScroll) {
-    heroShell.scrollIntoView({ behavior: "auto", block: "start" });
-    window.setTimeout(() => heroRegisterFace.querySelector("input")?.focus({ preventScroll: true }), 80);
-  }
 }
 
 function showToast(message) {
@@ -583,31 +274,36 @@ function closeDialog(dialog) {
 }
 
 function openEventDetail(eventId) {
+  if (!memberSessionActive) {
+    pendingDetailEventId = Number(eventId);
+    navigatePublic("prihlaseni");
+    return;
+  }
   const event = events.find((item) => item.id === Number(eventId));
-  if (!event) return;
+  if (!event || event.status !== "published") return;
   eventModalContent.innerHTML = `
     <div class="modal-hero">
       <div>
-        <span class="modal-badge">${event.type}</span>
-        <h2>${event.title}</h2>
+        <span class="modal-badge">${escapeHTML(event.type)}</span>
+        <h2>${escapeHTML(event.title)}</h2>
       </div>
     </div>
     <div class="event-modal-body">
       <div>
         <h3>O výstavě</h3>
-        <p>${event.description}</p>
+        <p>${escapeHTML(event.description)}</p>
         <div class="modal-facts">
-          <div><span>Datum</span><b>${event.day}. ${event.month} 2026</b></div>
-          <div><span>Místo</span><b>${event.venue}</b></div>
-          <div><span>Posuzovatelé</span><b>${event.judges}</b></div>
-          <div><span>Pořadatel</span><b>${event.organizer}</b></div>
+          <div><span>Datum a čas</span><b>${dateText(event.date)} · ${escapeHTML(event.startTime)}</b></div>
+          <div><span>Místo</span><b>${escapeHTML(event.venue)}</b></div>
+          <div><span>Posuzovatelé</span><b>${escapeHTML(event.judges)}</b></div>
+          <div><span>Pořadatel</span><b>${escapeHTML(event.organizer)}</b></div>
         </div>
-        <p>Propozice, veterinární podmínky a rozpis skupin budou dostupné po přihlášení v detailu přihlášky.</p>
+        <details class="event-allowed-breeds"><summary>Povolená plemena a třídy</summary>${Object.entries(event.breedClasses).map(([breed, classes]) => `<p><b>${escapeHTML(breed)}</b><br>${classes.map(EventRules.classLabel).map(escapeHTML).join(", ")}</p>`).join("")}</details><p>Propozice, veterinární podmínky a rozpis skupin budou dostupné po přihlášení v detailu přihlášky.</p>
       </div>
       <aside class="modal-side">
         <div><span>Přihlášeno</span><b>${event.dogs.toLocaleString("cs-CZ")} / ${event.capacity.toLocaleString("cs-CZ")} psů</b></div>
-        <div><span>Uzávěrka</span><b>${event.deadline}</b></div>
-        <div><span>Kontakt</span><b>${event.contact}</b></div>
+        <div><span>Uzávěrka</span><b>${escapeHTML(event.deadline)}</b></div>
+        <div><span>Kontakt</span><b>${escapeHTML(event.contact)}</b></div><div><span>Cena za psa</span><b>${money(event.price)}</b></div><div><span>Povolená plemena</span><b>${Object.keys(event.breedClasses).length} plemen</b></div>
         <button class="gold-button" type="button" data-modal-register="${event.id}">Přihlásit psa <span>→</span></button>
       </aside>
     </div>
@@ -626,23 +322,36 @@ function applicationClassForDog(dog) {
 function renderApplicationDogOptions() {
   const container = document.querySelector("#application-dog-options");
   const ids = Object.keys(memberDogs);
-  const preferredId = ids.includes(currentMemberDogId) ? currentMemberDogId : ids[0];
-  container.replaceChildren(...ids.map((id) => {
+  const reasons = Object.fromEntries(ids.map(id => [id, EventRules.eligibility(currentApplicationEvent, id, memberDogs[id], registrations)]));
+  const eligible = ids.filter(id => !reasons[id]);
+  const previous = applicationForm.querySelector("[name='applicationDog']:checked")?.value;
+  const preferredId = eligible.includes(previous) ? previous : eligible.includes(currentMemberDogId) ? currentMemberDogId : eligible[0];
+  container.replaceChildren(...ids.map(id => {
     const dog = memberDogs[id];
     const label = document.createElement("label");
-    label.className = "application-dog-choice";
+    label.className = `application-dog-choice${reasons[id] ? " unavailable" : ""}`;
     const checked = id === preferredId;
     label.classList.toggle("selected", checked);
-    label.innerHTML = `<input type="radio" name="applicationDog" value="${escapeHTML(id)}" ${checked ? "checked" : ""} required /><span>${escapeHTML(dogInitials(dog.fullName))}</span><div><b>${escapeHTML(dog.fullName)}</b><small>${escapeHTML(dog.breed)} · ${escapeHTML(dog.registration)}</small></div><i>Vybrat</i>`;
+    label.innerHTML = `<input type="radio" name="applicationDog" value="${escapeHTML(id)}" ${checked ? "checked" : ""} ${reasons[id] ? "disabled" : ""} required /><span>${escapeHTML(dogInitials(dog.fullName))}</span><div><b>${escapeHTML(dog.fullName)}</b><small>${escapeHTML(dog.breed)} · ${escapeHTML(dog.registration)}</small>${reasons[id] ? `<small class="dog-ineligible-reason">${escapeHTML(reasons[id])}</small>` : ""}</div><i>${reasons[id] ? "—" : "Vybrat"}</i>`;
     return label;
   }));
+  document.querySelector("#application-eligibility-note").textContent = EventRules.availability(currentApplicationEvent) || (eligible.length ? "Každého psa lze na tuto výstavu přihlásit jednou. Vyberte psa a povolenou třídu." : "Žádný z vašich psů nyní nesplňuje podmínky přihlášení. Důvod najdete u každého profilu.");
   updateApplicationDogSelection();
 }
 
 function updateApplicationDogSelection() {
-  const selected = applicationForm.querySelector("[name='applicationDog']:checked");
-  applicationForm.querySelectorAll(".application-dog-choice").forEach((label) => label.classList.toggle("selected", label.contains(selected)));
-  document.querySelector("#application-class").textContent = applicationClassForDog(memberDogs[selected?.value]);
+  const selected = applicationForm.querySelector("[name='applicationDog']:checked:not(:disabled)");
+  applicationForm.querySelectorAll(".application-dog-choice").forEach(label => label.classList.toggle("selected", label.contains(selected)));
+  const select = document.querySelector("#application-class");
+  const allowed = selected ? EventRules.allowedClasses(currentApplicationEvent, memberDogs[selected.value]) : [];
+  select.innerHTML = allowed.map(value => `<option value="${escapeHTML(value)}">${escapeHTML(EventRules.classLabel(value))}</option>`).join('');
+  const preferred = applicationClassForDog(memberDogs[selected?.value]);
+  const suggested = allowed.find(value => EventRules.classLabel(value) === preferred);
+  if (suggested) select.value = suggested;
+  select.disabled = !allowed.length;
+  document.querySelector("#application-submit").disabled = !selected || !allowed.length;
+  applicationForm.querySelectorAll('[name="paymentMethod"]').forEach(input => { input.disabled = !selected; });
+  document.querySelectorAll('[data-application-price]').forEach(node => { node.textContent = money(EventRules.price(currentApplicationEvent, demoOwnerId, registrations)); });
 }
 
 function drawDemoQrCode() {
@@ -676,10 +385,11 @@ function drawDemoQrCode() {
   drawFinder(0, modules - 7);
 }
 
-function openQrPayment() {
+function openQrPayment(application = null) {
   const selectedDogId = applicationForm.querySelector("[name='applicationDog']:checked")?.value;
-  document.querySelector("#qr-event-name").textContent = currentApplicationEvent?.title || "Přihláška na výstavu";
-  document.querySelector("#qr-dog-name").textContent = selectedDogId ? memberDogs[selectedDogId].fullName : "Přihláška psa";
+  document.querySelector("#qr-event-name").textContent = application?.title || currentApplicationEvent?.title || "Přihláška na výstavu";
+  document.querySelector("#qr-amount").textContent = application?.price || money(EventRules.price(currentApplicationEvent, demoOwnerId, registrations));
+  document.querySelector("#qr-dog-name").textContent = application ? memberDogs[application.dogId].fullName : selectedDogId ? memberDogs[selectedDogId].fullName : "Přihláška psa";
   drawDemoQrCode();
   openDialog(qrPaymentDialog);
 }
@@ -693,8 +403,8 @@ function updateApplicationPaymentMethod(openQr = false) {
 
 function openApplication(eventId) {
   const event = events.find((item) => item.id === Number(eventId));
-  if (!event) return;
-  const memberIsActive = memberSessionActive || (document.body.classList.contains("portal-active") && !memberPortal.hidden);
+  if (!event || event.status !== "published") return;
+  const memberIsActive = memberSessionActive;
   if (!memberIsActive) {
     pendingApplicationEventId = event.id;
     closeDialog(eventDialog);
@@ -705,40 +415,19 @@ function openApplication(eventId) {
   currentApplicationEvent = event;
   document.querySelector("#application-event-name").textContent = event.title;
   document.querySelector("#summary-event").textContent = event.title;
-  document.querySelector("#application-event-place").textContent = `${event.venue}, ${event.city} · ${event.day}. ${event.month} 2026`;
+  document.querySelector("#application-event-place").textContent = `${event.venue}, ${event.city} · ${dateText(event.date)} · ${event.startTime}`;
   applicationForm.reset();
   renderApplicationDogOptions();
   updateApplicationPaymentMethod();
   closeDialog(eventDialog);
-  window.setTimeout(() => openDialog(applicationDialog), 30);
+  showPortal("member");
+  switchMemberPanel("application-new");
+  document.querySelector("#application-event-name").focus({ preventScroll: true });
 }
 
 function configureAccountDialog(mode) {
-  const registerMode = mode !== "login";
-  document.querySelector("#account-eyebrow").textContent = registerMode ? "Nový profil" : "Členská zóna";
-  document.querySelector("#account-title").textContent = registerMode ? "Vytvořte si účet" : "Vítejte zpět";
-  document.querySelector("#account-copy").textContent = registerMode
-    ? "Jednou vyplníte své údaje a profily psů pak použijete pro každou další výstavu."
-    : "Přihlaste se ke svým psům, přihláškám a vstupním listům.";
-  document.querySelector("#account-submit").innerHTML = registerMode ? "Vytvořit účet <span>↗</span>" : "Přihlásit se <span>→</span>";
-  const accountModeToggle = document.querySelector("#account-mode-toggle");
-  accountModeToggle.innerHTML = registerMode
-    ? "<span>Už máte účet?</span><b>Přihlásit se →</b>"
-    : "<span>Nemáte účet?</span><b>Zaregistrovat se →</b>";
-  accountModeToggle.setAttribute("aria-label", registerMode ? "Přejít na přihlášení" : "Přejít na registraci");
-  accountModeToggle.dataset.nextMode = registerMode ? "login" : "register";
-  document.querySelector("#account-form").dataset.mode = registerMode ? "register" : "login";
-  accountDialog.dataset.mode = registerMode ? "register" : "login";
-  document.querySelectorAll(".register-fields, .account-terms").forEach((element) => (element.hidden = !registerMode));
-  document.querySelector(".login-password-field").hidden = registerMode;
-  document.querySelectorAll(".register-fields input, .register-fields select, .account-terms input").forEach((input) => {
-    input.required = registerMode && input.name !== "accountMarketing" && input.type !== "file";
-  });
-  document.querySelector("[name='accountPassword']").required = !registerMode;
-  document.querySelector("[name='accountPassword']").autocomplete = registerMode ? "off" : "current-password";
-  document.querySelector("[name='accountPassword']").minLength = registerMode ? 0 : 1;
-  document.querySelector("[name='accountPassword']").placeholder = registerMode ? "" : "Zadejte heslo";
-  openDialog(accountDialog);
+  closeDialog(accountDialog);
+  navigatePublic(mode === "login" ? "prihlaseni" : "registrace");
 }
 
 async function loadBreeds() {
@@ -802,6 +491,7 @@ function renderEventBreedOptions() {
     button.className = selected ? "selected" : "";
     button.dataset.eventBreedOption = breed.nazev;
     button.setAttribute("aria-pressed", String(selected));
+    button.setAttribute("aria-label", `${selected ? "Přidáno" : "Přidat plemeno"} ${breed.nazev}`);
     button.innerHTML = `<span>${escapeHTML(breed.nazev)}</span><small>FCI ${escapeHTML(breed.skupina_kod)}</small><i>${selected ? "Přidáno" : "+ Přidat"}</i>`;
     return button;
   }));
@@ -852,6 +542,7 @@ function renderEventBreedSelector() {
 }
 
 function addEventBreed(breedName) {
+  if (!breedCatalog.some(breed => breed.nazev === breedName)) return;
   if (!selectedEventBreeds.has(breedName)) selectedEventBreeds.add(breedName);
   ensureEventBreedClasses(breedName);
   activeEventBreed = breedName;
@@ -1006,7 +697,7 @@ function openDogCreator() {
   document.querySelector("#dog-photo-preview").innerHTML = "<b>+</b><small>Fotografie psa</small>";
   document.querySelector("#dog-form-eyebrow").textContent = "Nový profil psa";
   document.querySelector("#dog-form-title").textContent = "Přidat psa";
-  document.querySelector("#dog-form-copy").textContent = "Údaje vyplňte podle průkazu původu. Fotografii můžete doplnit dobrovolně";
+  document.querySelector("#dog-form-copy").textContent = "Údaje vyplňte podle průkazu původu.";
   document.querySelector("#dog-form-submit").textContent = "Vytvořit profil psa →";
   document.querySelector("#member-panel-title").textContent = "Přidat psa";
   memberPortal.querySelector(".portal-main").scrollTo({ top: 0, behavior: "instant" });
@@ -1073,45 +764,44 @@ function renderMemberDogAssets(dog) {
     ? documents.map((document) => `<article><span class="file-type${document.type === "PDF" ? "" : " image"}">${escapeHTML(document.type)}</span><div><b>${escapeHTML(document.title)}</b><small>${escapeHTML(document.file)}</small></div><i class="status-badge ${document.status === "Ověřeno" ? "paid" : "review"}">${escapeHTML(document.status)}</i><button type="button" data-toast="Náhled dokumentu je připravený.">Zobrazit</button></article>`).join("")
     : '<div class="member-empty-assets"><b>Zatím žádné dokumenty</b><span>Nahrajte průkaz původu nebo další doklad</span></div>';
   awardList.innerHTML = awards.length
-    ? awards.map((award) => `<article><time><b>${escapeHTML(award.day)}</b><span>${escapeHTML(award.month)}<br />2026</span></time><div><span class="status-badge paid">${escapeHTML(award.result)}</span><h4>${escapeHTML(award.title)}</h4><p>${escapeHTML(award.detail)}</p><small>${escapeHTML(award.file)}</small></div><button type="button" data-toast="Náhled ocenění je připravený.">Dokument →</button></article>`).join("")
-    : '<div class="member-empty-assets"><b>Zatím žádná ocenění</b><span>Diplom nebo posudek nahrajete tlačítkem výše</span></div>';
+    ? awards.map((award) => `<article><time><b>${escapeHTML(award.day)}</b><span>${escapeHTML(award.month)} 2026</span></time><div><h4>${escapeHTML(award.title)}</h4><p>${escapeHTML(award.detail)}</p><small>${escapeHTML(award.file)}</small></div><span class="status-badge paid">${escapeHTML(award.result)}</span><button type="button" data-toast="Náhled ocenění je připravený.">Dokument <span aria-hidden="true">↗</span></button></article>`).join("")
+    : '<div class="member-empty-assets"><b>Zatím žádná ocenění</b><span>Výsledky a související doklady sem doplní administrátor.</span></div>';
 }
 
-function appendUploadedFiles(input, listSelector, kind) {
+function appendUploadedFiles(input, kind) {
   const dog = memberDogs[currentMemberDogId];
-  if (!dog || !input.files?.length) return;
+  if (!dog || !input.files?.length || !["pedigree", "document"].includes(kind)) return;
   dog.documents ||= [];
-  dog.awards ||= [];
   [...input.files].forEach((file) => {
     const extension = (file.name.split(".").pop() || "soubor").toLocaleUpperCase("cs");
-    if (kind === "award") {
-      dog.awards.unshift({ day: String(new Date().getDate()).padStart(2, "0"), month: "SRP", result: "Nově nahráno", title: file.name.replace(/\.[^.]+$/, ""), detail: "Ocenění čeká na doplnění údajů", file: file.name });
-    } else {
-      dog.documents.unshift({ type: extension, title: kind === "pedigree" ? "Průkaz původu" : "Nový dokument", file: `${file.name} · ${(file.size / 1024 / 1024).toLocaleString("cs-CZ", { maximumFractionDigits: 1 })} MB`, status: "Čeká na kontrolu" });
-    }
+    dog.documents.unshift({ type: extension, title: kind === "pedigree" ? "Průkaz původu" : "Nový dokument", file: `${file.name} · ${(file.size / 1024 / 1024).toLocaleString("cs-CZ", { maximumFractionDigits: 1 })} MB`, status: "Čeká na kontrolu" });
   });
   input.value = "";
   renderMemberDogAssets(dog);
-  showToast(kind === "award" ? "Ocenění bylo přidáno k profilu psa." : "Dokument byl nahrán a čeká na kontrolu.");
+  showToast("Dokument byl nahrán a čeká na kontrolu.");
 }
 
 function renderMemberEvents() {
   const container = document.querySelector("#member-event-grid");
-  container.innerHTML = events
-    .slice(0, 6)
-    .map(
-      (event) => `
-        <article class="member-event-card">
-          <span>${event.type} · ${event.day}. ${event.month} 2026</span>
-          <h2>${event.title}</h2>
-          <p>${event.venue}, ${event.city}</p>
-          <dl><div><dt>Uzávěrka</dt><dd>${event.deadline}</dd></div><div><dt>Volná místa</dt><dd>${event.capacity - event.dogs}</dd></div></dl>
-          <button class="gold-button" type="button" data-member-apply="${event.id}">Přihlásit psa <span>→</span></button>
-        </article>
-      `,
-    )
-    .join("");
+  const query = document.querySelector("#member-event-search").value.trim().toLocaleLowerCase("cs");
+  const type = document.querySelector("#member-event-type").value;
+  const filtered = events.filter(event => event.status === "published" && (type === "all" || event.type === type) && `${event.title} ${event.city} ${event.venue}`.toLocaleLowerCase("cs").includes(query));
+  document.querySelector("#member-event-count").textContent = `Počet výstav: ${filtered.length}`;
+  document.querySelector("#member-events-empty").hidden = filtered.length > 0;
+  container.innerHTML = filtered.map(event => `
+    <article class="member-event-card">
+      <div class="member-event-date"><b>${event.day}</b><span>${event.month}</span></div>
+      <div class="member-event-description"><span>${escapeHTML(event.type)}</span><h2>${escapeHTML(event.title)}</h2><p>${escapeHTML(event.venue)}, ${escapeHTML(event.city)}</p></div>
+      <div class="member-event-deadline"><span>Uzávěrka přihlášek</span><b>${escapeHTML(event.deadline)}</b><small>${money(event.price)} / pes · ${Math.max(0, event.capacity - event.dogs)} volných míst</small></div>
+      <div class="member-event-actions"><button class="gold-button" type="button" data-member-apply="${event.id}"><span>Přihlásit psa</span><span aria-hidden="true">→</span></button><button class="member-event-detail" type="button" data-member-event-detail="${event.id}">Detail výstavy <span aria-hidden="true">↗</span></button></div>
+    </article>`).join("");
 }
+
+const memberEventFilters = document.querySelector("#member-event-filters");
+memberEventFilters.addEventListener("input", renderMemberEvents);
+memberEventFilters.addEventListener("submit", event => event.preventDefault());
+memberEventFilters.addEventListener("reset", () => window.setTimeout(renderMemberEvents, 0));
+document.querySelector("#member-events-reset").addEventListener("click", () => memberEventFilters.reset());
 
 function openMemberApplicationDetail(key) {
   const application = memberApplications[key];
@@ -1136,20 +826,28 @@ function openMemberApplicationDetail(key) {
   document.querySelector("#member-detail-payment-note").textContent = application.paymentNote;
   const action = document.querySelector("#member-detail-primary-action");
   action.textContent = application.action;
-  action.dataset.toast = application.actionMessage;
+  delete action.dataset.toast;
+  action.dataset.applicationPayment = key;
+  action.hidden = application.statusClass === "paid";
+  action.textContent = "Zobrazit demo platební údaje →";
+  document.querySelector("#member-detail-submitted").textContent = new Date(application.submittedAt).toLocaleDateString('cs-CZ');
+  document.querySelector("#member-detail-documents").textContent = application.docs || 'Čeká na kontrolu';
+  const documents = document.querySelector("#member-detail-documents-step");
+  documents.classList.toggle('done', application.docs === 'Ověřeno');
+  documents.querySelector(':scope > span').textContent = application.docs === 'Ověřeno' ? '✓' : '2';
   switchMemberPanel("application-detail");
 }
 
 function registrationRowMarkup(registration) {
   return `
     <tr>
-      <td data-label="Přihlášen">${registration.date}</td>
-      <td data-label="Vystavovatel"><b>${registration.name}</b><span>${registration.email}</span></td>
-      <td data-label="Pes / třída"><b>${registration.dog}</b><span>${registration.showClass}</span></td>
-      <td data-label="Doklady"><span class="status-badge ${registration.docs === "Ověřeno" ? "paid" : "review"}">${registration.docs}</span></td>
+      <td data-label="Přihlášen">${escapeHTML(registration.date)}</td>
+      <td data-label="Vystavovatel"><b>${escapeHTML(registration.name)}</b><span>${escapeHTML(registration.email)}</span></td>
+      <td data-label="Pes / třída"><b>${escapeHTML(registration.dog)}</b><span>${escapeHTML(registration.showClass)}</span></td>
+      <td data-label="Doklady"><span class="status-badge ${registration.docs === "Ověřeno" ? "paid" : "review"}">${escapeHTML(registration.docs)}</span></td>
       <td data-label="Částka">${registration.amount.toLocaleString("cs-CZ")} Kč</td>
       <td data-label="Platba"><button class="status-badge ${registration.payment === "paid" ? "paid" : "pending"}" type="button" data-toggle-payment="${registrations.indexOf(registration)}">${registration.payment === "paid" ? "Zaplaceno" : "Nezaplaceno"}</button></td>
-      <td data-label="Detail"><button type="button" data-toast="Detail přihlášky je připravený." aria-label="Otevřít detail přihlášky ${registration.dog}">→</button></td>
+      <td data-label="Detail"><button type="button" data-toast="Detail přihlášky je připravený." aria-label="Otevřít detail přihlášky ${escapeHTML(registration.dog)}">→</button></td>
     </tr>
   `;
 }
@@ -1157,16 +855,17 @@ function registrationRowMarkup(registration) {
 function renderRegistrationRows() {
   const query = document.querySelector("#registration-search")?.value.trim().toLocaleLowerCase("cs") || "";
   const payment = document.querySelector("#payment-filter")?.value || "all";
-  const rows = registrations.filter((registration) => {
+  const rows = eventRecords(currentAdminEventId).filter((registration) => {
     const haystack = `${registration.name} ${registration.email} ${registration.dog}`.toLocaleLowerCase("cs");
     return haystack.includes(query) && (payment === "all" || registration.payment === payment);
   });
-  document.querySelector("#registration-rows").innerHTML = rows.map(registrationRowMarkup).join("");
+  document.querySelector("#registration-rows").innerHTML = rows.map(registrationRowMarkup).join("") || '<tr><td colspan="7">Zatím žádné odpovídající přihlášky.</td></tr>';
 }
 
 function renderAdminDetailRegistrationRows() {
-  const rows = document.querySelector("#admin-detail-registration-rows");
-  if (rows) rows.innerHTML = registrations.map(registrationRowMarkup).join("");
+  const records = eventRecords(currentAdminEventId);
+  document.querySelector("#admin-detail-registration-rows").innerHTML = records.slice(-6).reverse().map(registrationRowMarkup).join("") || '<tr><td colspan="7">Na tuto výstavu zatím nepřišla žádná přihláška.</td></tr>';
+  document.querySelector("#admin-recent-count").textContent = `Zobrazeno ${Math.min(records.length, 6)} z ${records.length} přihlášek`;
 }
 
 function openAdminAccess() {
@@ -1210,6 +909,8 @@ function updateMemberSessionUI() {
   document.querySelector("#hero-login-content").hidden = memberSessionActive;
   document.querySelector("#hero-member-session").hidden = !memberSessionActive;
   if (!memberSessionActive) closeMemberAccountMenu();
+  document.querySelector("#exhibition-access-note").hidden = memberSessionActive;
+
 }
 
 const memberAccountMenu = document.querySelector("#member-account-menu");
@@ -1232,9 +933,23 @@ function setMemberSession(active) {
   memberSessionActive = active;
   if (active) setHeroRegistration(false, false);
   updateMemberSessionUI();
+  renderEvents();
 }
 
 function showPortal(role) {
+  if (role !== "admin" && !memberSessionActive) {
+    navigatePublic("prihlaseni");
+    return false;
+  }
+  if (role === "admin" && !adminSessionActive) {
+    openAdminAccess();
+    return false;
+  }
+  closeMobileNavigation();
+  closeMemberAccountMenu();
+  const hash = role === "admin" ? "#poradatel" : "#vystavy";
+  if (location.hash !== hash) history.pushState(null, "", hash);
+  document.title = role === "admin" ? "Pořadatelská administrace | Česká kynologická" : "Výstavy a členská zóna | Česká kynologická";
   allDialogs.forEach(closeDialog);
   const isAdmin = role === "admin";
   memberPortal.hidden = isAdmin;
@@ -1252,24 +967,33 @@ function showPortal(role) {
 function enterMemberAndContinue() {
   setMemberSession(true);
   showPortal("member");
-  if (!pendingApplicationEventId) return;
+  if (pendingMemberPanel) {
+    switchMemberPanel(pendingMemberPanel);
+    pendingMemberPanel = null;
+  }
   const eventId = pendingApplicationEventId;
+  const detailId = pendingDetailEventId;
   pendingApplicationEventId = null;
-  window.setTimeout(() => openApplication(eventId), 50);
+  pendingDetailEventId = null;
+  if (eventId) window.setTimeout(() => openApplication(eventId), 50);
+  else if (detailId) window.setTimeout(() => openEventDetail(detailId), 50);
 }
 
-function exitPortal() {
+function hidePortals() {
   memberPortal.hidden = true;
   adminPortal.hidden = true;
   memberPortal.classList.remove("sidebar-open");
-  adminPortal.classList.remove("sidebar-open");
+  if (adminSidebarMedia.matches) setAdminSidebar(false);
   document.body.classList.remove("portal-active");
-  window.scrollTo({ top: 0 });
+}
+
+function exitPortal() {
+  navigatePublic("uvod");
 }
 
 function switchMemberPanel(panel) {
-  const titleMap = { dogs: "Moji psi", applications: "Přihlášky", "application-detail": "Detail přihlášky", "member-events": "Výstavy", profile: "Můj profil" };
-  const navigationPanel = panel === "application-detail" ? "applications" : panel;
+  const titleMap = { dogs: "Moji psi", applications: "Přihlášky", "application-detail": "Detail přihlášky", "application-new": "Přihlášení psa", "member-events": "Výstavy", profile: "Můj profil" };
+  const navigationPanel = panel === "application-detail" ? "applications" : panel === "application-new" ? "member-events" : panel;
   document.querySelectorAll("[data-member-content]").forEach((section) => section.classList.toggle("active", section.dataset.memberContent === panel));
   document.querySelectorAll("[data-member-panel]").forEach((button) => button.classList.toggle("active", button.dataset.memberPanel === navigationPanel));
   document.querySelector("#member-panel-title").textContent = titleMap[panel] || "Členská zóna";
@@ -1279,41 +1003,46 @@ function switchMemberPanel(panel) {
 }
 
 function switchAdminPanel(panel) {
-  const titleMap = { "admin-overview": "Přehled výstav", "admin-event-detail": "Detail výstavy", "admin-events": "Výstavy a přihlášky", "admin-create-event": "Vytvořit výstavu", "admin-payments": "Platby a rozpočet", "admin-propositions": "Propozice a PDF" };
-  const navigationPanel = panel === "admin-event-detail" ? "admin-overview" : panel === "admin-create-event" ? "admin-events" : panel;
+  if (!adminSessionActive) return;
+  if (panel === "admin-overview") panel = "admin-events";
+  const titleMap = { "admin-overview": "Přehled výstav", "admin-event-detail": "Detail výstavy", "admin-events": "Výstavy a přihlášky", "admin-create-event": "Vytvořit výstavu" };
+  if (!Object.hasOwn(titleMap, panel)) panel = "admin-events";
+  const navigationPanel = panel === "admin-event-detail" ? "admin-events" : panel === "admin-create-event" ? "admin-events" : panel;
   document.querySelectorAll("[data-admin-content]").forEach((section) => section.classList.toggle("active", section.dataset.adminContent === panel));
   document.querySelectorAll("[data-admin-panel]").forEach((button) => button.classList.toggle("active", button.dataset.adminPanel === navigationPanel));
   document.querySelector("#admin-panel-title").textContent = titleMap[panel] || "Administrace";
-  adminPortal.classList.remove("sidebar-open");
+  if (adminSidebarMedia.matches) setAdminSidebar(false);
   adminPortal.querySelector(".portal-main").scrollTo({ top: 0, behavior: "instant" });
   if (panel === "admin-events") {
+    renderAdminEvents();
     document.querySelector("#admin-show-registrations").hidden = true;
     document.querySelectorAll("[data-admin-show-registrations]").forEach((eventRow) => eventRow.classList.remove("expanded"));
   }
 }
 
 function openAdminShowRegistrations(trigger) {
+  const id = Number(typeof trigger === 'object' ? trigger.dataset.adminShowRegistrations : trigger);
+  const event = events.find(item => item.id === id);
+  if (!event || !adminSessionActive) return;
   switchAdminPanel("admin-events");
+  currentAdminEventId = id;
+  let row = document.querySelector(`[data-admin-event-row="${id}"]`);
+  if (!row) {
+    document.querySelector('#admin-event-filters').reset(); renderAdminEvents();
+    row = document.querySelector(`[data-admin-event-row="${id}"]`);
+  }
   const section = document.querySelector("#admin-show-registrations");
-  trigger.after(section);
-  trigger.classList.add("expanded");
-  document.querySelector("#admin-registration-show-title").textContent = trigger.dataset.title || trigger.querySelector("h2")?.textContent || "Vybraná výstava";
+  row.after(section); row.classList.add("expanded");
+  row.querySelector('[data-admin-show-registrations]').setAttribute('aria-expanded', 'true');
+  document.querySelector("#admin-registration-show-title").textContent = event.title;
   section.hidden = false;
   renderRegistrationRows();
-  window.setTimeout(() => section.scrollIntoView({ behavior: "smooth", block: "start" }), 30);
+  section.scrollIntoView({ block: "nearest" });
 }
 
 function openAdminEventDetail(trigger) {
-  document.querySelector("#admin-detail-title").textContent = trigger.dataset.title || "Detail výstavy";
-  document.querySelector("#admin-detail-copy").textContent = trigger.dataset.copy || "Aktuální stav vybrané výstavy.";
-  document.querySelector("#admin-detail-dogs").textContent = trigger.dataset.dogs || "—";
-  document.querySelector("#admin-detail-paid").textContent = trigger.dataset.paid || "—";
-  document.querySelector("#admin-detail-revenue").textContent = trigger.dataset.revenue || "—";
-  document.querySelector("#admin-detail-deadline").textContent = trigger.dataset.deadline || "—";
-  document.querySelector("#admin-detail-exhibitors").textContent = trigger.dataset.exhibitors || "—";
-  document.querySelector("#admin-detail-registration-total").textContent = trigger.dataset.dogs || "—";
-  renderAdminDetailRegistrationRows();
-  switchAdminPanel("admin-event-detail");
+  if (!adminSessionActive) return;
+  showAdminEventDetail(typeof trigger === 'object' ? trigger.dataset.adminEventDetail : trigger);
 }
 
 function openLegalDocument(type) {
@@ -1323,124 +1052,29 @@ function openLegalDocument(type) {
   openDialog(legalDialog);
 }
 
-function updateBudget() {
-  const plan = [...document.querySelectorAll("[data-budget-plan]")].reduce((sum, input) => sum + Number(input.value || 0), 0);
-  const actual = [...document.querySelectorAll("[data-budget-actual]")].reduce((sum, input) => sum + Number(input.value || 0), 0);
-  const income = 928450;
-  document.querySelector("#budget-plan-total").textContent = `${plan.toLocaleString("cs-CZ")} Kč`;
-  document.querySelector("#budget-actual-total").textContent = `${actual.toLocaleString("cs-CZ")} Kč`;
-  const result = income - actual;
-  document.querySelector("#budget-result-card").textContent = `${result >= 0 ? "+" : "−"}${Math.abs(result).toLocaleString("cs-CZ")} Kč`;
-}
-
-function updatePropositionPreview() {
-  document.querySelector("#prop-preview-title").textContent = document.querySelector("#prop-title").value || "Název výstavy";
-  document.querySelector("#prop-preview-date").textContent = document.querySelector("#prop-date").value || "—";
-  document.querySelector("#prop-preview-place").textContent = document.querySelector("#prop-place").value || "—";
-  document.querySelector("#prop-preview-body").textContent = document.querySelector("#prop-body").value;
-}
-
 function exportRegistrationsCSV() {
   const header = ["Přihlášen", "Vystavovatel", "E-mail", "Pes", "Třída", "Doklady", "Částka", "Platba"];
-  const csv = [header, ...registrations.map((item) => [item.date, item.name, item.email, item.dog, item.showClass, item.docs, item.amount, item.payment === "paid" ? "Zaplaceno" : "Nezaplaceno"])]
+  const csv = [header, ...eventRecords(currentAdminEventId).map((item) => [item.date, item.name, item.email, item.dog, item.showClass, item.docs, item.amount, item.payment === "paid" ? "Zaplaceno" : "Nezaplaceno"])]
     .map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(";"))
     .join("\n");
   const blob = new Blob([`\uFEFF${csv}`], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "prihlaseni-narodni-vystava-brno.csv";
+  link.download = `prihlasky-vystava-${currentAdminEventId}.csv`;
   link.click();
   URL.revokeObjectURL(url);
   showToast("CSV se seznamem přihlášených bylo vytvořeno.");
 }
 
-calendarReel.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-calendar-date]");
-  if (!button) return;
-  markCalendarTouched();
-  calendarIndex = Number(button.dataset.calendarIndex);
-  selectedDate = button.dataset.calendarDate;
-  renderCalendar();
-  renderEvents();
-});
-
-document.querySelector("#calendar-prev").addEventListener("click", () => {
-  markCalendarTouched();
-  shiftCalendar(-1);
-});
-
-document.querySelector("#calendar-next").addEventListener("click", () => {
-  markCalendarTouched();
-  shiftCalendar(1);
-});
-
-calendarReelWrap.addEventListener(
-  "wheel",
-  (event) => {
-    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
-    event.preventDefault();
-    markCalendarTouched();
-    calendarWheelDelta += event.deltaX;
-    if (Math.abs(calendarWheelDelta) < 60) return;
-    shiftCalendar(calendarWheelDelta > 0 ? 1 : -1);
-    calendarWheelDelta = 0;
-  },
-  { passive: false },
-);
-
-calendarReelWrap.addEventListener("pointerdown", (event) => {
-  if (event.target.closest(".reel-arrow")) return;
-  calendarDragX = event.clientX;
-  calendarReelWrap.classList.add("dragging");
-  calendarReelWrap.setPointerCapture(event.pointerId);
-  markCalendarTouched();
-});
-
-calendarReelWrap.addEventListener("pointermove", (event) => {
-  if (calendarDragX === null) return;
-  const delta = event.clientX - calendarDragX;
-  if (Math.abs(delta) < 55) return;
-  shiftCalendar(delta < 0 ? 1 : -1);
-  calendarDragX = event.clientX;
-});
-
-function endCalendarDrag(event) {
-  calendarDragX = null;
-  calendarReelWrap.classList.remove("dragging");
-  if (event.pointerId !== undefined && calendarReelWrap.hasPointerCapture(event.pointerId)) {
-    calendarReelWrap.releasePointerCapture(event.pointerId);
-  }
-}
-
-calendarReelWrap.addEventListener("pointerup", endCalendarDrag);
-calendarReelWrap.addEventListener("pointercancel", endCalendarDrag);
-calendarReelWrap.addEventListener("keydown", (event) => {
-  if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-  event.preventDefault();
-  markCalendarTouched();
-  shiftCalendar(event.key === "ArrowRight" ? 1 : -1);
-});
-
-[searchInput, typeFilter, regionFilter].forEach((control) => control.addEventListener("input", renderEvents));
-
+[searchInput, typeFilter, dateFilter].forEach((control) => control.addEventListener("input", renderEvents));
+filterForm.addEventListener("submit", (event) => event.preventDefault());
 filterForm.addEventListener("reset", () => {
   window.setTimeout(() => {
-    selectedDate = "all";
-    calendarIndex = 0;
-    enhancedFilterSelects.forEach((control) => control.sync());
-    renderCalendar();
     renderEvents();
-  });
+  }, 0);
 });
-
-document.querySelector("#empty-reset").addEventListener("click", () => {
-  filterForm.reset();
-  selectedDate = "all";
-  calendarIndex = 0;
-  renderCalendar();
-  renderEvents();
-});
+document.querySelector("#empty-reset").addEventListener("click", () => filterForm.reset());
 
 eventList.addEventListener("click", (event) => {
   const detailButton = event.target.closest("[data-event-detail]");
@@ -1462,7 +1096,7 @@ document.addEventListener("click", (event) => {
   if (heroRegisterButton) setHeroRegistration(true);
 
   const heroLoginButton = event.target.closest("[data-hero-login]");
-  if (heroLoginButton) setHeroRegistration(false, false);
+  if (heroLoginButton) navigatePublic("prihlaseni");
 
   const accountButton = event.target.closest("[data-open-account]");
   if (accountButton) {
@@ -1481,9 +1115,13 @@ document.addEventListener("click", (event) => {
   const memberProfileButton = event.target.closest("[data-open-member-profile]");
   if (memberProfileButton) {
     closeMemberAccountMenu();
-    setMemberSession(true);
-    showPortal("member");
-    switchMemberPanel("profile");
+    if (memberSessionActive) {
+      showPortal("member");
+      switchMemberPanel("profile");
+    } else {
+      pendingMemberPanel = "profile";
+      navigatePublic("prihlaseni");
+    }
   }
 
   if (event.target.closest("[data-open-member-zone]")) {
@@ -1574,21 +1212,24 @@ document.addEventListener("click", (event) => {
   const adminEventDetailButton = event.target.closest("[data-admin-event-detail]");
   if (adminEventDetailButton) openAdminEventDetail(adminEventDetailButton);
 
-  if (event.target.closest("[data-open-full-registration-list]")) {
-    const currentTitle = document.querySelector("#admin-detail-title").textContent;
-    const showRow = [...document.querySelectorAll("[data-admin-show-registrations]")].find((row) => row.dataset.title === currentTitle);
-    if (showRow) openAdminShowRegistrations(showRow);
-    else switchAdminPanel("admin-events");
-  }
+  if (event.target.closest("[data-open-full-registration-list]")) openAdminShowRegistrations(currentAdminEventId);
+  const editEvent = event.target.closest('[data-edit-event]');
+  if (editEvent) openEventEditor(editEvent.dataset.editEvent);
+  const paymentDetail = event.target.closest('[data-application-payment]');
+  if (paymentDetail) openQrPayment(memberApplications[paymentDetail.dataset.applicationPayment]);
+  if (event.target.closest('[data-admin-sign-out]')) { adminSessionActive = false; exitPortal(); }
 
   if (event.target.closest("[data-enter-admin]")) openAdminAccess();
-  if (event.target.closest("[data-switch-member]")) {
-    setMemberSession(true);
-    showPortal("member");
-  }
+  if (event.target.closest("[data-switch-member]")) showPortal("member");
   if (event.target.closest("[data-sign-out]")) {
     event.preventDefault();
+    allDialogs.forEach(closeDialog);
     setMemberSession(false);
+    adminSessionActive = false;
+    pendingApplicationEventId = null;
+    pendingDetailEventId = null;
+    pendingMemberPanel = null;
+    document.querySelector("#hero-login-form").reset();
     exitPortal();
   } else if (event.target.closest("[data-exit-portal]")) {
     event.preventDefault();
@@ -1598,8 +1239,11 @@ document.addEventListener("click", (event) => {
   if (event.target.closest("[data-open-dog]")) openDogCreator();
   if (event.target.closest("[data-edit-dog]")) openDogEditor();
   if (event.target.closest("[data-cancel-dog-create]")) selectMemberDog(currentMemberDogId);
-  if (event.target.closest("[data-create-event]")) switchAdminPanel("admin-create-event");
+  if (event.target.closest("[data-create-event]")) openEventEditor();
   if (event.target.closest("[data-export-csv]")) exportRegistrationsCSV();
+
+  const memberDetail = event.target.closest("[data-member-event-detail]");
+  if (memberDetail) openEventDetail(memberDetail.dataset.memberEventDetail);
 
   const memberApply = event.target.closest("[data-member-apply]");
   if (memberApply) openApplication(memberApply.dataset.memberApply);
@@ -1611,12 +1255,21 @@ document.addEventListener("click", (event) => {
   }
 
   const paymentButton = event.target.closest("[data-toggle-payment]");
-  if (paymentButton) {
+  if (paymentButton && adminSessionActive) {
     const registration = registrations[Number(paymentButton.dataset.togglePayment)];
     if (registration) {
       registration.payment = registration.payment === "paid" ? "pending" : "paid";
+      const application = memberApplications[registration.id];
+      if (application) {
+        application.status = registration.payment === 'paid' ? 'Zaplaceno' : 'Čeká na platbu';
+        application.statusClass = registration.payment === 'paid' ? 'paid' : 'pending';
+        application.paymentDate = registration.payment === 'paid' ? new Date().toLocaleDateString('cs-CZ') : 'Dosud neuhrazeno';
+        application.paymentNote = registration.payment === 'paid' ? 'Označeno jako uhrazené pořadatelem v demu' : 'Platba zatím nebyla přijata';
+        renderMemberApplications();
+      }
       renderRegistrationRows();
       renderAdminDetailRegistrationRows();
+      if (document.querySelector('[data-admin-content="admin-event-detail"]').classList.contains('active')) showAdminEventDetail(currentAdminEventId);
       showToast("Stav platby byl v prototypu změněn.");
     }
   }
@@ -1645,17 +1298,7 @@ document.querySelector("#qr-payment-done").addEventListener("click", () => {
   showToast("Demo QR platební údaje byly zkontrolovány. Přihlášku můžete odeslat.");
 });
 
-applicationForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!applicationForm.checkValidity()) {
-    applicationForm.reportValidity();
-    showToast("Vyberte psa a potvrďte povinné podmínky přihlášky.");
-    return;
-  }
-  const method = new FormData(applicationForm).get("paymentMethod");
-  closeDialog(applicationDialog);
-  showToast(method === "qr" ? "Přihláška byla uložena s demo QR platbou." : "Přihláška byla uložena. Platební údaje jsme poslali e-mailem.");
-});
+applicationForm.addEventListener("submit", submitManagedApplication);
 
 document.querySelector("#hero-login-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -1664,12 +1307,25 @@ document.querySelector("#hero-login-form").addEventListener("submit", (event) =>
   const valid = Boolean(email.value.trim() && password.value.trim());
   email.classList.toggle("invalid", !email.value.trim());
   password.classList.toggle("invalid", !password.value.trim());
+  [email, password].forEach(field => {
+    const missing = !field.value.trim();
+    field.setAttribute("aria-invalid", String(missing));
+    document.querySelector(`#login-${field.name}-error`).hidden = !missing;
+  });
   if (!valid) {
-    showToast("Zadejte e-mail a heslo.");
+    (!email.value.trim() ? email : password).focus();
     return;
   }
   enterMemberAndContinue();
   showToast("Demo přihlášení bylo úspěšné.");
+});
+
+document.querySelector("#hero-login-form").addEventListener("input", event => {
+  const field = event.target;
+  if (!field.matches("input") || !field.value.trim()) return;
+  field.classList.remove("invalid");
+  field.removeAttribute("aria-invalid");
+  document.querySelector(`#login-${field.name}-error`).hidden = true;
 });
 
 const sameAddressToggle = document.querySelector("#hero-register-form [name='sameAddress']");
@@ -1853,6 +1509,7 @@ document.querySelector("#admin-access-form").addEventListener("submit", (event) 
   password.classList.remove("invalid");
   error.hidden = true;
   closeDialog(adminAccessDialog);
+  adminSessionActive = true;
   showPortal("admin");
   showToast("Vstoupili jste do demo administrace.");
 });
@@ -1966,43 +1623,12 @@ document.querySelector("#event-breed-class-editor").addEventListener("change", (
   renderSelectedEventBreeds();
 });
 
-document.querySelector("#event-create-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!selectedEventBreeds.size) {
-    showToast("Vyberte alespoň jedno povolené plemeno.");
-    document.querySelector("#event-breed-search").focus();
-    return;
-  }
-  const breedWithoutClass = [...selectedEventBreeds].find((breedName) => ensureEventBreedClasses(breedName).size === 0);
-  if (breedWithoutClass) {
-    activeEventBreed = breedWithoutClass;
-    renderEventBreedSelector();
-    showToast(`Vyberte alespoň jednu třídu pro plemeno ${breedWithoutClass}.`);
-    return;
-  }
-  if (!event.currentTarget.checkValidity()) {
-    event.currentTarget.reportValidity();
-    return;
-  }
-  const data = new FormData(event.currentTarget);
-  const name = escapeHTML(data.get("eventName"));
-  const type = escapeHTML(data.get("eventType"));
-  const venue = escapeHTML(data.get("eventVenue"));
-  const from = new Date(`${data.get("eventFrom")}T12:00:00`);
-  const deadline = new Date(data.get("eventDeadline"));
-  const month = from.toLocaleDateString("cs-CZ", { month: "short" }).replace(".", "").toUpperCase();
-  const article = document.createElement("article");
-  article.dataset.adminShowRegistrations = "";
-  article.dataset.title = String(data.get("eventName"));
-  article.innerHTML = `<div class="admin-event-date"><b>${String(from.getDate()).padStart(2, "0")}</b><span>${month} / ${from.getFullYear()}</span></div><div><span class="status-badge review">Koncept</span><h2>${name}</h2><p>${venue} · uzávěrka ${deadline.toLocaleDateString("cs-CZ")}</p></div><dl><div><dt>Typ</dt><dd>${type}</dd></div><div><dt>Kapacita</dt><dd>0 / ${Number(data.get("eventCapacity")).toLocaleString("cs-CZ")}</dd></div></dl><button class="outline-button" type="button">Přihlášky →</button>`;
-  document.querySelector("#admin-event-list").prepend(article);
-  event.currentTarget.reset();
-  selectedEventBreeds.clear();
-  eventBreedClasses.clear();
-  activeEventBreed = null;
-  renderEventBreedSelector();
-  switchAdminPanel("admin-events");
-  showToast("Koncept nové výstavy byl vytvořen.");
+document.querySelector("#event-create-form").addEventListener("submit", saveManagedEvent);
+document.querySelector("#admin-event-filters").addEventListener("input", renderAdminEvents);
+document.querySelector("#admin-event-filters").addEventListener("submit", event => event.preventDefault());
+document.querySelector('[name="eventFrom"]').addEventListener('change', event => {
+  const end = document.querySelector('[name="eventTo"]');
+  if (!end.value) end.value = event.target.value;
 });
 
 document.querySelector("#profile-form").addEventListener("submit", (event) => {
@@ -2014,33 +1640,8 @@ document.querySelector("#member-marketing").addEventListener("change", (event) =
   showToast(event.currentTarget.checked ? "Souhlas s newsletterem byl uložen." : "Souhlas s newsletterem byl odvolán.");
 });
 
-document.querySelector("#pedigree-upload").addEventListener("change", (event) => appendUploadedFiles(event.currentTarget, "#dog-document-list", "pedigree"));
-document.querySelector("#dog-document-upload").addEventListener("change", (event) => appendUploadedFiles(event.currentTarget, "#dog-document-list", "document"));
-document.querySelector("#award-upload").addEventListener("change", (event) => appendUploadedFiles(event.currentTarget, "#dog-award-list", "award"));
-
-document.querySelector("#budget-form").addEventListener("input", updateBudget);
-document.querySelector("#budget-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  updateBudget();
-  showToast("Rozpočet byl uložen.");
-});
-
-["#prop-title", "#prop-date", "#prop-place", "#prop-body"].forEach((selector) => {
-  document.querySelector(selector).addEventListener("input", updatePropositionPreview);
-});
-
-document.querySelector("#proposition-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  updatePropositionPreview();
-  showToast("Propozice byly uloženy a publikovány.");
-});
-
-document.querySelector("[data-print-propositions]").addEventListener("click", () => {
-  updatePropositionPreview();
-  document.body.classList.add("printing-propositions");
-  window.print();
-  window.setTimeout(() => document.body.classList.remove("printing-propositions"), 100);
-});
+document.querySelector("#pedigree-upload").addEventListener("change", (event) => appendUploadedFiles(event.currentTarget, "pedigree"));
+document.querySelector("#dog-document-upload").addEventListener("change", (event) => appendUploadedFiles(event.currentTarget, "document"));
 
 document.querySelector("#registration-search").addEventListener("input", renderRegistrationRows);
 document.querySelector("#payment-filter").addEventListener("change", renderRegistrationRows);
@@ -2088,7 +1689,7 @@ mobileNav.addEventListener("click", (event) => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth <= 1120) closeMemberAccountMenu();
-  if (window.innerWidth > 1180 && !mobileNav.hidden) closeMobileNavigation();
+  if (window.innerWidth > 980 && !mobileNav.hidden) closeMobileNavigation();
 });
 
 document.addEventListener("keydown", (event) => {
@@ -2099,38 +1700,127 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-const publicNavigationLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"], .mobile-nav a[href^="#"]')];
-const publicSections = ["vystavy", "poradenstvi", "kontakt"].map((id) => document.getElementById(id)).filter(Boolean);
+let pendingDetailEventId = null;
+let pendingMemberPanel = null;
+let adminSessionActive = false;
+const publicPages = new Set(["uvod", "klub", "prihlaseni", "registrace", "vystava-exterieru-psu"]);
+const publicTitles = {
+  uvod: "Česká kynologická | Klub a výstavy psů",
+  klub: "Klub | Česká kynologická",
+  prihlaseni: "Přihlášení do výstavní části | Česká kynologická",
+  registrace: "Vytvořit vystavovatelský profil | Česká kynologická",
+  "vystava-exterieru-psu": "Výstava exteriéru psů | Česká kynologická",
+};
 
-function setActivePublicSection(id) {
-  publicNavigationLinks.forEach((link) => {
-    const active = link.getAttribute("href") === `#${id}`;
+function renderPublicPage(page, { focus = true, anchor = null } = {}) {
+  allDialogs.forEach(closeDialog);
+  hidePortals();
+  closeMemberAccountMenu();
+  closeMobileNavigation();
+  document.body.dataset.publicPage = page;
+  document.querySelectorAll("[data-public-page]").forEach((section) => {
+    section.hidden = !section.dataset.publicPage.split(" ").includes(page);
+  });
+  setHeroRegistration(page === "registrace", false);
+  document.title = publicTitles[page];
+  const activePage = page === "vystava-exterieru-psu" ? "klub" : ["prihlaseni", "registrace"].includes(page) ? "vystavy" : page;
+  document.querySelectorAll('.desktop-nav a[href^="#"], .mobile-nav a[href^="#"]').forEach((link) => {
+    const active = link.getAttribute("href") === `#${activePage}`;
     link.classList.toggle("active", active);
-    if (active) link.setAttribute("aria-current", "location");
+    if (active) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
+  if (anchor) {
+    const target = document.getElementById(anchor);
+    target?.scrollIntoView({ behavior: "instant", block: "start" });
+    if (focus && target) { target.tabIndex = -1; target.focus({ preventScroll: true }); }
+  } else {
+    window.scrollTo({ top: 0, behavior: "instant" });
+    if (focus) {
+      const target = page === "registrace" ? document.querySelector("#hero-register-heading") : document.querySelector('main [data-public-page]:not([hidden]) h1');
+      if (target) { target.tabIndex = -1; target.focus({ preventScroll: true }); }
+    }
+  }
 }
 
-const publicSectionObserver = new IntersectionObserver(
-  (entries) => {
-    const current = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (current) setActivePublicSection(current.target.id);
-  },
-  { rootMargin: "-28% 0px -58%", threshold: [0, 0.15, 0.5] },
-);
-publicSections.forEach((section) => publicSectionObserver.observe(section));
-if (location.hash) setActivePublicSection(location.hash.slice(1));
+function applyPublicRoute({ focus = true } = {}) {
+  const route = location.hash.slice(1) || "uvod";
+  if (route === "vystavy") {
+    if (memberSessionActive) showPortal("member");
+    else renderPublicPage("prihlaseni", { focus });
+  } else if (route === "poradatel") {
+    if (adminSessionActive) showPortal("admin");
+    else { renderPublicPage("uvod", { focus }); openAdminAccess(); }
+  } else if (route === "kalendar") {
+    renderPublicPage("uvod", { focus, anchor: "kalendar" });
+  } else if (route.startsWith("clanek-")) {
+    renderPublicPage("vystava-exterieru-psu", { focus, anchor: route });
+  } else if (route === "poradenstvi") {
+    renderPublicPage("klub", { focus });
+  } else if (route === "kontakt") {
+    location.assign("kontakt.html");
+  } else {
+    renderPublicPage(publicPages.has(route) ? route : "uvod", { focus });
+  }
+}
 
+function navigatePublic(page) {
+  if (location.hash !== `#${page}`) history.pushState(null, "", `#${page}`);
+  applyPublicRoute();
+}
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.hasAttribute("data-exit-portal") || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+  const page = link.getAttribute("href").slice(1);
+  if (page === "main-content") {
+    event.preventDefault();
+    const main = document.querySelector("#main-content");
+    main.focus({ preventScroll: true });
+    main.scrollIntoView({ behavior: "instant" });
+    return;
+  }
+  event.preventDefault();
+  navigatePublic(page || "uvod");
+});
+window.addEventListener("popstate", () => applyPublicRoute());
+window.addEventListener("hashchange", () => applyPublicRoute());
+
+function showBrandIntro() {
+  // Show once per page load; never replay during navigation or keep login in storage.
+  if (location.hash && location.hash !== "#uvod") return;
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (motionPreference.matches) return;
+  const intro = document.querySelector("#brand-intro");
+  const duration = 2400;
+  const fadeDuration = 450;
+  intro.style.setProperty("--intro-fade-duration", `${fadeDuration}ms`);
+  intro.showModal();
+  document.body.classList.add("intro-active");
+  const dismiss = () => { if (intro.open) intro.close(); };
+  const fadeTimer = window.setTimeout(() => intro.classList.add("is-leaving"), duration - fadeDuration);
+  const timer = window.setTimeout(dismiss, duration);
+  const reduceMotion = (event) => { if (event.matches) dismiss(); };
+  motionPreference.addEventListener("change", reduceMotion);
+  intro.addEventListener("close", () => {
+    window.clearTimeout(fadeTimer);
+    window.clearTimeout(timer);
+    motionPreference.removeEventListener("change", reduceMotion);
+    intro.classList.remove("is-leaving");
+    document.body.classList.remove("intro-active");
+    document.querySelector("#login-heading")?.focus({ preventScroll: true });
+  }, { once: true });
+}
+
+initializeEventManagement();
 setHeroRegistration(false, false);
 updateMemberSessionUI();
-renderCalendar();
 renderEvents();
 renderMemberEvents();
 updateDogRosterSummary();
 selectMemberDog(currentMemberDogId);
 renderRegistrationRows();
 renderAdminDetailRegistrationRows();
-updateBudget();
-updatePropositionPreview();
-startCalendarMotion();
 loadBreeds();
+applyPublicRoute({ focus: false });
+showBrandIntro();

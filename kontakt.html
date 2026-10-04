@@ -5,22 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Kontaktní údaje České kynologické" />
   <title>Kontakt | Česká kynologická</title>
-  <link rel="stylesheet" href="info-pages.css" />
+  <link rel="stylesheet" href="info-pages.css?v=20261004-square" />
+  <link rel="stylesheet" href="site-header.css?v=20261004-arrow" />
+  <link rel="icon" href="Zadani/logo-pruhledne.png" type="image/png" />
+  <script src="info-navigation.js" defer></script>
+  <link rel="stylesheet" href="brand.css?v=20261004-angular" />
+  <link rel="stylesheet" href="contact.css?v=20261004-contact2" />
+  <script src="event-catalog.js?v=20261004-contact" defer></script>
+  <script src="contact.js?v=20261004-contact2" defer></script>
 </head>
 <body>
-  <header class="info-header">
-    <a class="info-brand" href="index.html"><img src="Zadani/logo-pruhledne.png" alt="" /><span><b>Česká</b><small>kynologická</small></span></a>
-    <nav class="info-nav" aria-label="Informační stránky"><a href="ochrana-osobnich-udaju.html">Osobní údaje</a><a href="podminky.html">Podmínky</a><a href="newsletter.html">Newsletter</a><a class="active" href="kontakt.html">Kontakt</a><a class="back-home" href="index.html">Zpět na web →</a></nav>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <header class="site-header" id="top">
+    <a class="brand brand-lockup" href="index.html#uvod" aria-label="Česká kynologická — úvod"><img src="Zadani/logo-pruhledne.png" alt="" width="48" height="48" /><span class="brand-wordmark"><b>Česká</b><small>kynologická</small></span></a>
+    <nav class="desktop-nav" aria-label="Hlavní navigace">
+      <a href="index.html#uvod">Úvod</a>
+      <a href="index.html#klub">Klub</a>
+      <a href="index.html#vystavy">Výstavy <svg class="nav-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></a>
+      <a class="active" aria-current="page" href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-member-access" id="header-member-access" href="index.html#prihlaseni"><span class="header-member-copy"><strong id="header-member-label">Přihlásit se</strong></span></a>
+      <a id="header-register-button" href="index.html#registrace">Vytvořit účet <svg class="header-register-arrow" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 15 15 5M5 5h10v10" /></svg></a>
+      <button class="menu-button" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobilní navigace" hidden>
+      <div class="mobile-nav-panel">
+        <div class="mobile-nav-head"><div class="mobile-nav-title"><span>Hlavní nabídka</span><b>Kam chcete pokračovat?</b></div><button class="mobile-nav-close" type="button" aria-label="Zavřít menu">×</button></div>
+        <div class="mobile-nav-links">
+          <a href="index.html#uvod"><b>Úvod</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#klub"><b>Klub</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#vystavy"><b>Výstavy</b><i aria-hidden="true">→</i></a>
+          <a class="active" aria-current="page" href="kontakt.html"><b>Kontakt</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#prihlaseni"><b>Přihlásit se</b><i aria-hidden="true">→</i></a>
+          <a href="index.html#poradatel"><b>Pro pořadatele</b><i aria-hidden="true">↗</i></a>
+        </div>
+        <p class="mobile-nav-foot">Česká kynologická · klub a výstavy</p>
+      </div>
+    </nav>
   </header>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="info-hero"><p class="eyebrow">Jsme vám k dispozici</p><h1>Kontakt</h1><p class="lead">Pomůžeme s používáním portálu, účtem, profilem psa i přihláškou. Dotazy ke konkrétní výstavě vyřizuje pořadatel uvedený v jejích propozicích</p><div class="info-meta"><span>Organizace <b>Česká kynologická, z. s.</b></span><span>IČO <b>22254862</b></span></div></section>
     <div class="info-layout">
       <aside class="info-toc" aria-label="Obsah stránky"><span>Kontaktní oblasti</span><a href="#portal">Podpora portálu</a><a href="#vystava">Konkrétní výstava</a><a href="#udaje">Osobní údaje</a><a href="#sidlo">Sídlo organizace</a></aside>
       <article class="info-content">
         <div class="contact-grid">
-          <section id="portal"><span>Účet a technická podpora</span><h2>Podpora portálu</h2><p>Registrace, přihlášení, profily psů, dokumenty, platby a technické potíže</p><a class="contact-action" href="mailto:info@ceskakynologicka.cz?subject=Podpora%20portálu">Napsat na podporu →</a></section>
-          <section id="vystava"><span>Pořadatel akce</span><h2>Konkrétní výstava</h2><p>Propozice, uzávěrka, rozhodčí, změna přihlášky, storno a organizace výstavního dne</p><a class="contact-action" href="index.html#vystavy">Najít výstavu →</a></section>
-          <section id="udaje"><span>Soukromí a data</span><h2>Osobní údaje</h2><p>Žádost o přístup, opravu, výmaz, omezení zpracování nebo export údajů</p><a class="contact-action" href="mailto:info@ceskakynologicka.cz?subject=Ochrana%20osobních%20údajů">Kontaktovat správce →</a></section>
+          <section id="portal"><span>Účet a technická podpora</span><h2>Podpora portálu</h2><p>Registrace, přihlášení, profily psů, dokumenty, platby a technické potíže</p><button class="contact-action" type="button" data-contact-open="support" aria-haspopup="dialog">Napsat na podporu →</button></section>
+          <section id="vystava"><span>Pořadatel akce</span><h2>Konkrétní výstava</h2><p>Propozice, uzávěrka, rozhodčí, změna přihlášky, storno a organizace výstavního dne</p><button class="contact-action" type="button" id="open-event-finder" aria-haspopup="dialog">Najít výstavu →</button></section>
+          <section id="udaje"><span>Soukromí a data</span><h2>Osobní údaje</h2><p>Žádost o přístup, opravu, výmaz, omezení zpracování nebo export údajů</p><button class="contact-action" type="button" data-contact-open="privacy" aria-haspopup="dialog">Kontaktovat správce →</button></section>
           <section id="sidlo"><span>Provozovatel</span><h2>Česká kynologická, z. s.</h2><p>Plzeňská 86/38<br />Beroun-Město<br />266 01 Beroun<br /><br />IČO 22254862<br />sp. zn. L 79663/MSPH</p></section>
         </div>
         <section><h2>Co uvést do zprávy</h2><p>Pro rychlejší vyřízení uveďte e-mail používaný v portálu a stručný popis problému. U dotazu k přihlášce připojte název výstavy a jméno psa. Heslo, jednorázový přístup ani údaje platební karty nám neposílejte</p></section>
@@ -28,5 +60,40 @@
     </div>
   </main>
   <footer class="info-footer"><span>© 2026 Česká kynologická, z. s. · IČO 22254862</span><nav><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a><a href="podminky.html">Podmínky používání</a><a href="newsletter.html">Newsletter</a></nav></footer>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+    <div class="contact-dialog-body">
+      <button class="contact-close" type="button" data-close-contact aria-label="Zavřít formulář">×</button>
+      <header class="contact-dialog-head"><p class="eyebrow" id="contact-dialog-eyebrow">Podpora portálu</p><h2 id="contact-dialog-title">Napsat na podporu</h2><p id="contact-recipient"></p></header>
+      <form id="contact-form">
+        <div class="contact-fields"><label>Jméno a příjmení *<input name="name" autocomplete="name" maxlength="100" required /></label><label>E-mail pro odpověď *<input name="email" type="email" autocomplete="email" maxlength="160" required /></label></div>
+        <label id="privacy-kind-field" hidden>Typ žádosti<select name="requestKind"><option value="access">Přístup k osobním údajům</option><option value="correction">Oprava údajů</option><option value="export">Kopie / export údajů</option><option value="deletion">Výmaz údajů</option><option value="restriction">Omezení zpracování</option></select></label>
+        <label>Předmět *<input name="subject" maxlength="180" required /></label>
+        <label>Zpráva *<textarea name="message" rows="4" maxlength="3000" placeholder="Stručně popište, s čím potřebujete pomoci…" required></textarea></label>
+        <p class="contact-hint">Pole s * jsou povinná. Neuvádějte heslo ani platební údaje.</p>
+        <div class="contact-form-actions"><p>Zpráva se zatím neodesílá. Připravíme ji pro váš e-mail.</p><button class="contact-primary" type="submit">Připravit zprávu <span aria-hidden="true">→</span></button></div>
+      </form>
+      <section id="contact-prepared" hidden aria-labelledby="contact-prepared-title">
+        <h3 id="contact-prepared-title" tabindex="-1">Zpráva je připravena</h3><p class="contact-hint">Ještě nebyla odeslána. Otevřete ji ve své e-mailové aplikaci a odešlete.</p>
+        <dl class="contact-preview-meta"><div><dt>Komu</dt><dd id="contact-preview-recipient"></dd></div><div><dt>Předmět</dt><dd id="contact-preview-subject"></dd></div></dl><pre id="contact-preview-message"></pre>
+        <div class="contact-form-actions"><button class="contact-secondary" type="button" id="contact-edit">Upravit zprávu</button><a class="contact-primary" id="contact-mail-link">Otevřít v e-mailu ↗</a></div>
+      </section>
+    </div>
+  </dialog>
+  <dialog class="contact-dialog event-finder-dialog" id="event-finder-dialog" aria-labelledby="event-finder-title">
+    <div class="contact-dialog-body">
+      <button class="contact-close" type="button" data-close-contact aria-label="Zavřít hledání výstav">×</button>
+      <header class="contact-dialog-head"><p class="eyebrow">Výstavy a místa konání</p><h2 id="event-finder-title">Najít výstavu</h2><p>Vyberte akci a zobrazte její místo konání a kontakt na pořadatele.</p></header>
+      <label class="event-finder-search">Název výstavy nebo město<input id="contact-event-search" type="search" placeholder="Např. Brno nebo retrívrů" /></label>
+      <p class="contact-finder-count" id="contact-event-count" role="status"></p>
+      <div class="event-finder-layout"><div class="contact-event-list" id="contact-event-list" aria-label="Nalezené výstavy"></div>
+        <section class="contact-event-detail" id="contact-event-detail" aria-labelledby="contact-event-title">
+          <p class="eyebrow" id="contact-event-date"></p><h3 id="contact-event-title"></h3><p id="contact-event-venue"></p>
+          <iframe id="contact-event-map" title="Mapa místa konání výstavy" referrerpolicy="no-referrer"></iframe>
+          <div class="contact-map-caption"><span>Orientační poloha areálu</span><a id="contact-map-link" target="_blank" rel="noopener noreferrer">Větší mapa ↗</a></div>
+          <div class="contact-organizer"><span>Pořadatel</span><b id="contact-event-organizer"></b><button class="contact-secondary" id="contact-event-message" type="button">Napsat pořadateli →</button></div>
+        </section>
+      </div><p class="contact-hint">Ukázkový kalendář 2026 · přesné místo přejímky určuje pořadatel.</p>
+    </div>
+  </dialog>
 </body>
 </html>

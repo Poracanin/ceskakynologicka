@@ -2,9 +2,9 @@
   --black: #080808;
   --black-soft: #11110f;
   --black-lift: #181713;
-  --gold: #d5ad4c;
-  --gold-light: #f1d785;
-  --gold-dark: #9d7523;
+  --gold: #d9ba72;
+  --gold-light: #ecd395;
+  --gold-dark: #b99a56;
   --ivory: #f3efe5;
   --paper: #fbf9f3;
   --ink: #151513;
@@ -13,7 +13,7 @@
   --dark-line: rgba(255, 255, 255, 0.13);
   --display: Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --radius: 4px;
+  --radius: 0;
   color-scheme: dark;
   font-family: var(--sans);
   font-synthesis: none;
@@ -191,7 +191,7 @@ video {
   justify-content: center;
   gap: 34px;
   padding: 0 24px;
-  border-radius: 2px;
+  border-radius: 0;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -267,7 +267,7 @@ video {
 .hero-section {
   padding: 36px clamp(22px, 5vw, 88px) 48px;
   background:
-    radial-gradient(circle at 80% 0, rgba(213, 173, 76, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 0, rgba(217, 186, 114, 0.08), transparent 28%),
     var(--black);
 }
 
@@ -294,14 +294,14 @@ video {
 .live-dot {
   width: 5px;
   height: 5px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--gold-light);
-  box-shadow: 0 0 0 6px rgba(213, 173, 76, 0.11);
+  box-shadow: 0 0 0 6px rgba(217, 186, 114, 0.11);
   animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  50% { box-shadow: 0 0 0 10px rgba(213, 173, 76, 0); }
+  50% { box-shadow: 0 0 0 10px rgba(217, 186, 114, 0); }
 }
 
 .hero-shell {
@@ -309,8 +309,8 @@ video {
   display: grid;
   grid-template-columns: minmax(0, 1.58fr) minmax(340px, 0.82fr);
   overflow: hidden;
-  border: 1px solid rgba(213, 173, 76, 0.38);
-  border-radius: var(--radius);
+  border: 1px solid rgba(217, 186, 114, 0.38);
+  border-radius: 0;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.46);
 }
 
@@ -421,7 +421,7 @@ em {
   display: grid;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+  border-radius: 0;
   background: rgba(0, 0, 0, 0.25);
   color: #fff;
   cursor: pointer;
@@ -471,9 +471,9 @@ em {
   grid-template-rows: auto 1fr;
   overflow: hidden;
   background:
-    radial-gradient(circle at 115% 90%, rgba(213, 173, 76, 0.14), transparent 40%),
+    radial-gradient(circle at 115% 90%, rgba(217, 186, 114, 0.14), transparent 40%),
     var(--black-soft);
-  border-left: 1px solid rgba(213, 173, 76, 0.3);
+  border-left: 1px solid rgba(217, 186, 114, 0.3);
 }
 
 .login-topline {
@@ -695,7 +695,7 @@ em {
   position: absolute;
   right: -29px;
   bottom: -45px;
-  color: rgba(213, 173, 76, 0.035);
+  color: rgba(217, 186, 114, 0.035);
   font-family: var(--display);
   font-size: 190px;
   line-height: 1;
@@ -853,7 +853,7 @@ em {
   bottom: 12px;
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--gold-dark);
 }
 
@@ -1169,7 +1169,7 @@ em {
   gap: clamp(60px, 9vw, 150px);
   padding: 125px clamp(22px, 7vw, 120px);
   background:
-    radial-gradient(circle at 10% 100%, rgba(213, 173, 76, 0.12), transparent 30%),
+    radial-gradient(circle at 10% 100%, rgba(217, 186, 114, 0.12), transparent 30%),
     var(--black-soft);
 }
 
@@ -1210,7 +1210,7 @@ em {
 }
 
 .process-steps li:hover {
-  background: rgba(213, 173, 76, 0.055);
+  background: rgba(217, 186, 114, 0.055);
 }
 
 .process-steps li > span {
@@ -1226,8 +1226,8 @@ em {
   display: grid;
   place-items: center;
   margin: 32px 0 23px;
-  border: 1px solid rgba(213, 173, 76, 0.35);
-  border-radius: 50%;
+  border: 1px solid rgba(217, 186, 114, 0.35);
+  border-radius: 0;
   color: var(--gold-light);
 }
 
@@ -1473,7 +1473,7 @@ em {
   width: 39px;
   height: 39px;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 0;
   background: transparent;
   color: var(--ink);
   font-family: var(--display);
@@ -1631,7 +1631,7 @@ em {
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 .stepper button.active {
@@ -1745,7 +1745,7 @@ em {
   align-items: center;
   padding: 17px;
   border: 1px solid var(--gold-dark);
-  background: rgba(213, 173, 76, 0.07);
+  background: rgba(217, 186, 114, 0.07);
 }
 
 .dog-avatar {
@@ -1753,7 +1753,7 @@ em {
   height: 58px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--ink);
   color: var(--gold-light);
   font-family: var(--display);
@@ -1786,7 +1786,7 @@ em {
   height: 28px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--gold);
   color: var(--ink);
 }
@@ -1828,7 +1828,7 @@ em {
   place-items: center;
   flex: 0 0 auto;
   border: 1px solid var(--gold-dark);
-  border-radius: 50%;
+  border-radius: 0;
   color: var(--gold-dark);
   font-family: var(--display);
   font-size: 12px;
@@ -2010,7 +2010,7 @@ em {
   align-items: center;
   gap: 12px;
   padding: 16px 19px;
-  border: 1px solid rgba(213, 173, 76, 0.5);
+  border: 1px solid rgba(217, 186, 114, 0.5);
   background: #111;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
   opacity: 0;
@@ -2029,7 +2029,7 @@ em {
   height: 27px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--gold);
   color: var(--ink);
   font-size: 12px;
@@ -2122,7 +2122,7 @@ em {
   }
 
   .login-pane {
-    border-top: 1px solid rgba(213, 173, 76, 0.3);
+    border-top: 1px solid rgba(217, 186, 114, 0.3);
     border-left: 0;
   }
 

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("assets/fonts/chakra-petch/ChakraPetch-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("assets/fonts/chakra-petch/ChakraPetch-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* One angular wordmark across public pages, both portals and the footer. */
+:is(.site-header, .portal-shell, .site-footer) .brand-lockup {
+  --brand-mark-size: 48px;
+  --brand-name-size: 18px;
+  --brand-descriptor-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  color: #f5f4ef;
+  font-family: "Chakra Petch", "Segoe UI", sans-serif;
+  text-decoration: none;
+}
+:is(.site-header, .portal-shell, .site-footer) .brand-lockup > img {
+  display: block;
+  flex: 0 0 var(--brand-mark-size);
+  width: var(--brand-mark-size);
+  height: var(--brand-mark-size);
+  object-fit: contain;
+  filter: none;
+}
+:is(.site-header, .portal-shell, .site-footer) .brand-lockup > .brand-wordmark {
+  display: grid;
+  gap: 4px;
+  padding: 0;
+  line-height: 1.15;
+  text-align: left;
+  white-space: nowrap;
+}
+:is(.site-header, .portal-shell, .site-footer) .brand-lockup > .brand-wordmark > b {
+  margin: 0;
+  color: #f5f4ef;
+  font-family: inherit;
+  font-size: var(--brand-name-size);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+:is(.site-header, .portal-shell, .site-footer) .brand-lockup > .brand-wordmark > small {
+  margin: 0;
+  color: #d9ba72;
+  font-family: inherit;
+  font-size: var(--brand-descriptor-size);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+:is(.site-header, .portal-shell, .site-footer) a.brand-lockup:focus-visible {
+  outline: 2px solid #d9ba72;
+  outline-offset: 5px;
+}
+.portal-shell .brand-lockup--compact {
+  --brand-mark-size: 32px;
+  --brand-name-size: 14px;
+  --brand-descriptor-size: 10px;
+  gap: 9px;
+}
+@media (max-width: 700px) {
+  .site-header .brand-lockup {
+    --brand-mark-size: 40px;
+    --brand-name-size: 17px;
+    --brand-descriptor-size: 11px;
+    gap: 10px;
+  }
+  .portal-shell .brand-lockup--compact {
+    --brand-mark-size: 28px;
+    --brand-name-size: 13px;
+    --brand-descriptor-size: 10px;
+    gap: 7px;
+  }
+}
+@media (max-width: 380px) {
+  .site-header .brand-lockup { --brand-mark-size: 36px; --brand-name-size: 16px; --brand-descriptor-size: 10px; gap: 8px; }
+}
